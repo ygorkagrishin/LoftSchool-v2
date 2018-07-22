@@ -1,0 +1,21 @@
+.navbar
+    ul
+        display flex
+    li
+        &:not(:last-child)::after
+            content ''
+            display inline-block
+            width 4px
+            height 4px
+            vertical-align 3px
+            background-color primaryWhiteColor 
+            border-radius 50%
+    a
+        display inline-block
+        margin 0 15.5px
+        font 13px / 30px baseFontMedium
+        text-transform uppercase
+        color primaryWhiteColor
+        &:hover
+            text-decoration underline
+            

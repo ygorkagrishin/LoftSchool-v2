@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after
+    box-sizing border-box
+
+//TODO: Вынести в отдельный файл reset.styl
+ul,li
+    margin 0
+    padding 0
+    list-style none
+
+for $n in (1..6)
+    h{$n}
+        margin 0
+        font-weight normal
+
+p
+    margin 0
+
+a
+    text-decoration none
+
+img 
+    display inline-block
+    width 100%
+
+button 
+    border none
+    margin 0
+    padding 0
+    width auto
+    overflow visible
+    background transparent
+    cursor pointer
+
+    /* inherit font & color from ancestor */
+    color inherit
+    font inherit
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height normal
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing inherit
+    -moz-osx-font-smoothing inherit
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance none
+
+html 
+    font-size 14px 
+    line-height 24px
+    font-family baseFontLight 
+    color primaryBlackColor
+
+body
+    position relative
+
+.wrapper
+    min-height 100vh
+
+.sect
+    position relative
+    height 100vh
+
+.container
+    display flex
+    width 100%
+    max-width 960px
+    height inherit
+    margin 0 auto
+    padding 0 10px
+    align-items center
+
+.sect__cont
+    width 100%
+    min-height 650px
+
+.sect__title
+    font-size 72px
+    line-height 64px
+    font-family baseFontMainTitle 
+    color primaryBlackColor
+
+.clearfix::after
+    content ''
+    display block
+    clear both
+
+input[type="text"],
+textarea
+    border none
+    outline-color primaryYellowColor

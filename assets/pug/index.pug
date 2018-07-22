@@ -4,3 +4,740 @@ block title
     | LoftSchool templates
 
 block content
+
+    //- page main content!!!
+    main.page__main
+
+        //- oner page scroll
+        .wrapper
+
+            //- section hero
+            section.sect.hero
+                .container
+                    include modules/_header
+
+                    .hero__row.hero__cont
+                        .hero__col.hero__pic
+                            img(src="images/content/hero/steam.png", alt="burger pic")
+                            svg(width="450.527px", height="241.369px", viewBox="0 0 450.527 241.369").hero__drops
+                                use(xlink:href="icons/sprite-svg.svg#drops")
+                        .hero__col.hero__desc
+                            h1.hero__title.sect__title Мы делаем 
+                            span натуральные бургеры
+                    .hero__arrow
+                        button(type="button").btn.btn__arrow
+                            svg(width="28px", height="14px", viewBox="0 0 28.685 14.479")
+                                use(xlink:href="icons/sprite-svg.svg#arrow-scroll")
+            //- section hero end
+
+            //- section we
+            section.sect.we
+                .container
+                    .sect__cont
+                        h2.sect__title.we__title Мы лучшие
+
+                        .we__row
+                            .we__col.we__meat
+                                svg(width="96.428px", height="89.246px", viewBox="0 0 96.428 89.246")
+                                    use(xlink:href="icons/sprite-svg.svg#meat")
+                                .we__desc
+                                    h3 100% свежее мясо
+                                    p
+                                        | Драма представляет собой деструктивный цикл. 
+                                        | Анапест представляет собой анапест. Ямб неравномерен.
+                            .we__col.we__hand
+                                svg(width="73px", height="85.875px", viewBox="0 0 73 85.875")
+                                    use(xlink:href="icons/sprite-svg.svg#hand")
+                                .we__desc
+                                    h3 Ручная сборка 
+                                    p
+                                        | Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. 
+                                        | Первое полустишие притягивает сюжетный реформаторский пафос.
+                            .we__col.we__natural
+                                svg(width="88px", height="75.534px", viewBox="0 0 88 75.534")
+                                    use(xlink:href="icons/sprite-svg.svg#natural")
+                                .we__desc
+                                    h3 Натуральные ингредиенты
+                                    p
+                                        | Драма представляет собой деструктивный цикл. 
+                                        | Анапест представляет собой анапест.
+            //- section we end
+
+            //- section burgers
+            section.sect.burger
+                .container
+                    
+                    //- Carousel 
+                    .burger__carousel#carousel
+                        .burger__wrap
+
+                            //- #1
+                            .burger__slide
+                                .burger__comp
+                                    svg(width="46px", height="42px", viewBox="0 0 45.748 44.625")
+                                        use(xlink:href="icons/sprite-svg.svg#burger")
+                                    p Состав
+                                    ul.burger__list
+                                        //- #1 
+                                        li
+                                            svg(width="44px", height="39px", viewBox="0 0 44 39.212")
+                                                use(xlink:href="icons/sprite-svg.svg#beef")
+                                            .burger__product Говядина
+                                            .burger__weight 300г
+                                        //- #1end
+                                        //- #2
+                                        li
+                                            svg(width="38px" height="30px" viewBox="0 0 48 30.317")
+                                                use(xlink:href="icons/sprite-svg.svg#buns")
+                                            .burger__product Булочки
+                                            .burger__weight 100г
+                                        //- #2end
+                                        //- #3
+                                        li
+                                            svg(width="38px" height="38px" viewBox="0 0 38 38.638")
+                                                use(xlink:href="icons/sprite-svg.svg#salad")
+                                            .burger__product Зелень
+                                            .burger__weight 70г
+                                        //- #3end
+                                        //- #4
+                                        li
+                                            svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
+                                                use(xlink:href="icons/sprite-svg.svg#sauce")
+                                            .burger__product Соус
+                                            .burger__weight 150г
+                                        //- #4end
+                                        //- #5
+                                        li
+                                            svg(width="43px", height="37px", viewBox="0 0 42 37.754")
+                                                use(xlink:href="icons/sprite-svg.svg#cucumber")
+                                            .burger__product Овощи
+                                            .burger__weight 200г
+                                        //- #5end
+                                        //- #6
+                                        li
+                                            svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
+                                                use(xlink:href="icons/sprite-svg.svg#cheese")
+                                            .burger__product Сыр
+                                            .burger__weight 80г
+                                        //- #6end
+                                .burger__pic
+                                    img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic")
+                                .burger__cont
+                                    .burger__desc
+                                        h2 Dark Beef Burger
+                                        p
+                                            | Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
+                                            | тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
+                                            | луком, салатом и соусом гриль теперь 
+                                            | с добавлением экзотического соуса чураско.
+                                    .burger__order
+                                        .burger__price
+                                            span 500
+                                            | рублей
+                                        a(href="javascript:void(0);").btn.btn__order Заказать
+                                .burger__kkal
+                                    svg(width="60px", height="60px", viewBox="0 0 60 60.178")
+                                        use(xlink:href="icons/sprite-svg.svg#kkal")
+                                    span 1200
+                                    p Ккал
+                            //- #1 end
+
+                            //- #2
+                            .burger__slide
+                                .burger__comp
+                                    svg(width="46px", height="42px", viewBox="0 0 45.748 44.625")
+                                        use(xlink:href="icons/sprite-svg.svg#burger")
+                                    p Состав
+                                    ul.burger__list
+                                        //- #1 
+                                        li
+                                            svg(width="44px", height="39px", viewBox="0 0 44 39.212")
+                                                use(xlink:href="icons/sprite-svg.svg#beef")
+                                            .burger__product Говядина
+                                            .burger__weight 300г
+                                        //- #1end
+                                        //- #2
+                                        li
+                                            svg(width="38px" height="30px" viewBox="0 0 48 30.317")
+                                                use(xlink:href="icons/sprite-svg.svg#buns")
+                                            .burger__product Булочки
+                                            .burger__weight 100г
+                                        //- #2end
+                                        //- #3
+                                        li
+                                            svg(width="38px" height="38px" viewBox="0 0 38 38.638")
+                                                use(xlink:href="icons/sprite-svg.svg#salad")
+                                            .burger__product Зелень
+                                            .burger__weight 70г
+                                        //- #3end
+                                        //- #4
+                                        li
+                                            svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
+                                                use(xlink:href="icons/sprite-svg.svg#sauce")
+                                            .burger__product Соус
+                                            .burger__weight 150г
+                                        //- #4end
+                                        //- #5
+                                        li
+                                            svg(width="43px", height="37px", viewBox="0 0 42 37.754")
+                                                use(xlink:href="icons/sprite-svg.svg#cucumber")
+                                            .burger__product Овощи
+                                            .burger__weight 200г
+                                        //- #5end
+                                        //- #6
+                                        li
+                                            svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
+                                                use(xlink:href="icons/sprite-svg.svg#cheese")
+                                            .burger__product Сыр
+                                            .burger__weight 80г
+                                        //- #6end
+                                .burger__pic
+                                    img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic")
+                                .burger__cont
+                                    .burger__desc
+                                        h2 Dark Beef Burger
+                                        p
+                                            | Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
+                                            | тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
+                                            | луком, салатом и соусом гриль теперь 
+                                            | с добавлением экзотического соуса чураско.
+                                    .burger__order
+                                        .burger__price
+                                            span 500
+                                            | рублей
+                                        a(href="javascript:void(0);").btn.btn__order Заказать
+                                .burger__kkal
+                                    svg(width="60px", height="60px", viewBox="0 0 60 60.178")
+                                        use(xlink:href="icons/sprite-svg.svg#kkal")
+                                    span 1200
+                                    p Ккал
+                            //- #2 end
+
+                            //- #3
+                            .burger__slide
+                                .burger__comp
+                                    svg(width="46px", height="42px", viewBox="0 0 45.748 44.625")
+                                        use(xlink:href="icons/sprite-svg.svg#burger")
+                                    p Состав
+                                    ul.burger__list
+                                        //- #1 
+                                        li
+                                            svg(width="44px", height="39px", viewBox="0 0 44 39.212")
+                                                use(xlink:href="icons/sprite-svg.svg#beef")
+                                            .burger__product Говядина
+                                            .burger__weight 300г
+                                        //- #1end
+                                        //- #2
+                                        li
+                                            svg(width="38px" height="30px" viewBox="0 0 48 30.317")
+                                                use(xlink:href="icons/sprite-svg.svg#buns")
+                                            .burger__product Булочки
+                                            .burger__weight 100г
+                                        //- #2end
+                                        //- #3
+                                        li
+                                            svg(width="38px" height="38px" viewBox="0 0 38 38.638")
+                                                use(xlink:href="icons/sprite-svg.svg#salad")
+                                            .burger__product Зелень
+                                            .burger__weight 70г
+                                        //- #3end
+                                        //- #4
+                                        li
+                                            svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
+                                                use(xlink:href="icons/sprite-svg.svg#sauce")
+                                            .burger__product Соус
+                                            .burger__weight 150г
+                                        //- #4end
+                                        //- #5
+                                        li
+                                            svg(width="43px", height="37px", viewBox="0 0 42 37.754")
+                                                use(xlink:href="icons/sprite-svg.svg#cucumber")
+                                            .burger__product Овощи
+                                            .burger__weight 200г
+                                        //- #5end
+                                        //- #6
+                                        li
+                                            svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
+                                                use(xlink:href="icons/sprite-svg.svg#cheese")
+                                            .burger__product Сыр
+                                            .burger__weight 80г
+                                        //- #6end
+                                .burger__pic
+                                    img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic")
+                                .burger__cont
+                                    .burger__desc
+                                        h2 Dark Beef Burger
+                                        p
+                                            | Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
+                                            | тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
+                                            | луком, салатом и соусом гриль теперь 
+                                            | с добавлением экзотического соуса чураско.
+                                    .burger__order
+                                        .burger__price
+                                            span 500
+                                            | рублей
+                                        a(href="javascript:void(0);").btn.btn__order Заказать
+                                .burger__kkal
+                                    svg(width="60px", height="60px", viewBox="0 0 60 60.178")
+                                        use(xlink:href="icons/sprite-svg.svg#kkal")
+                                    span 1200
+                                    p Ккал
+                            //- #3 end
+                    //- Carousel end
+                    button(type="button").burger__prev
+                        svg(width="28px", height="14px", viewBox="0 0 28.685 14.479")
+                            use(xlink:href="icons/sprite-svg.svg#arrow-scroll")
+                    button(type="button").burger__next
+                        svg(width="28px", height="14px", viewBox="0 0 28.685 14.479")
+                            use(xlink:href="icons/sprite-svg.svg#arrow-scroll")
+            //- sectino burgers end
+
+            //- section team
+            section.sect.team
+                .team__row
+                    .team__col
+                        .sect__cont
+                            h2.sect__title.team__title Команда
+
+                            .team__acco#acco
+                                //- acco section #1
+                                .team__sect.collapsed
+                                    h3.team__name 
+                                        svg(width="9px", height="6px", viewBox="0 0 16 16").team__arrow
+                                            use(xlink:href="icons/sprite-svg.svg#triangle-pointing-up")
+                                        span Дэниэл Редклиф
+                                    .team__cont
+                                        .team__wrap
+                                            .team__pic
+                                                img(src="images/content/team/aphex.png", alt="avatar pic").team__img
+                                            .team__desc
+                                                h4 Оператор
+                                                p 
+                                                    | С радостью поможем подобрать
+                                                    | идеальный бургер и оформить
+                                                    | заказ.
+                                //- acco section #1 end
+
+                                //- acco section #2
+                                .team__sect.collapsed
+                                    h3.team__name 
+                                        svg(width="9px", height="6px", viewBox="0 0 16 16").team__arrow
+                                            use(xlink:href="icons/sprite-svg.svg#triangle-pointing-up")
+                                        span Ричард Джеймс
+                                    .team__cont
+                                        .team__wrap
+                                            .team__pic
+                                                img(src="images/content/team/aphex.png", alt="avatar pic").team__img
+                                            .team__desc
+                                                h4 Оператор
+                                                p 
+                                                    | С радостью поможем подобрать
+                                                    | идеальный бургер и оформить
+                                                    | заказ.
+                                //- acco section #2 end
+
+                                //- acco section #3
+                                .team__sect.collapsed
+                                    h3.team__name 
+                                        svg(width="9px", height="6px", viewBox="0 0 16 16").team__arrow
+                                            use(xlink:href="icons/sprite-svg.svg#triangle-pointing-up")
+                                        span Джейк Финн
+                                    .team__cont
+                                        .team__wrap
+                                            .team__pic
+                                                img(src="images/content/team/aphex.png", alt="avatar pic").team__img
+                                            .team__desc
+                                                h4 Оператор
+                                                p 
+                                                    | С радостью поможем подобрать
+                                                    | идеальный бургер и оформить
+                                                    | заказ.
+                                //- acco section #3 end
+
+                                //- acco section #4
+                                .team__sect.collapsed
+                                    h3.team__name 
+                                        svg(width="9px", height="6px", viewBox="0 0 16 16").team__arrow
+                                            use(xlink:href="icons/sprite-svg.svg#triangle-pointing-up")
+                                        span Николай Иванов
+                                    .team__cont
+                                        .team__wrap
+                                            .team__pic
+                                                img(src="images/content/team/aphex.png", alt="avatar pic").team__img
+                                            .team__desc
+                                                h4 Оператор
+                                                p 
+                                                    | С радостью поможем подобрать
+                                                    | идеальный бургер и оформить
+                                                    | заказ.
+                                //- acco section #4 end
+            //- section team end
+
+            //- section menu
+            section.sect.menu
+                h2.sect__title.menu__title Меню
+
+                .menu__acco#menu
+                    //- section menu #1
+                    .menu__sect.collapsed
+                        .menu__pannel(style="background: url('images/content/menu/photo-1468071174046-657d9d351a401.png') no-repeat center / cover")
+                            h3.menu__name Для мясоедов
+                        .menu__cont
+                            .menu__desc
+                                | Речевой акт редуцирует диалектический характер. 
+                                | Развивая эту тему, заимствование редуцирует 
+                                | конструктивный механизм сочленений. 
+                                | Лирический субъект начинает диссонансный анжамбеман. 
+                                | Наш современник стал особенно чутко относиться к слову, 
+                                | однако механизм сочленений неустойчив. Модальность высказывания, 
+                                | как справедливо считает И.Гальперин, пространственно выбирает метр.
+                                | Речевой акт редуцирует диалектический характер. Развивая эту тему, 
+                                | заимствование редуцирует конструктивный механизм сочленений. 
+                                | Лирический субъект начинает диссонансный анжамбеман. 
+                                | Наш современник стал особенно чутко относиться к слову.
+                    //- section menu #1 end
+
+                    //- section menu #2
+                    .menu__sect.collapsed
+                        .menu__pannel(style="background: url(images/content/menu/photo-1466814314367-45323ac74e2b1.png) no-repeat center / cover")
+                            h3.menu__name Вегетарианское
+                        .menu__cont
+                            .menu__desc
+                                | Речевой акт редуцирует диалектический характер. 
+                                | Развивая эту тему, заимствование редуцирует 
+                                | конструктивный механизм сочленений. 
+                                | Лирический субъект начинает диссонансный анжамбеман. 
+                                | Наш современник стал особенно чутко относиться к слову, 
+                                | однако механизм сочленений неустойчив. Модальность высказывания, 
+                                | как справедливо считает И.Гальперин, пространственно выбирает метр.
+                                | Речевой акт редуцирует диалектический характер. Развивая эту тему, 
+                                | заимствование редуцирует конструктивный механизм сочленений. 
+                                | Лирический субъект начинает диссонансный анжамбеман. 
+                                | Наш современник стал особенно чутко относиться к слову.
+                    //- section menu #2 end
+
+                    //- section menu #3
+                    .menu__sect.collapsed
+                        .menu__pannel(style="background: url('images/content/menu/IMG_4084.png') no-repeat center / cover")
+                            h3.menu__name Диетическое
+                        .menu__cont
+                            .menu__desc
+                                | Речевой акт редуцирует диалектический характер. 
+                                | Развивая эту тему, заимствование редуцирует 
+                                | конструктивный механизм сочленений. 
+                                | Лирический субъект начинает диссонансный анжамбеман. 
+                                | Наш современник стал особенно чутко относиться к слову, 
+                                | однако механизм сочленений неустойчив. Модальность высказывания, 
+                                | как справедливо считает И.Гальперин, пространственно выбирает метр.
+                                | Речевой акт редуцирует диалектический характер. Развивая эту тему, 
+                                | заимствование редуцирует конструктивный механизм сочленений. 
+                                | Лирический субъект начинает диссонансный анжамбеман. 
+                                | Наш современник стал особенно чутко относиться к слову.
+                    //- section menu #3 end
+            //- section menu end
+
+            //- section review
+            section.sect.review
+                .review__row.review__reviews
+                    //- #1
+                    .review__col.review__review(style="background: url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover")
+                        .review__hover
+                            .review__desc
+                                h3 Констанин Спилберг
+                                p
+                                    | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                    | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                    | а сыр таким расплавленным.
+                            a(href="javascript:void(0);", data-target="#review-popup-1").btn.btn__more.review__btn Подробнее
+                    //- #1end
+
+                    //- popup-#1
+                    .review__modal.collapsed#review-popup-1
+                        .review__popup
+                            h4 Констанин Спилберг
+                            p
+                                |Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                | а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+                                | Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            button(type="button").review__close
+                                svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
+                                    use(xlink:href="icons/sprite-svg.svg#close")
+                    //- popup-#1end
+
+                    //- #2
+                    .review__col.review__review(style="background: url(images/content/review/photo-1440606797942-6cc04c045447.png) no-repeat center / cover")
+                        .review__hover
+                            .review__desc
+                                h3 Констанин Спилберг
+                                p
+                                    | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                    | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                    | а сыр таким расплавленным.
+                            a(href="javascript:void(0);", data-target="#review-popup-2").btn.btn__more.review__btn Подробнее
+                    //- #2end
+
+                    //- popup-#2
+                    .review__modal.collapsed#review-popup-2
+                        .review__popup
+                            h4 Констанин Спилберг
+                            p
+                                |Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                | а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+                                | Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            button(type="button").review__close
+                                svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
+                                    use(xlink:href="icons/sprite-svg.svg#close")
+                    //- popup-#2end
+
+                    //- #3
+                    .review__col.review__review(style="background: url(images/content/review/photo-1445404590072-16ef9c18bd83.png) no-repeat center / cover")
+                        .review__hover
+                            .review__desc
+                                h3 Констанин Спилберг
+                                p
+                                    | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                    | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                    | а сыр таким расплавленным.
+                            a(href="javascript:void(0);", data-target="#review-popup-3").btn.btn__more.review__btn Подробнее
+                    //- #3end
+
+                    //- popup-#3
+                    .review__modal.collapsed#review-popup-3
+                        .review__popup
+                            h4 Констанин Спилберг
+                            p
+                                |Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                | а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+                                | Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            button(type="button").review__close
+                                svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
+                                    use(xlink:href="icons/sprite-svg.svg#close")
+                    //- popup-#3end
+
+                    //- #4
+                    .review__col.review__review(style="background: url(images/content/review/photo-1468546818829-25bb337b6646.png) no-repeat center / cover")
+                        .review__hover
+                            .review__desc
+                                h3 Констанин Спилберг
+                                p
+                                    | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                    | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                    | а сыр таким расплавленным.
+                            a(href="javascript:void(0);", data-target="#review-popup-4").btn.btn__more.review__btn Подробнее
+                    //- #4end
+
+                    //- popup-#4
+                    .review__modal.collapsed#review-popup-4
+                        .review__popup
+                            h4 Констанин Спилберг
+                            p
+                                |Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                | а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+                                | Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            button(type="button").review__close
+                                svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
+                                    use(xlink:href="icons/sprite-svg.svg#close")
+                    //- popup-#4end
+
+                    //- #5
+                    .review__col.review__review(style="background: url(images/content/review/photo-1438763298591-75a0d42b7265.png) no-repeat center / cover")
+                        .review__hover
+                            .review__desc
+                                h3 Констанин Спилберг
+                                p
+                                    | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                    | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                    | а сыр таким расплавленным.
+                            a(href="javascript:void(0);", data-target="#review-popup-5").btn.btn__more.review__btn Подробнее
+                    //- #5end
+
+                    //- popup-#5
+                    .review__modal.collapsed#review-popup-5
+                        .review__popup
+                            h4 Констанин Спилберг
+                            p
+                                |Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                | а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+                                | Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            button(type="button").review__close
+                                svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
+                                    use(xlink:href="icons/sprite-svg.svg#close")
+                    //- popup-#5end
+
+                    //- #6
+                    .review__col.review__review(style="background: url(images/content/review/photo-1461332682233-b818af4c3a6e.png) no-repeat center / cover")
+                        .review__hover
+                            .review__desc
+                                h3 Констанин Спилберг
+                                p
+                                    | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                    | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                    | а сыр таким расплавленным.
+                            a(href="javascript:void(0);", data-target="#review-popup-6").btn.btn__more.review__btn Подробнее
+                    //- #6end
+
+                    //- popup-#6
+                    .review__modal.collapsed#review-popup-6
+                        .review__popup
+                            h4 Констанин Спилберг
+                            p
+                                |Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                | а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+                                | Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            button(type="button").review__close
+                                svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
+                                    use(xlink:href="icons/sprite-svg.svg#close")
+                    //- popup-#6end
+
+                    //- #7
+                    .review__col.review__review(style="background: url(images/content/review/photo-1457706924510-773f3c796de3.png) no-repeat center / cover")
+                        .review__hover
+                            .review__desc
+                                h3 Констанин Спилберг
+                                p
+                                    | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                    | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                    | а сыр таким расплавленным.
+                            a(href="javascript:void(0);", data-target="#review-popup-7").btn.btn__more.review__btn Подробнее
+                    //- #7end
+
+                    //- popup-#7
+                    .review__modal.collapsed#review-popup-7
+                        .review__popup
+                            h4 Констанин Спилберг
+                            p
+                                |Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                | а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+                                | Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            button(type="button").review__close
+                                svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
+                                    use(xlink:href="icons/sprite-svg.svg#close")
+                    //- popup-#7end
+
+                    //- #8
+                    .review__col.review__review(style="background: url(images/content/review/photo-1458696765561-12142eaead131.png) no-repeat center / cover")
+                        .review__hover
+                            .review__desc
+                                h3 Констанин Спилберг
+                                p
+                                    | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                    | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                    | а сыр таким расплавленным.
+                            a(href="javascript:void(0);", data-target="#review-popup-8").btn.btn__more.review__btn Подробнее
+                    //- #8end
+
+                    //- popup-#8
+                    .review__modal.collapsed#review-popup-8
+                        .review__popup
+                            h4 Констанин Спилберг
+                            p
+                                |Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+                                | а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+                                | Нельзя устоять, невозможно забыть... 
+                                | Никогда не думал, что булочки могут быть такими мягкими, 
+                                | котлетка такой сочной, а сыр таким расплавленным.
+                            button(type="button").review__close
+                                svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
+                                    use(xlink:href="icons/sprite-svg.svg#close")
+                    //- popup-#8end
+            //- section review end
+
+            //- section form
+            section.sect.form
+                .container
+                    .sect__cont
+                        h2.form__title.sect__title Закажите доставку
+
+                        form(action="").form__form#form
+                            .form__row.form__field
+                                .form__col
+                                    //- #1
+                                    .form__row
+                                        .form__col
+                                            label(for="name").form__label Имя
+                                            input(type="text", name="name", id="name").form__input
+                                        .form__col
+                                            label(for="phone").form__label Телефон
+                                            input(type="text", name="phone", id="phone").form__input
+                                    //- #1 end
+
+                                    //- #2
+                                    .form__row
+                                        .form__col
+                                            label(for="street").form__label Улица
+                                            input(type="text", name="street", id="street").form__input
+                                    //- #2 end
+
+                                    //- #3
+                                    .form__row
+                                        .form__col
+                                            label(for="house").form__label Дом
+                                            input(type="text", name="house", id="house").form__input
+                                        .form__col
+                                            label(for="build").form__label Корпус
+                                            input(type="text", name="build", id="build").form__input
+                                        .form__col
+                                            label(for="flat").form__label Квартира
+                                            input(type="text", name="flat", id="flat").form__input
+                                        .form__col
+                                            label(for="floor").form__label Этаж
+                                            input(type="text", name="floor", id="floor").form__input
+                                    //- #3 end
+
+                                .form__col
+                                    label(for="comment").form__label Комментарий
+                                    textarea(name="comment", rows="6", id="comment").form__textarea
+                                    .form__set
+                                        .form__puy
+                                            .form__change
+                                                input(type="radio", name="card", id="change").form__input 
+                                                label(for="change").form__label Потребуется сдача
+                                            .form__card
+                                                input(type="radio", name="card", id="card").form__input
+                                                label(for="card").form__label Оплата по карте
+                                        .form__call
+                                            input(type="checkbox", name="", id="call").form__input
+                                            label(for="call").form__label Не перезванивать
+                            .form__row
+                                .form__col
+
+                                .form__col
+                                    .form__order
+                                        button(type="submit").btn.btn__order Заказать
+                                    .form__clean
+                                        button(type="reset").btn.btn__reset Очистить
+            //- section form end
+
+            //- section contact
+            section.sect.cont
+            //- section contact end
+
+            //- footer
+            include modules/_footer
+            //- footer end
+
+        //- one page scroll end
+
+    //- page main content end

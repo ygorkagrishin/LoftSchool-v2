@@ -1,0 +1,30 @@
+.btn
+    display inline-block
+    height 35px 
+    padding 0 16px
+    font 13px / 33px baseFontMedium 
+    text-transform uppercase
+    color primaryWhiteColor
+    border-radius 5px
+    cursor pointer
+    &__order
+        background-color primaryOrangeColor 
+        &:hover
+            background-color primaryDarkOrangeColor
+    &__more
+        background-color primaryBlackColor 
+        &:hover
+            background-color primaryDarkColor
+    &__reset
+        padding 0 20px
+        text-transform inherit
+        color rgba(primaryWhiteColor,.7)
+        &:hover
+            color primaryWhiteColor
+    &__arrow
+        cursor pointer
+        &:hover
+            svg 
+                width 32px !important 
+                height 18px !important
+                transition all .1s
