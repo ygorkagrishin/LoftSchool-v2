@@ -18,27 +18,49 @@
 .hero__row
     display flex
     padding-bottom 10px
+    @media (orientation portrait) and (max-width 1024px)
+        width 100%
+        max-width 470px
+        margin 0 auto
+        padding 0
+        flex-direction column
+        text-align center
 
 .hero__col
     flex 1 0 50%
+    @media (orientation portrait) and (max-width 1024px)
+        flex 1 0 100%
 
 .hero__pic
     position relative
     padding 0px 14px 0 50px
+    @media (orientation portrait) and (max-width 1024px)
+        padding 0 0 0 3.5% 
+
+.hero__burger
+    @media (orientation portrait) and (max-width 1024px)
+        width 90%
 
 .hero__drops
     position absolute
     top -7%
     left 1%
     width 100% !important 
+    @media (orientation portrait) and (max-width 1024px)
+        top -8%
+        left 0%
 
 .hero__desc
     padding-left 10px
+    @media (orientation portrait) and (max-width 1024px)
+        padding 0
 
 .hero__title
     margin 42px 0 18px 0
     line-height 85px
     color primaryYellowColor
+    @media (orientation portrait) and (max-width 1024px)
+        margin 3% 0
     & + span 
         font 65px / 60px baseFontTitle
         letter-spacing -1.5px
@@ -53,16 +75,22 @@
     background url('images/content/we/bg.png') no-repeat center / cover
 
 .we__title
-    margin 74px 0 86px
+    margin 74px 0 86px 0
     text-align center
+    @media (orientation portrait) and (max-width 1024px)
+        margin 16% 0 23% 0
 
 .we__row
     display flex
     justify-content space-between
+    @media (orientation portrait) and (max-width 1024px)
+        padding 0 12px
 
 .we__col
     max-width 300px
     text-align center
+    @media (orientation portrait) and (max-width 1024px)
+        max-width 230px
 
 .we__desc
     h3 
@@ -89,6 +117,9 @@
     min-height 480px
     display flex
     align-items center
+    @media (orientation portrait) and (max-width 1024px)
+        flex-direction column
+        text-align center
 
 .burger__list
     position absolute
@@ -141,6 +172,8 @@
 .burger__cont
     padding-left 10px
     align-self flex-start
+    @media (orientation portrait) and (max-width 1024px)
+        align-self center
 
 .burger__desc
     margin 0 0 20px 0
@@ -202,20 +235,33 @@
     height 100vh
     padding-left 81px
     background-color rgba(primaryBlackColor,.9)
+    @media (orientation portrait) and (max-width 1024px)
+        max-width 100%
+        padding 0
 
 .team__title
     padding 84px 0 73px 0
     color primaryYellowColor
+    @media (orientation portrait) and (max-width 1024px)
+        padding 15.4% 0 16.3% 0
 
 .team__acco
     max-width 380px
+    @media (orientation portrait) and (max-width 1024px)
+        max-width 345px
+        margin 0 auto
+        text-align center
 
 .team__sect:not(:last-child)
     margin-bottom 22px
+    @media (orientation portrait) and (max-width 1024px)
+        margin-bottom 8.5%
 
 .team__name
     font 14px / 28px baseFontMainTitle
     color primaryYellowColor
+    @media (orientation portrait) and (max-width 1024px)
+        font-size 24px
     span 
         cursor pointer
 
@@ -228,12 +274,17 @@
 .team__wrap
     display flex    
     padding 10px 16px
+    @media (orientation portrait) and (max-width 1024px)
+        flex-direction column
+        padding 4% 0 0 0
 
 .team__pic
     width 100px
     height 100px
     overflow hidden
     border-radius 50%
+    @media (orientation portrait) and (max-width 1024px)
+        margin 0 auto
 
 .team__img
     transform scale(1.4) translate(-3px,11px)
@@ -242,10 +293,15 @@
     max-width 240px
     padding-left 23px
     color primaryWhiteColor
+    @media (orientation portrait) and (max-width 1024px)
+        max-width 100%
+        padding 0
     h4 
         margin-bottom 16px
         line-height 14px
         font-family baseFontBold
+        @media (orientation portrait) and (max-width 1024px)
+            margin 5.5% 0 4.5% 0
 
 .team__sect.collapsed
     .team__name
@@ -262,9 +318,15 @@
     position absolute
     top 16.5%
     left 8.7%
+    z-index $z-index3
     color primaryWhiteColor
+    @media (orientation portrait) and (max-width 1024px)
+        top 10.5%
+        left 2.7%
 
 .menu__acco
+    position relative
+    z-index $z-index2
     display flex
     justify-content flex-end
 
@@ -288,6 +350,9 @@
     white-space nowrap
     color primaryYellowColor
     transform rotate(-90deg)
+    @media (orientation portrait) and (max-width 1024px)
+        top 89.5%
+        left 4%
 
 .menu__cont
     max-width 541px
@@ -319,13 +384,17 @@
     height 100%
     padding 43px 30px 50px 19px
     background-color rgba(primaryBlackColor,.7)
+    @media (orientation portrait) and (max-width 1024px)
+        padding 7.5% 12%
 
 .review__col
     position relative
     z-index $z-index2
     flex 1 0 25%
     filter grayscale(100)
-    
+    @media (orientation portrait) and (max-width 1024px)
+        flex 1 0 50%
+        text-align center
     
 .review__col:hover .review__hover
     display block
@@ -333,9 +402,13 @@
 .review__desc
     margin-bottom 12px
     color primaryWhiteColor
+    @media (orientation portrait) and (max-width 1024px)
+        margin-bottom 8%
     h3    
         margin-bottom 16px
         font 14px / 24px baseFontMainTitle 
+        @media (orientation portrait) and (max-width 1024px)
+            margin-bottom 2%
 
 .review__modal
     position absolute
@@ -355,8 +428,13 @@
     padding 22px 20px
     background-color primaryWhiteColor
     border-radius 5px
-    h4
+    @media (orientation portrait) and (max-width 1024px)
+        max-width 472px
+        padding 3% 2.5%
+    h4 
         @extend .review__desc h3
+        @media (orientation portrait) and (max-width 1024px)
+            margin-bottom 4%
 
 .review__close
     position absolute
@@ -374,9 +452,22 @@
     margin 84px 0 76px 0
     text-align center
     color primaryYellowColor
+    @media (orientation portrait) and (max-width 1024px)
+        margin 16% 0 10% 0
+
+.form__form
+    @media (orientation portrait) and (max-width 1024px)
+        max-width 475px
+        margin 0 auto    
 
 .form__field
     margin-bottom 12px !important
+    @media (orientation portrait) and (max-width 1024px)
+        margin-bottom 6.8% !important
+        flex-direction column
+        // Переключаем margin у основных блоков
+        & > .form__col:first-child
+            margin 0 0 2.8% 0
 
 .form__row
     display flex
@@ -447,6 +538,10 @@
 
 .form__input[type="checkbox"]:checked + label::before
     background-position center
+
+.form__ghost
+    @media (orientation portrait) and (max-width 1024px)
+        display none
 
 .form__order,
 .form__clean

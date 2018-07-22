@@ -12,18 +12,20 @@ block content
         .wrapper
 
             //- section hero
-            section.sect.hero
+            //- section.sect.hero
                 .container
                     include modules/_header
 
-                    .hero__row.hero__cont
-                        .hero__col.hero__pic
-                            img(src="images/content/hero/steam.png", alt="burger pic")
-                            svg(width="450.527px", height="241.369px", viewBox="0 0 450.527 241.369").hero__drops
-                                use(xlink:href="icons/sprite-svg.svg#drops")
-                        .hero__col.hero__desc
-                            h1.hero__title.sect__title Мы делаем 
-                            span натуральные бургеры
+                    .hero__row
+                        .hero__col
+                            .hero__pic
+                                img(src="images/content/hero/steam.png", alt="burger pic").hero__burger
+                                svg(width="450.527px", height="241.369px", viewBox="0 0 450.527 241.369").hero__drops
+                                    use(xlink:href="icons/sprite-svg.svg#drops")
+                        .hero__col
+                            .hero__desc
+                                h1.hero__title.sect__title Мы делаем 
+                                span натуральные бургеры
                     .hero__arrow
                         button(type="button").btn.btn__arrow
                             svg(width="28px", height="14px", viewBox="0 0 28.685 14.479")
@@ -293,7 +295,7 @@ block content
             //- sectino burgers end
 
             //- section team
-            section.sect.team
+            //- section.sect.team
                 .team__row
                     .team__col
                         .sect__cont
@@ -374,7 +376,7 @@ block content
             //- section team end
 
             //- section menu
-            section.sect.menu
+            //- section.sect.menu
                 h2.sect__title.menu__title Меню
 
                 .menu__acco#menu
@@ -437,7 +439,7 @@ block content
             //- section menu end
 
             //- section review
-            section.sect.review
+            //- section.sect.review
                 .review__row.review__reviews
                     //- #1
                     .review__col.review__review(style="background: url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover")
@@ -665,7 +667,7 @@ block content
             //- section review end
 
             //- section form
-            section.sect.form
+            //- section.sect.form
                 .container
                     .sect__cont
                         h2.form__title.sect__title Закажите доставку
@@ -721,7 +723,7 @@ block content
                                             input(type="checkbox", name="", id="call").form__input
                                             label(for="call").form__label Не перезванивать
                             .form__row
-                                .form__col
+                                .form__col.form__ghost
 
                                 .form__col
                                     .form__order

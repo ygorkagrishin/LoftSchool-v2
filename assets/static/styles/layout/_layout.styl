@@ -71,16 +71,22 @@ body
     margin 0 auto
     padding 0 10px
     align-items center
+    @media (orientation portrait) and (max-width 1024px)
+        align-items flex-start
 
 .sect__cont
     width 100%
     min-height 650px
+    @media (orientation portrait) and (max-width 1024px)
+        min-height auto
 
 .sect__title
     font-size 72px
     line-height 64px
     font-family baseFontMainTitle 
     color primaryBlackColor
+    @media (orientation portrait) and (max-width 1024px)
+        text-align center
 
 .clearfix::after
     content ''
