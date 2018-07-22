@@ -103,6 +103,9 @@
 
 .burger
     background-color primaryYellowColor
+    .container
+        @media (orientation portrait) and (max-width 1024px)
+            align-items center
 
 .burger__carousel
     width 100%
@@ -111,17 +114,28 @@
 .burger__wrap
     display flex
 
+// Слишком много flexbox, с этим надо что то делать
 .burger__slide
     position relative
     flex 1 0 100%
-    min-height 480px
+
     display flex
     align-items center
+
+.burger__row    
+    display flex
+    align-items center
+    min-height 480px
     @media (orientation portrait) and (max-width 1024px)
+        max-width 600px
+        min-height 750px
+        margin 0 auto
+        padding-top 9.5%
+
         flex-direction column
         text-align center
 
-.burger__list
+.burger__hover
     position absolute
     top 0
     left 100%
@@ -130,6 +144,9 @@
     padding 20px 10px 20px 14px
     background-color rgba(primaryWhiteColor,.9) 
     border-radius 5px
+    @media (orientation portrait) and (max-width 1024px)
+        width 320px
+        padding-right 58px
     li 
         display flex
         align-items center
@@ -137,6 +154,17 @@
             margin-bottom 14px
     svg 
         flex 1
+
+.burger__close
+    position absolute
+    top 0
+    right 0
+    z-index $z-index3
+    display none
+    @media (orientation portrait) and (max-width 1024px)
+        display inline-block
+        top 5.5%
+        right 6.5%
 
 .burger__comp
     position absolute
@@ -149,11 +177,14 @@
     background-color primaryOrangeColor
     border-radius 5px
     cursor pointer
+    @media (orientation portrait) and (max-width 1024px)
+        top 0
+        left 18.5%
     p 
         font 14px / 14px baseFontMainTitle 
         color primaryWhiteColor
     
-.burger__comp:hover .burger__list
+.burger__comp:hover .burger__hover
     display block
 
 .burger__product
@@ -165,26 +196,48 @@
 .burger__weight
     flex 1
 
-.burger__pic,
-.burger__cont
+.burger__col
     width 50%
+    @media (orientation portrait) and (max-width 1024px)
+        width 100%
 
-.burger__cont
-    padding-left 10px
+.burger__pic
+    @media (orientation portrait) and (max-width 1024px)
+        margin-bottom 3%
+
+.burger__burger
+    @media (orientation portrait) and (max-width 1024px)
+        width 85%
+
+.burger__col_align_start
     align-self flex-start
     @media (orientation portrait) and (max-width 1024px)
         align-self center
 
+.burger__cont
+    padding-left 10px
+    @media (orientation portrait) and (max-width 1024px)
+        align-self center
+
 .burger__desc
-    margin 0 0 20px 0
+    margin-bottom 20px
     color primaryWhiteColor
+    @media (orientation portrait) and (max-width 1024px)
+        margin-bottom 5%
     h2 
         margin-bottom 36px
         font 72px / 64px baseFontMainTitle
+        @media (orientation portrait) and (max-width 1024px)
+            max-width 75%
+            margin 0 auto
+            padding-bottom 20px
 
 .burger__order
     display flex
     align-items flex-end
+    @media (orientation portrait) and (max-width 1024px)
+        max-width 336px
+        margin 0 auto
 
 .burger__price
     margin-right 26px
@@ -199,6 +252,11 @@
     left 0
     text-align center
     color primaryWhiteColor
+    @media (orientation portrait) and (max-width 1024px)
+        top 0
+        right 18.5%
+        bottom auto
+        left auto
     span 
         position absolute
         top 33%
@@ -208,19 +266,25 @@
         font-family baseFontMainTitle
         line-height 14px
 
-.burger__prev
-    position absolute
-    top 48.5%
-    left 3.5%
-    z-index $z-index1
-    transform rotate(90deg)
-
+.burger__prev,
 .burger__next
     position absolute
     top 48.5%
-    right 3.5%
     z-index $z-index1
+    @media (orientation portrait) and (max-width 1024px)
+        top 49%
+
+.burger__prev
+    left 3.5%
+    transform rotate(90deg)
+    @media (orientation portrait) and (max-width 1024px)
+        left 4.5%
+
+.burger__next
+    right 3.5%
     transform rotate(-90deg)
+    @media (orientation portrait) and (max-width 1024px)
+        right 4.5%
 
 .team
     background url('images/content/team/bg.png') no-repeat top center / cover

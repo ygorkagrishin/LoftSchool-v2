@@ -12,7 +12,7 @@ block content
         .wrapper
 
             //- section hero
-            //- section.sect.hero
+            section.sect.hero
                 .container
                     include modules/_header
 
@@ -79,64 +79,71 @@ block content
                                     svg(width="46px", height="42px", viewBox="0 0 45.748 44.625")
                                         use(xlink:href="icons/sprite-svg.svg#burger")
                                     p Состав
-                                    ul.burger__list
-                                        //- #1 
-                                        li
-                                            svg(width="44px", height="39px", viewBox="0 0 44 39.212")
-                                                use(xlink:href="icons/sprite-svg.svg#beef")
-                                            .burger__product Говядина
-                                            .burger__weight 300г
-                                        //- #1end
-                                        //- #2
-                                        li
-                                            svg(width="38px" height="30px" viewBox="0 0 48 30.317")
-                                                use(xlink:href="icons/sprite-svg.svg#buns")
-                                            .burger__product Булочки
-                                            .burger__weight 100г
-                                        //- #2end
-                                        //- #3
-                                        li
-                                            svg(width="38px" height="38px" viewBox="0 0 38 38.638")
-                                                use(xlink:href="icons/sprite-svg.svg#salad")
-                                            .burger__product Зелень
-                                            .burger__weight 70г
-                                        //- #3end
-                                        //- #4
-                                        li
-                                            svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
-                                                use(xlink:href="icons/sprite-svg.svg#sauce")
-                                            .burger__product Соус
-                                            .burger__weight 150г
-                                        //- #4end
-                                        //- #5
-                                        li
-                                            svg(width="43px", height="37px", viewBox="0 0 42 37.754")
-                                                use(xlink:href="icons/sprite-svg.svg#cucumber")
-                                            .burger__product Овощи
-                                            .burger__weight 200г
-                                        //- #5end
-                                        //- #6
-                                        li
-                                            svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
-                                                use(xlink:href="icons/sprite-svg.svg#cheese")
-                                            .burger__product Сыр
-                                            .burger__weight 80г
-                                        //- #6end
-                                .burger__pic
-                                    img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic")
-                                .burger__cont
-                                    .burger__desc
-                                        h2 Dark Beef Burger
-                                        p
-                                            | Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
-                                            | тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
-                                            | луком, салатом и соусом гриль теперь 
-                                            | с добавлением экзотического соуса чураско.
-                                    .burger__order
-                                        .burger__price
-                                            span 500
-                                            | рублей
-                                        a(href="javascript:void(0);").btn.btn__order Заказать
+                                    .burger__hover
+                                        ul.burger__list
+                                            //- #1 
+                                            li
+                                                svg(width="44px", height="39px", viewBox="0 0 44 39.212")
+                                                    use(xlink:href="icons/sprite-svg.svg#beef")
+                                                .burger__product Говядина
+                                                .burger__weight 300г
+                                            //- #1end
+                                            //- #2
+                                            li
+                                                svg(width="38px" height="30px" viewBox="0 0 48 30.317")
+                                                    use(xlink:href="icons/sprite-svg.svg#buns")
+                                                .burger__product Булочки
+                                                .burger__weight 100г
+                                            //- #2end
+                                            //- #3
+                                            li
+                                                svg(width="38px" height="38px" viewBox="0 0 38 38.638")
+                                                    use(xlink:href="icons/sprite-svg.svg#salad")
+                                                .burger__product Зелень
+                                                .burger__weight 70г
+                                            //- #3end
+                                            //- #4
+                                            li
+                                                svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
+                                                    use(xlink:href="icons/sprite-svg.svg#sauce")
+                                                .burger__product Соус
+                                                .burger__weight 150г
+                                            //- #4end
+                                            //- #5
+                                            li
+                                                svg(width="43px", height="37px", viewBox="0 0 42 37.754")
+                                                    use(xlink:href="icons/sprite-svg.svg#cucumber")
+                                                .burger__product Овощи
+                                                .burger__weight 200г
+                                            //- #5end
+                                            //- #6
+                                            li
+                                                svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
+                                                    use(xlink:href="icons/sprite-svg.svg#cheese")
+                                                .burger__product Сыр
+                                                .burger__weight 80г
+                                            //- #6end
+                                        button(type="button").burger__close
+                                            svg(width="18px", height="18px", viewBox="0 0 14.988 14.988")
+                                                use(xlink:href="icons/sprite-svg.svg#close")
+                                .burger__row
+                                    .burger__col
+                                        .burger__pic
+                                            img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic").burger__burger
+                                    .burger__col.burger__col_align_start
+                                        .burger__cont
+                                            .burger__desc
+                                                h2 Dark Beef Burger
+                                                p
+                                                    | Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
+                                                    | тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
+                                                    | луком, салатом и соусом гриль теперь 
+                                                    | с добавлением экзотического соуса чураско.
+                                            .burger__order
+                                                .burger__price
+                                                    span 500
+                                                    | рублей
+                                                a(href="javascript:void(0);").btn.btn__order Заказать
                                 .burger__kkal
                                     svg(width="60px", height="60px", viewBox="0 0 60 60.178")
                                         use(xlink:href="icons/sprite-svg.svg#kkal")
@@ -193,21 +200,24 @@ block content
                                             .burger__product Сыр
                                             .burger__weight 80г
                                         //- #6end
-                                .burger__pic
-                                    img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic")
-                                .burger__cont
-                                    .burger__desc
-                                        h2 Dark Beef Burger
-                                        p
-                                            | Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
-                                            | тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
-                                            | луком, салатом и соусом гриль теперь 
-                                            | с добавлением экзотического соуса чураско.
-                                    .burger__order
-                                        .burger__price
-                                            span 500
-                                            | рублей
-                                        a(href="javascript:void(0);").btn.btn__order Заказать
+                                .burger__row
+                                    .burger__col
+                                        .burger__pic
+                                            img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic").burger__burger
+                                    .burger__col.burger__col_align_start
+                                        .burger__cont
+                                            .burger__desc
+                                                h2 Dark Beef Burger
+                                                p
+                                                    | Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
+                                                    | тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
+                                                    | луком, салатом и соусом гриль теперь 
+                                                    | с добавлением экзотического соуса чураско.
+                                            .burger__order
+                                                .burger__price
+                                                    span 500
+                                                    | рублей
+                                                a(href="javascript:void(0);").btn.btn__order Заказать
                                 .burger__kkal
                                     svg(width="60px", height="60px", viewBox="0 0 60 60.178")
                                         use(xlink:href="icons/sprite-svg.svg#kkal")
@@ -264,21 +274,24 @@ block content
                                             .burger__product Сыр
                                             .burger__weight 80г
                                         //- #6end
-                                .burger__pic
-                                    img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic")
-                                .burger__cont
-                                    .burger__desc
-                                        h2 Dark Beef Burger
-                                        p
-                                            | Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
-                                            | тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
-                                            | луком, салатом и соусом гриль теперь 
-                                            | с добавлением экзотического соуса чураско.
-                                    .burger__order
-                                        .burger__price
-                                            span 500
-                                            | рублей
-                                        a(href="javascript:void(0);").btn.btn__order Заказать
+                                .burger__row
+                                    .burger__col
+                                        .burger__pic
+                                            img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic").burger__burger
+                                    .burger__col.burger__col_align_start
+                                        .burger__cont
+                                            .burger__desc
+                                                h2 Dark Beef Burger
+                                                p
+                                                    | Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
+                                                    | тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
+                                                    | луком, салатом и соусом гриль теперь 
+                                                    | с добавлением экзотического соуса чураско.
+                                            .burger__order
+                                                .burger__price
+                                                    span 500
+                                                    | рублей
+                                                a(href="javascript:void(0);").btn.btn__order Заказать
                                 .burger__kkal
                                     svg(width="60px", height="60px", viewBox="0 0 60 60.178")
                                         use(xlink:href="icons/sprite-svg.svg#kkal")
@@ -295,7 +308,7 @@ block content
             //- sectino burgers end
 
             //- section team
-            //- section.sect.team
+            section.sect.team
                 .team__row
                     .team__col
                         .sect__cont
@@ -376,7 +389,7 @@ block content
             //- section team end
 
             //- section menu
-            //- section.sect.menu
+            section.sect.menu
                 h2.sect__title.menu__title Меню
 
                 .menu__acco#menu
@@ -439,7 +452,7 @@ block content
             //- section menu end
 
             //- section review
-            //- section.sect.review
+            section.sect.review
                 .review__row.review__reviews
                     //- #1
                     .review__col.review__review(style="background: url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover")
@@ -667,7 +680,7 @@ block content
             //- section review end
 
             //- section form
-            //- section.sect.form
+            section.sect.form
                 .container
                     .sect__cont
                         h2.form__title.sect__title Закажите доставку
