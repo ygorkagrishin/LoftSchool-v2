@@ -5,6 +5,8 @@
 
 @import 'layout/_layout.styl'
 
+@import 'components/_buttons.styl'
+
 /* ***************
     main styles
  ************** */
@@ -25,6 +27,9 @@
         padding 0
         flex-direction column
         text-align center
+    @media (orientation portrait) and (max-width 480px)
+        max-width 370px
+        padding-top 8%
 
 .hero__col
     flex 1 0 50%
@@ -36,6 +41,8 @@
     padding 0px 14px 0 50px
     @media (orientation portrait) and (max-width 1024px)
         padding 0 0 0 3.5% 
+    @media (orientation portrait) and (max-width 480px)
+        padding 0 0 0 4.5%
 
 .hero__burger
     @media (orientation portrait) and (max-width 1024px)
@@ -49,6 +56,12 @@
     @media (orientation portrait) and (max-width 1024px)
         top -8%
         left 0%
+    @media (orientation portrait) and (max-width 480px)
+        top -17%
+        left 1%
+        width 98% !important
+    @media (orientation portrait) and (max-width 465px)
+        display none
 
 .hero__desc
     padding-left 10px
@@ -61,15 +74,23 @@
     color primaryYellowColor
     @media (orientation portrait) and (max-width 1024px)
         margin 3% 0
+    @media (orientation portrait) and (max-width 480px)
+        margin 11% 0 1% 0
+        font-size 63px
+        line-height 60px
     & + span 
         font 65px / 60px baseFontTitle
         letter-spacing -1.5px
         color primaryWhiteColor
+        @media (orientation portrait) and (max-width 480px)
+            font-size 54px
 
 .hero__arrow
     width 100%
     margin-bottom 26px
     text-align center
+    @media (orientation portrait) and (max-width 480px)
+        margin-bottom 4%
 
 .we
     background url('images/content/we/bg.png') no-repeat center / cover
@@ -79,33 +100,57 @@
     text-align center
     @media (orientation portrait) and (max-width 1024px)
         margin 16% 0 23% 0
+    @media (orientation portrait) and (max-width 480px)
+        margin 10% 0 16% 0
 
 .we__row
     display flex
     justify-content space-between
     @media (orientation portrait) and (max-width 1024px)
         padding 0 12px
+    @media (orientation portrait) and (max-width 480px)
+        flex-direction column
+        padding 0 0 0 4%
 
 .we__col
     max-width 300px
     text-align center
     @media (orientation portrait) and (max-width 1024px)
         max-width 230px
+    @media (orientation portrait) and (max-width 480px)
+        display flex
+        max-width 100%
+        justify-content space-between
+        &:not(:last-child)
+            margin-bottom 10%
 
 .we__desc
+    @media (orientation portrait) and (max-width 480px)
+        max-width 320px
+        text-align left
     h3 
         margin 20px 0 15px 0
         font 24px / 28px baseFontTitle 
+        @media (orientation portrait) and (max-width 480px)
+            margin 0 0 4% 0
+
+.we__hand
+    @media (orientation portrait) and (max-width 480px)
+        margin-bottom 6%
 
 .we__natural
     h3
         margin 32px 0 8px 0
+        @media (orientation portrait) and (max-width 480px)
+            margin 5% 0 4% 0
 
 .burger
     background-color primaryYellowColor
     .container
         @media (orientation portrait) and (max-width 1024px)
             align-items center
+        @media (orientation portrait) and (max-width 480px)
+            align-items flex-start
 
 .burger__carousel
     width 100%
@@ -121,6 +166,8 @@
 
     display flex
     align-items center
+    @media (orientation portrait) and (max-width 480px)
+        margin-top 11%
 
 .burger__row    
     display flex
@@ -130,10 +177,12 @@
         max-width 600px
         min-height 750px
         margin 0 auto
-        padding-top 9.5%
 
         flex-direction column
         text-align center
+    @media (orientation portrait) and (max-width 480px)
+        min-height auto
+        padding-top 24%
 
 .burger__hover
     position absolute
@@ -180,6 +229,8 @@
     @media (orientation portrait) and (max-width 1024px)
         top 0
         left 18.5%
+    @media (orientation portrait) and (max-width 480px)
+        left 0
     p 
         font 14px / 14px baseFontMainTitle 
         color primaryWhiteColor
@@ -204,10 +255,14 @@
 .burger__pic
     @media (orientation portrait) and (max-width 1024px)
         margin-bottom 3%
+    @media (orientation portrait) and (max-width 480px)
+        margin-bottom 1%
 
 .burger__burger
     @media (orientation portrait) and (max-width 1024px)
         width 85%
+    @media (orientation portrait) and (max-width 480px)
+        width 88%
 
 .burger__col_align_start
     align-self flex-start
@@ -224,6 +279,8 @@
     color primaryWhiteColor
     @media (orientation portrait) and (max-width 1024px)
         margin-bottom 5%
+    @media (orientation portrait) and (max-width 480px)
+        margin-bottom 3%
     h2 
         margin-bottom 36px
         font 72px / 64px baseFontMainTitle
@@ -231,6 +288,10 @@
             max-width 75%
             margin 0 auto
             padding-bottom 20px
+        @media (orientation portrait) and (max-width 480px)
+            padding-bottom 3%
+            font-size 50px
+            line-height 60px
 
 .burger__order
     display flex
@@ -238,13 +299,20 @@
     @media (orientation portrait) and (max-width 1024px)
         max-width 336px
         margin 0 auto
+    @media (orientation portrait) and (max-width 480px)
+        max-width 292px
 
 .burger__price
     margin-right 26px
     font 30px / 1 baseFontMainTitle
     color primaryOrangeColor
+    @media (orientation portrait) and (max-width 480px)
+        margin-right 11%
+        font-size 24px
     span 
         font 72px / 1 baseFontMainTitle 
+        @media (orientation portrait) and (max-width 480px)
+            font-size 50px
 
 .burger__kkal
     position absolute
@@ -257,6 +325,8 @@
         right 18.5%
         bottom auto
         left auto
+    @media (orientation portrait) and (max-width 480px)
+        right 0
     span 
         position absolute
         top 33%
@@ -273,18 +343,24 @@
     z-index $z-index1
     @media (orientation portrait) and (max-width 1024px)
         top 49%
+    @media (orientation portrait) and (max-width 480px)
+        top 46.5%
 
 .burger__prev
     left 3.5%
     transform rotate(90deg)
     @media (orientation portrait) and (max-width 1024px)
         left 4.5%
+    @media (orientation portrait) and (max-width 480px)
+        left 0
 
 .burger__next
     right 3.5%
     transform rotate(-90deg)
     @media (orientation portrait) and (max-width 1024px)
         right 4.5%
+    @media (orientation portrait) and (max-width 480px)
+        right 0
 
 .team
     background url('images/content/team/bg.png') no-repeat top center / cover
@@ -308,6 +384,8 @@
     color primaryYellowColor
     @media (orientation portrait) and (max-width 1024px)
         padding 15.4% 0 16.3% 0
+    @media (orientation portrait) and (max-width 480px)
+        padding 11.4% 0 18.3% 0
 
 .team__acco
     max-width 380px
@@ -391,18 +469,27 @@
 .menu__acco
     position relative
     z-index $z-index2
+
     display flex
+    height 100vh
+
     justify-content flex-end
+    @media (orientation portrait) and (max-width 480px)
+        flex-direction column
 
 .menu__sect
     display flex
-    height 100vh
+    @media (orientation portrait) and (max-width 480px)
+        flex-direction column
 
 .menu__pannel
     position relative
     width 80px
     z-index $z-index3
     cursor pointer
+    @media (orientation portrait) and (max-width 480px)
+        width 100%
+        padding 1% 3%
 
 .menu__name
     position absolute
@@ -417,6 +504,10 @@
     @media (orientation portrait) and (max-width 1024px)
         top 89.5%
         left 4%
+    @media (orientation portrait) and (max-width 480px)
+        position static
+        font-size 36px
+        transform rotate(0deg)
 
 .menu__cont
     max-width 541px
@@ -426,12 +517,18 @@
 .menu__desc
     padding 56px 34px
     color primaryWhiteColor
+    @media (orientation portrait) and (max-width 480px)
+        padding 5%
 
 .menu__sect.collapsed
     .menu__name
         color primaryWhiteColor
     .menu__cont
         max-width 0px
+        @media (orientation portrait) and (max-width 480px)
+            max-width 100%
+            height 0
+        
 
 .review__row
     display flex
@@ -450,6 +547,8 @@
     background-color rgba(primaryBlackColor,.7)
     @media (orientation portrait) and (max-width 1024px)
         padding 7.5% 12%
+    @media (orientation portrait) and (max-width 480px)
+        padding 0 12%
 
 .review__col
     position relative
@@ -462,6 +561,11 @@
     
 .review__col:hover .review__hover
     display block
+    @media (orientation portrait) and (max-width 480px)
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
 
 .review__desc
     margin-bottom 12px
@@ -473,6 +577,19 @@
         font 14px / 24px baseFontMainTitle 
         @media (orientation portrait) and (max-width 1024px)
             margin-bottom 2%
+        @media (orientation portrait) and (max-width 480px)
+            font-size 24px
+            line-height 28px
+    p
+        @media (orientation portrait) and (max-width 480px)
+            display none
+
+.review__btn
+    @media (orientation portrait) and (max-width 480px)
+        display none
+    &_visibility_modile
+        @media (orientation portrait) and (max-width 480px)
+            display inline-block
 
 .review__modal
     position absolute
@@ -495,10 +612,16 @@
     @media (orientation portrait) and (max-width 1024px)
         max-width 472px
         padding 3% 2.5%
+    @media (orientation portrait) and (max-width 480px)
+        max-width 460px
+        padding 4% 4.5%
     h4 
         @extend .review__desc h3
         @media (orientation portrait) and (max-width 1024px)
             margin-bottom 4%
+        @media (orientation portrait) and (max-width 480px)
+            margin 1% 0 3% 0
+            font-size 14px
 
 .review__close
     position absolute
@@ -518,6 +641,8 @@
     color primaryYellowColor
     @media (orientation portrait) and (max-width 1024px)
         margin 16% 0 10% 0
+    @media (orientation portrait) and (max-width 480px)
+        margin 12% 0 4.6% 0
 
 .form__form
     @media (orientation portrait) and (max-width 1024px)
@@ -529,7 +654,7 @@
     @media (orientation portrait) and (max-width 1024px)
         margin-bottom 6.8% !important
         flex-direction column
-        // Переключаем margin у основных блоков
+        // Переключаем margin у главных колонок
         & > .form__col:first-child
             margin 0 0 2.8% 0
 
@@ -544,6 +669,8 @@
 
 .form__col:not(:last-child)
     margin-right 20px
+    @media (orientation portrait) and (max-width 480px)
+        margin-right 2.5%
 
 .form__label
     display block
@@ -558,16 +685,35 @@
 .form__input[type="text"]
     padding 9px 20px 
 
+.form__flat
+    @media (orientation portrait) and (max-width 480px)
+        margin 0 !important
+
+.form__floor
+    @media (orientation portrait) and (max-width 480px)
+        display none
+
 .form__textarea
     padding 6px 20px
+    @media (orientation portrait) and (max-width 1024px)
+        padding 7px 20px 
 
 .form__set
     margin-top 7px
+    color primaryWhiteColor
+    .form__label
+        margin-bottom 0
+    @media (orientation portrait) and (max-width 480px)
+        margin-top 6%
+        text-align center
 
 .form__puy
     display flex
     margin-bottom 15px
     align-items center
+    @media (orientation portrait) and (max-width 480px)
+        margin-bottom 6.2%
+        justify-content center
 
 .form__change
     margin-right 20px
@@ -607,15 +753,19 @@
     @media (orientation portrait) and (max-width 1024px)
         display none
 
-.form__order,
-.form__clean
-    float left
+.form__order
+    @media (orientation portrait) and (max-width 480px)
+        padding 1% 0
+        text-align center
+
+.form__btn_type_submit
+    @media (orientation portrait) and (max-width 480px)
+        margin-left 3%
 
 /* ***************
     main styles end
  ************** */
 
-@import 'components/_buttons.styl'
 @import 'components/_header.styl'
 @import 'components/_nav.styl'
 @import 'components/_footer.styl'
