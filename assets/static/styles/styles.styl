@@ -41,12 +41,19 @@
     padding 0px 14px 0 50px
     @media (orientation portrait) and (max-width 1024px)
         padding 0 0 0 3.5% 
+    @media (orientation landscape) and (max-width 1024px)
+        text-align center
     @media (orientation portrait) and (max-width 480px)
         padding 0 0 0 4.5%
+    @media (orientation landscape) and (max-width 960px)
+        text-align right
 
 .hero__burger
-    @media (orientation portrait) and (max-width 1024px)
+    @media (orientation portrait) and (max-width 1024px),
+    (orientation landscape) and (max-width 1024px)
         width 90%
+    @media (orientation landscape) and (max-width 960px)
+        width 80%
 
 .hero__drops
     position absolute
@@ -56,10 +63,18 @@
     @media (orientation portrait) and (max-width 1024px)
         top -8%
         left 0%
+    @media (orientation landscape) and (max-width 1024px)
+        top -11%
+        left 6%
+        width 90% !important
     @media (orientation portrait) and (max-width 480px)
         top -17%
         left 1%
         width 98% !important
+    @media (orientation landscape) and (max-width 960px)
+        top -28%
+        left 23%
+        width 75% !important
     @media (orientation portrait) and (max-width 465px)
         display none
 
@@ -74,16 +89,31 @@
     color primaryYellowColor
     @media (orientation portrait) and (max-width 1024px)
         margin 3% 0
+    @media (orientation landscape) and (max-width 1024px)
+        margin-bottom 12px
+        font-size 68px
+        line-height 80px
     @media (orientation portrait) and (max-width 480px)
         margin 11% 0 1% 0
         font-size 63px
         line-height 60px
+    @media (orientation landscape) and (max-width 960px)
+        font-size 50px
+        line-height 1
     & + span 
         font 65px / 60px baseFontTitle
         letter-spacing -1.5px
         color primaryWhiteColor
+        @media (orientation landscape) and (max-width 1024px)
+            font-size 52px
+            line-height 48px
         @media (orientation portrait) and (max-width 480px)
             font-size 54px
+        @media (orientation landscape) and (max-width 960px)
+            display inline-block
+            max-width 75%
+            font-size 38px
+            line-height 1
 
 .hero__arrow
     width 100%
@@ -91,7 +121,10 @@
     text-align center
     @media (orientation portrait) and (max-width 480px)
         margin-bottom 4%
-
+    @media (orientation landscape) and (max-width 960px)
+        svg
+            width 30% !important 
+            height 30% !important 
 .we
     background url('images/content/we/bg.png') no-repeat center / cover
 
@@ -102,6 +135,8 @@
         margin 16% 0 23% 0
     @media (orientation portrait) and (max-width 480px)
         margin 10% 0 16% 0
+    @media (orientation landscape) and (max-width 960px)
+        margin 5% 0
 
 .we__row
     display flex
@@ -123,6 +158,10 @@
         justify-content space-between
         &:not(:last-child)
             margin-bottom 10%
+    @media (orientation landscape) and (max-width 960px)
+        svg
+            width 25% !important
+            height 25% !important
 
 .we__desc
     @media (orientation portrait) and (max-width 480px)
@@ -133,6 +172,9 @@
         font 24px / 28px baseFontTitle 
         @media (orientation portrait) and (max-width 480px)
             margin 0 0 4% 0
+        @media (orientation landscape) and (max-width 960px)
+            font-size 22px
+            line-height 1
 
 .we__hand
     @media (orientation portrait) and (max-width 480px)
@@ -143,6 +185,8 @@
         margin 32px 0 8px 0
         @media (orientation portrait) and (max-width 480px)
             margin 5% 0 4% 0
+        @media (orientation landscape) and (max-width 960px)
+            margin-top 20px
 
 .burger
     background-color primaryYellowColor
@@ -229,8 +273,12 @@
     @media (orientation portrait) and (max-width 1024px)
         top 0
         left 18.5%
+    @media (orientation landscape) and (max-width 1024px)
+        left 2%
     @media (orientation portrait) and (max-width 480px)
         left 0
+    @media (orientation landscape) and (max-width 960px)
+        display none
     p 
         font 14px / 14px baseFontMainTitle 
         color primaryWhiteColor
@@ -255,11 +303,14 @@
 .burger__pic
     @media (orientation portrait) and (max-width 1024px)
         margin-bottom 3%
+    @media (orientation landscape) and (max-width 1024px)
+        text-align right
     @media (orientation portrait) and (max-width 480px)
         margin-bottom 1%
 
 .burger__burger
-    @media (orientation portrait) and (max-width 1024px)
+    @media (orientation portrait) and (max-width 1024px),
+    (orientation landscape) and (max-width 1024px)
         width 85%
     @media (orientation portrait) and (max-width 480px)
         width 88%
@@ -288,6 +339,10 @@
             max-width 75%
             margin 0 auto
             padding-bottom 20px
+        @media (orientation landscape) and (max-width 1024px)
+            margin 28px 0
+            font-size 64px
+            line-height 60px
         @media (orientation portrait) and (max-width 480px)
             padding-bottom 3%
             font-size 50px
@@ -306,11 +361,15 @@
     margin-right 26px
     font 30px / 1 baseFontMainTitle
     color primaryOrangeColor
+    @media (orientation landscape) and (max-width 1024px)
+        font-size 26px
     @media (orientation portrait) and (max-width 480px)
         margin-right 11%
         font-size 24px
     span 
         font 72px / 1 baseFontMainTitle 
+        @media (orientation landscape) and (max-width 1024px)
+            font-size 64px
         @media (orientation portrait) and (max-width 480px)
             font-size 50px
 
@@ -325,8 +384,12 @@
         right 18.5%
         bottom auto
         left auto
+    @media (orientation landscape) and (max-width 1024px)
+        left 2%
     @media (orientation portrait) and (max-width 480px)
         right 0
+    @media (orientation landscape) and (max-width 960px)
+        display none
     span 
         position absolute
         top 33%
@@ -351,6 +414,8 @@
     transform rotate(90deg)
     @media (orientation portrait) and (max-width 1024px)
         left 4.5%
+    @media (orientation landscape) and (max-width 1024px)
+        left 1.5%
     @media (orientation portrait) and (max-width 480px)
         left 0
 
@@ -359,6 +424,8 @@
     transform rotate(-90deg)
     @media (orientation portrait) and (max-width 1024px)
         right 4.5%
+    @media (orientation landscape) and (max-width 1024px)
+        right 1.5%
     @media (orientation portrait) and (max-width 480px)
         right 0
 
@@ -386,6 +453,8 @@
         padding 15.4% 0 16.3% 0
     @media (orientation portrait) and (max-width 480px)
         padding 11.4% 0 18.3% 0
+    @media (orientation landscape) and (max-width 960px)
+        padding 5% 0
 
 .team__acco
     max-width 380px
@@ -396,14 +465,16 @@
 
 .team__sect:not(:last-child)
     margin-bottom 22px
-    @media (orientation portrait) and (max-width 1024px)
+    @media (orientation portrait) and (max-width 1024px),
+    (orientation landscape) and (max-width 960px)
         margin-bottom 8.5%
-
 .team__name
     font 14px / 28px baseFontMainTitle
     color primaryYellowColor
     @media (orientation portrait) and (max-width 1024px)
         font-size 24px
+    @media (orientation landscape) and (max-width 960px)
+        line-height 1
     span 
         cursor pointer
 
@@ -427,9 +498,14 @@
     border-radius 50%
     @media (orientation portrait) and (max-width 1024px)
         margin 0 auto
+    @media (orientation landscape) and (max-width 960px)
+        width 70px
+        height 70px
 
 .team__img
     transform scale(1.4) translate(-3px,11px)
+    @media (orientation landscape) and (max-width 960px)
+        transform scale(1.4) translate(-2px, 7px)
 
 .team__desc
     max-width 240px
@@ -438,12 +514,16 @@
     @media (orientation portrait) and (max-width 1024px)
         max-width 100%
         padding 0
+    @media (orientation landscape) and (max-width 960px)
+        padding-left 3%
     h4 
         margin-bottom 16px
         line-height 14px
         font-family baseFontBold
         @media (orientation portrait) and (max-width 1024px)
             margin 5.5% 0 4.5% 0
+        @media (orientation landscape) and (max-width 960px)
+            margin-bottom 5%
 
 .team__sect.collapsed
     .team__name
@@ -669,6 +749,8 @@
 
 .form__col:not(:last-child)
     margin-right 20px
+    @media (orientation landscape) and (max-width 1024px)
+        margin-right 14px
     @media (orientation portrait) and (max-width 480px)
         margin-right 2.5%
 

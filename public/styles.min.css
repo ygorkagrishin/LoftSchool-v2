@@ -99,6 +99,12 @@ html {
   font-family: 'ubuntulight', sans-serif, arial;
   color: #2f3234;
 }
+@media (orientation: landscape) and (max-width: 960px) {
+  html {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
 body {
   position: relative;
 }
@@ -122,7 +128,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .container {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -133,7 +139,7 @@ body {
   width: 100%;
   min-height: 650px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .sect__cont {
     min-height: auto;
   }
@@ -153,6 +159,12 @@ body {
   .sect__title {
     font-size: 50px;
     line-height: 60px;
+  }
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .sect__title {
+    font-size: 42px;
+    line-height: 1;
   }
 }
 .clearfix::after {
@@ -265,14 +277,29 @@ textarea {
     padding: 0 0 0 3.5%;
   }
 }
+@media (orientation: landscape) and (max-width: 1024px) {
+  .hero__pic {
+    text-align: center;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .hero__pic {
     padding: 0 0 0 4.5%;
   }
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: landscape) and (max-width: 960px) {
+  .hero__pic {
+    text-align: right;
+  }
+}
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .hero__burger {
     width: 90%;
+  }
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .hero__burger {
+    width: 80%;
   }
 }
 .hero__drops {
@@ -287,11 +314,25 @@ textarea {
     left: 0%;
   }
 }
+@media (orientation: landscape) and (max-width: 1024px) {
+  .hero__drops {
+    top: -11%;
+    left: 6%;
+    width: 90% !important;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .hero__drops {
     top: -17%;
     left: 1%;
     width: 98% !important;
+  }
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .hero__drops {
+    top: -28%;
+    left: 23%;
+    width: 75% !important;
   }
 }
 @media (orientation: portrait) and (max-width: 465px) {
@@ -317,6 +358,13 @@ textarea {
     margin: 3% 0;
   }
 }
+@media (orientation: landscape) and (max-width: 1024px) {
+  .hero__title {
+    margin-bottom: 12px;
+    font-size: 68px;
+    line-height: 80px;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .hero__title {
     margin: 11% 0 1% 0;
@@ -324,14 +372,34 @@ textarea {
     line-height: 60px;
   }
 }
+@media (orientation: landscape) and (max-width: 960px) {
+  .hero__title {
+    font-size: 50px;
+    line-height: 1;
+  }
+}
 .hero__title + span {
   font: 65px/60px 'lifehackmedium', sans-serif, arial;
   letter-spacing: -1.5px;
   color: #fff;
 }
+@media (orientation: landscape) and (max-width: 1024px) {
+  .hero__title + span {
+    font-size: 52px;
+    line-height: 48px;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .hero__title + span {
     font-size: 54px;
+  }
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .hero__title + span {
+    display: inline-block;
+    max-width: 75%;
+    font-size: 38px;
+    line-height: 1;
   }
 }
 .hero__arrow {
@@ -342,6 +410,12 @@ textarea {
 @media (orientation: portrait) and (max-width: 480px) {
   .hero__arrow {
     margin-bottom: 4%;
+  }
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .hero__arrow svg {
+    width: 30% !important;
+    height: 30% !important;
   }
 }
 .we {
@@ -359,6 +433,11 @@ textarea {
 @media (orientation: portrait) and (max-width: 480px) {
   .we__title {
     margin: 10% 0 16% 0;
+  }
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .we__title {
+    margin: 5% 0;
   }
 }
 .we__row {
@@ -406,6 +485,12 @@ textarea {
     margin-bottom: 10%;
   }
 }
+@media (orientation: landscape) and (max-width: 960px) {
+  .we__col svg {
+    width: 25% !important;
+    height: 25% !important;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .we__desc {
     max-width: 320px;
@@ -421,6 +506,12 @@ textarea {
     margin: 0 0 4% 0;
   }
 }
+@media (orientation: landscape) and (max-width: 960px) {
+  .we__desc h3 {
+    font-size: 22px;
+    line-height: 1;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .we__hand {
     margin-bottom: 6%;
@@ -432,6 +523,11 @@ textarea {
 @media (orientation: portrait) and (max-width: 480px) {
   .we__natural h3 {
     margin: 5% 0 4% 0;
+  }
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .we__natural h3 {
+    margin-top: 20px;
   }
 }
 .burger {
@@ -568,9 +664,19 @@ textarea {
     left: 18.5%;
   }
 }
+@media (orientation: landscape) and (max-width: 1024px) {
+  .burger__comp {
+    left: 2%;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .burger__comp {
     left: 0;
+  }
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .burger__comp {
+    display: none;
   }
 }
 .burger__comp p {
@@ -606,12 +712,17 @@ textarea {
     margin-bottom: 3%;
   }
 }
+@media (orientation: landscape) and (max-width: 1024px) {
+  .burger__pic {
+    text-align: right;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .burger__pic {
     margin-bottom: 1%;
   }
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 1024px) {
   .burger__burger {
     width: 85%;
   }
@@ -665,6 +776,13 @@ textarea {
     padding-bottom: 20px;
   }
 }
+@media (orientation: landscape) and (max-width: 1024px) {
+  .burger__desc h2 {
+    margin: 28px 0;
+    font-size: 64px;
+    line-height: 60px;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .burger__desc h2 {
     padding-bottom: 3%;
@@ -696,6 +814,11 @@ textarea {
   font: 30px/1 'gagalinregular', sans-serif, arial;
   color: #e45028;
 }
+@media (orientation: landscape) and (max-width: 1024px) {
+  .burger__price {
+    font-size: 26px;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .burger__price {
     margin-right: 11%;
@@ -704,6 +827,11 @@ textarea {
 }
 .burger__price span {
   font: 72px/1 'gagalinregular', sans-serif, arial;
+}
+@media (orientation: landscape) and (max-width: 1024px) {
+  .burger__price span {
+    font-size: 64px;
+  }
 }
 @media (orientation: portrait) and (max-width: 480px) {
   .burger__price span {
@@ -725,9 +853,19 @@ textarea {
     left: auto;
   }
 }
+@media (orientation: landscape) and (max-width: 1024px) {
+  .burger__kkal {
+    left: 2%;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .burger__kkal {
     right: 0;
+  }
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .burger__kkal {
+    display: none;
   }
 }
 .burger__kkal span {
@@ -768,6 +906,11 @@ textarea {
     left: 4.5%;
   }
 }
+@media (orientation: landscape) and (max-width: 1024px) {
+  .burger__prev {
+    left: 1.5%;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .burger__prev {
     left: 0;
@@ -781,6 +924,11 @@ textarea {
 @media (orientation: portrait) and (max-width: 1024px) {
   .burger__next {
     right: 4.5%;
+  }
+}
+@media (orientation: landscape) and (max-width: 1024px) {
+  .burger__next {
+    right: 1.5%;
   }
 }
 @media (orientation: portrait) and (max-width: 480px) {
@@ -826,6 +974,11 @@ textarea {
     padding: 11.4% 0 18.3% 0;
   }
 }
+@media (orientation: landscape) and (max-width: 960px) {
+  .team__title {
+    padding: 5% 0;
+  }
+}
 .team__acco {
   max-width: 380px;
 }
@@ -839,7 +992,7 @@ textarea {
 .team__sect:not(:last-child) {
   margin-bottom: 22px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .team__sect:not(:last-child) {
     margin-bottom: 8.5%;
   }
@@ -851,6 +1004,11 @@ textarea {
 @media (orientation: portrait) and (max-width: 1024px) {
   .team__name {
     font-size: 24px;
+  }
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .team__name {
+    line-height: 1;
   }
 }
 .team__name span {
@@ -888,9 +1046,21 @@ textarea {
     margin: 0 auto;
   }
 }
+@media (orientation: landscape) and (max-width: 960px) {
+  .team__pic {
+    width: 70px;
+    height: 70px;
+  }
+}
 .team__img {
   -webkit-transform: scale(1.4) translate(-3px, 11px);
           transform: scale(1.4) translate(-3px, 11px);
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .team__img {
+    -webkit-transform: scale(1.4) translate(-2px, 7px);
+            transform: scale(1.4) translate(-2px, 7px);
+  }
 }
 .team__desc {
   max-width: 240px;
@@ -903,6 +1073,11 @@ textarea {
     padding: 0;
   }
 }
+@media (orientation: landscape) and (max-width: 960px) {
+  .team__desc {
+    padding-left: 3%;
+  }
+}
 .team__desc h4 {
   margin-bottom: 16px;
   line-height: 14px;
@@ -911,6 +1086,11 @@ textarea {
 @media (orientation: portrait) and (max-width: 1024px) {
   .team__desc h4 {
     margin: 5.5% 0 4.5% 0;
+  }
+}
+@media (orientation: landscape) and (max-width: 960px) {
+  .team__desc h4 {
+    margin-bottom: 5%;
   }
 }
 .team__sect.collapsed .team__name {
@@ -1255,6 +1435,11 @@ textarea {
 .form__col:not(:last-child) {
   margin-right: 20px;
 }
+@media (orientation: landscape) and (max-width: 1024px) {
+  .form__col:not(:last-child) {
+    margin-right: 14px;
+  }
+}
 @media (orientation: portrait) and (max-width: 480px) {
   .form__col:not(:last-child) {
     margin-right: 2.5%;
@@ -1386,7 +1571,7 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .header__inner {
     padding: 1% 3%;
   }
@@ -1402,7 +1587,13 @@ textarea {
           flex: 2;
   margin-left: -3px;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: landscape) and (max-width: 960px) {
+  .header__banner svg {
+    width: 12% !important;
+    height: 12% !important;
+  }
+}
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .header__order {
     margin-right: 3.9%;
   }
@@ -1415,7 +1606,7 @@ textarea {
 .header__menu {
   display: none;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .header__menu {
     display: inline-block;
   }
@@ -1435,7 +1626,7 @@ textarea {
   display: -ms-flexbox;
   display: flex;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .navbar ul {
     position: fixed;
     top: 0;
@@ -1468,7 +1659,7 @@ textarea {
   background-color: #fff;
   border-radius: 50%;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .navbar li:not(:last-child)::after {
     display: block;
     margin: 0 auto;
@@ -1483,7 +1674,7 @@ textarea {
   text-transform: uppercase;
   color: #fff;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .navbar a {
     margin: 20% 0;
     font-size: 24px;
@@ -1492,16 +1683,16 @@ textarea {
 .navbar a:hover {
   text-decoration: underline;
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .navbar__close {
-    position: absolute;
+    position: fixed;
     top: 3.1%;
     right: 4.5%;
     z-index: 9999999;
     display: inline-block;
   }
 }
-@media (orientation: portrait) and (max-width: 1024px) {
+@media (orientation: portrait) and (max-width: 1024px), (orientation: landscape) and (max-width: 960px) {
   .navbar.collapsed ul {
     display: none;
   }

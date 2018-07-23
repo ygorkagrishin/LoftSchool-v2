@@ -1,7 +1,8 @@
 .navbar
     ul
         display flex
-        @media (orientation portrait) and (max-width 1024px)
+        @media (orientation portrait) and (max-width 1024px),
+        (orientation landscape) and (max-width 960px)
             position fixed
             top 0
             left 0
@@ -22,7 +23,8 @@
             vertical-align 3px
             background-color primaryWhiteColor 
             border-radius 50%
-            @media (orientation portrait) and (max-width 1024px)
+            @media (orientation portrait) and (max-width 1024px),
+            (orientation landscape) and (max-width 960px)
                 display block
                 margin 0 auto
                 width 7px
@@ -33,15 +35,17 @@
         font 13px / 30px baseFontMedium
         text-transform uppercase
         color primaryWhiteColor
-        @media (orientation portrait) and (max-width 1024px)
+        @media (orientation portrait) and (max-width 1024px),
+        (orientation landscape) and (max-width 960px)
             margin 20% 0
             font-size 24px
         &:hover
             text-decoration underline
 
 .navbar__close
-    @media (orientation portrait) and (max-width 1024px)
-        position absolute
+    @media (orientation portrait) and (max-width 1024px),
+    (orientation landscape) and (max-width 960px)
+        position fixed
         top 3.1%
         right 4.5%
         z-index $z-index1
@@ -49,7 +53,8 @@
 
 .navbar.collapsed
     ul
-        @media (orientation portrait) and (max-width 1024px)
+        @media (orientation portrait) and (max-width 1024px),
+        (orientation landscape) and (max-width 960px)
             display none
     .navbar__close
         display none
