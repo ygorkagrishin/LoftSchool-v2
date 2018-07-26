@@ -711,6 +711,7 @@
     .we__col
         display flex
         max-width 100%
+        align-items flex-start
         justify-content space-between
         &:not(:last-child)
             margin-bottom 10%
@@ -860,6 +861,84 @@
         margin-left 3%
 
 
+@media (orientation portrait) and (max-width 425px)
+    .hero__drops
+        display none
+
+    .hero__pic
+        padding 0
+
+    .hero__burger
+        width 80%
+
+    .hero__title
+        margin 5% 0 3% 0
+        font-size 54px
+        line-height 1
+        & + span 
+            font-size 42px
+            line-height 1
+    
+    .hero__arrow
+        svg
+            width 52% !important
+            height 52% !important
+
+    .we__title
+        margin 5% 0 15% 0
+
+    .we__col
+        svg
+            width 12% !important 
+            height 12% !important
+
+    .we__desc
+        max-width 82%
+
+    .we__natural h3
+        margin 0 0 4% 0
+
+    .burger__comp
+        width 74px
+        height 74px
+        & > p
+            display none
+
+    .burger__hover
+        top 100%
+        left 0
+
+    .burger__burger
+        width 80%
+
+    .burger__desc
+        h2
+            font-size 42px
+            line-height 1
+
+    .burger__prev,
+    .burger__next
+        svg
+            width 72% !important 
+            height 72% !important
+
+    .team__title
+        padding 5% 0 15% 0
+
+    .menu__title
+        top 5%
+
+    .menu__name
+        font-size 28px
+
+    .review__popup
+        max-width 95%
+
+    .form__title
+        margin 5% 0 15% 0
+        font-size 36px
+        line-height 1
+
 @media (orientation landscape) and (max-width 960px)
     .hero__col
         width 38%
@@ -972,7 +1051,7 @@
         &:not(:last-child)
             margin-right 2%
 
-/* ***************
+/* ************
     main styles end
  ************** */
 

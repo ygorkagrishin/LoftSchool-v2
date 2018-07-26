@@ -1027,6 +1027,9 @@ _visibility_modile {
     display: -ms-flexbox;
     display: flex;
     max-width: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1200,6 +1203,83 @@ _visibility_modile {
     margin-left: 3%;
   }
 }
+@media (orientation: portrait) and (max-width: 425px) {
+  .hero__drops {
+    display: none;
+  }
+  .hero__pic {
+    padding: 0;
+  }
+  .hero__burger {
+    width: 80%;
+  }
+  .hero__title {
+    margin: 5% 0 3% 0;
+    font-size: 54px;
+    line-height: 1;
+  }
+  .hero__title + span {
+    font-size: 42px;
+    line-height: 1;
+  }
+  .hero__arrow svg {
+    width: 52% !important;
+    height: 52% !important;
+  }
+  .we__title {
+    margin: 5% 0 15% 0;
+  }
+  .we__col svg {
+    width: 12% !important;
+    height: 12% !important;
+  }
+  .we__desc {
+    max-width: 82%;
+  }
+  .we__natural h3 {
+    margin: 0 0 4% 0;
+  }
+  .burger__comp {
+    width: 74px;
+    height: 74px;
+  }
+  .burger__comp > p {
+    display: none;
+  }
+  .burger__hover {
+    top: 100%;
+    left: 0;
+  }
+  .burger__burger {
+    width: 80%;
+  }
+  .burger__desc h2 {
+    font-size: 42px;
+    line-height: 1;
+  }
+  .burger__prev svg,
+  .burger__next svg {
+    width: 72% !important;
+    height: 72% !important;
+  }
+  .team__title {
+    padding: 5% 0 15% 0;
+  }
+  .menu__title {
+    top: 5%;
+  }
+  .menu__name {
+    font-size: 28px;
+  }
+  .review__popup {
+    max-width: 95%;
+  }
+  .form__title {
+    margin: 5% 0 15% 0;
+    font-size: 36px;
+    line-height: 1;
+  }
+}
 @media (orientation: landscape) and (max-width: 960px) {
   .hero__col {
     width: 38%;
@@ -1321,7 +1401,7 @@ _visibility_modile {
     margin-right: 2%;
   }
 }
-/* ***************
+/* ************
     main styles end
  ************** */
 .header {
@@ -1372,6 +1452,12 @@ _visibility_modile {
   }
   .header__order {
     margin-right: 6.9%;
+  }
+}
+@media (orientation: portrait) and (max-width: 425px) {
+  .header__banner svg {
+    width: 32% !important;
+    height: 32% !important;
   }
 }
 @media (orientation: landscape) and (max-width: 960px) {
@@ -1449,6 +1535,11 @@ _visibility_modile {
   }
   .navbar.collapsed ul {
     display: none;
+  }
+}
+@media (orientation: portrait) and (max-width: 425px) {
+  .navbar a {
+    font-size: 18px;
   }
 }
 @media (orientation: landscape) and (max-width: 960px) {
