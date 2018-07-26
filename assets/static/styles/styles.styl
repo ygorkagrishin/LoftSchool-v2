@@ -1,4 +1,5 @@
 @import 'base/_typography.styl'
+@import 'base/reset.styl'
 
 @import '_var.styl'
 @import '_mixin.styl'
@@ -20,181 +21,63 @@
 .hero__row
     display flex
     padding-bottom 10px
-    @media (orientation portrait) and (max-width 1024px)
-        width 100%
-        max-width 470px
-        margin 0 auto
-        padding 0
-        flex-direction column
-        text-align center
-    @media (orientation portrait) and (max-width 480px)
-        max-width 370px
-        padding-top 8%
+    justify-content center
 
 .hero__col
-    flex 1 0 50%
-    @media (orientation portrait) and (max-width 1024px)
-        flex 1 0 100%
+    width 50%
 
 .hero__pic
     position relative
     padding 0px 14px 0 50px
-    @media (orientation portrait) and (max-width 1024px)
-        padding 0 0 0 3.5% 
-    @media (orientation landscape) and (max-width 1024px)
-        text-align center
-    @media (orientation portrait) and (max-width 480px)
-        padding 0 0 0 4.5%
-    @media (orientation landscape) and (max-width 960px)
-        text-align right
-
-.hero__burger
-    @media (orientation portrait) and (max-width 1024px),
-    (orientation landscape) and (max-width 1024px)
-        width 90%
-    @media (orientation landscape) and (max-width 960px)
-        width 80%
 
 .hero__drops
     position absolute
     top -7%
     left 1%
-    width 100% !important 
-    @media (orientation portrait) and (max-width 1024px)
-        top -8%
-        left 0%
-    @media (orientation landscape) and (max-width 1024px)
-        top -11%
-        left 6%
-        width 90% !important
-    @media (orientation portrait) and (max-width 480px)
-        top -17%
-        left 1%
-        width 98% !important
-    @media (orientation landscape) and (max-width 960px)
-        top -28%
-        left 23%
-        width 75% !important
-    @media (orientation portrait) and (max-width 465px)
-        display none
+    width 100% !important
 
 .hero__desc
     padding-left 10px
-    @media (orientation portrait) and (max-width 1024px)
-        padding 0
 
 .hero__title
     margin 42px 0 18px 0
     line-height 85px
     color primaryYellowColor
-    @media (orientation portrait) and (max-width 1024px)
-        margin 3% 0
-    @media (orientation landscape) and (max-width 1024px)
-        margin-bottom 12px
-        font-size 68px
-        line-height 80px
-    @media (orientation portrait) and (max-width 480px)
-        margin 11% 0 1% 0
-        font-size 63px
-        line-height 60px
-    @media (orientation landscape) and (max-width 960px)
-        font-size 50px
-        line-height 1
     & + span 
         font 65px / 60px baseFontTitle
         letter-spacing -1.5px
         color primaryWhiteColor
-        @media (orientation landscape) and (max-width 1024px)
-            font-size 52px
-            line-height 48px
-        @media (orientation portrait) and (max-width 480px)
-            font-size 54px
-        @media (orientation landscape) and (max-width 960px)
-            display inline-block
-            max-width 75%
-            font-size 38px
-            line-height 1
 
 .hero__arrow
     width 100%
     margin-bottom 26px
     text-align center
-    @media (orientation portrait) and (max-width 480px)
-        margin-bottom 4%
-    @media (orientation landscape) and (max-width 960px)
-        svg
-            width 30% !important 
-            height 30% !important 
 .we
     background url('images/content/we/bg.png') no-repeat center / cover
 
 .we__title
     margin 74px 0 86px 0
     text-align center
-    @media (orientation portrait) and (max-width 1024px)
-        margin 16% 0 23% 0
-    @media (orientation portrait) and (max-width 480px)
-        margin 10% 0 16% 0
-    @media (orientation landscape) and (max-width 960px)
-        margin 5% 0
 
 .we__row
     display flex
     justify-content space-between
-    @media (orientation portrait) and (max-width 1024px)
-        padding 0 12px
-    @media (orientation portrait) and (max-width 480px)
-        flex-direction column
-        padding 0 0 0 4%
 
 .we__col
     max-width 300px
     text-align center
-    @media (orientation portrait) and (max-width 1024px)
-        max-width 230px
-    @media (orientation portrait) and (max-width 480px)
-        display flex
-        max-width 100%
-        justify-content space-between
-        &:not(:last-child)
-            margin-bottom 10%
-    @media (orientation landscape) and (max-width 960px)
-        svg
-            width 25% !important
-            height 25% !important
 
 .we__desc
-    @media (orientation portrait) and (max-width 480px)
-        max-width 320px
-        text-align left
     h3 
         margin 20px 0 15px 0
-        font 24px / 28px baseFontTitle 
-        @media (orientation portrait) and (max-width 480px)
-            margin 0 0 4% 0
-        @media (orientation landscape) and (max-width 960px)
-            font-size 22px
-            line-height 1
-
-.we__hand
-    @media (orientation portrait) and (max-width 480px)
-        margin-bottom 6%
+        font 24px / 28px baseFontTitle
 
 .we__natural
     h3
         margin 32px 0 8px 0
-        @media (orientation portrait) and (max-width 480px)
-            margin 5% 0 4% 0
-        @media (orientation landscape) and (max-width 960px)
-            margin-top 20px
 
 .burger
     background-color primaryYellowColor
-    .container
-        @media (orientation portrait) and (max-width 1024px)
-            align-items center
-        @media (orientation portrait) and (max-width 480px)
-            align-items flex-start
 
 .burger__carousel
     width 100%
@@ -210,23 +93,12 @@
 
     display flex
     align-items center
-    @media (orientation portrait) and (max-width 480px)
-        margin-top 11%
 
 .burger__row    
     display flex
     align-items center
+    justify-content center
     min-height 480px
-    @media (orientation portrait) and (max-width 1024px)
-        max-width 600px
-        min-height 750px
-        margin 0 auto
-
-        flex-direction column
-        text-align center
-    @media (orientation portrait) and (max-width 480px)
-        min-height auto
-        padding-top 24%
 
 .burger__hover
     position absolute
@@ -237,9 +109,6 @@
     padding 20px 10px 20px 14px
     background-color rgba(primaryWhiteColor,.9) 
     border-radius 5px
-    @media (orientation portrait) and (max-width 1024px)
-        width 320px
-        padding-right 58px
     li 
         display flex
         align-items center
@@ -254,10 +123,6 @@
     right 0
     z-index $z-index3
     display none
-    @media (orientation portrait) and (max-width 1024px)
-        display inline-block
-        top 5.5%
-        right 6.5%
 
 .burger__comp
     position absolute
@@ -270,15 +135,6 @@
     background-color primaryOrangeColor
     border-radius 5px
     cursor pointer
-    @media (orientation portrait) and (max-width 1024px)
-        top 0
-        left 18.5%
-    @media (orientation landscape) and (max-width 1024px)
-        left 2%
-    @media (orientation portrait) and (max-width 480px)
-        left 0
-    @media (orientation landscape) and (max-width 960px)
-        display none
     p 
         font 14px / 14px baseFontMainTitle 
         color primaryWhiteColor
@@ -297,81 +153,30 @@
 
 .burger__col
     width 50%
-    @media (orientation portrait) and (max-width 1024px)
-        width 100%
-
-.burger__pic
-    @media (orientation portrait) and (max-width 1024px)
-        margin-bottom 3%
-    @media (orientation landscape) and (max-width 1024px)
-        text-align right
-    @media (orientation portrait) and (max-width 480px)
-        margin-bottom 1%
-
-.burger__burger
-    @media (orientation portrait) and (max-width 1024px),
-    (orientation landscape) and (max-width 1024px)
-        width 85%
-    @media (orientation portrait) and (max-width 480px)
-        width 88%
 
 .burger__col_align_start
     align-self flex-start
-    @media (orientation portrait) and (max-width 1024px)
-        align-self center
 
 .burger__cont
     padding-left 10px
-    @media (orientation portrait) and (max-width 1024px)
-        align-self center
 
 .burger__desc
     margin-bottom 20px
     color primaryWhiteColor
-    @media (orientation portrait) and (max-width 1024px)
-        margin-bottom 5%
-    @media (orientation portrait) and (max-width 480px)
-        margin-bottom 3%
     h2 
         margin-bottom 36px
         font 72px / 64px baseFontMainTitle
-        @media (orientation portrait) and (max-width 1024px)
-            max-width 75%
-            margin 0 auto
-            padding-bottom 20px
-        @media (orientation landscape) and (max-width 1024px)
-            margin 28px 0
-            font-size 64px
-            line-height 60px
-        @media (orientation portrait) and (max-width 480px)
-            padding-bottom 3%
-            font-size 50px
-            line-height 60px
 
 .burger__order
     display flex
     align-items flex-end
-    @media (orientation portrait) and (max-width 1024px)
-        max-width 336px
-        margin 0 auto
-    @media (orientation portrait) and (max-width 480px)
-        max-width 292px
 
 .burger__price
     margin-right 26px
     font 30px / 1 baseFontMainTitle
     color primaryOrangeColor
-    @media (orientation landscape) and (max-width 1024px)
-        font-size 26px
-    @media (orientation portrait) and (max-width 480px)
-        margin-right 11%
-        font-size 24px
     span 
-        font 72px / 1 baseFontMainTitle 
-        @media (orientation landscape) and (max-width 1024px)
-            font-size 64px
-        @media (orientation portrait) and (max-width 480px)
-            font-size 50px
+        font 72px / 1 baseFontMainTitle
 
 .burger__kkal
     position absolute
@@ -379,17 +184,6 @@
     left 0
     text-align center
     color primaryWhiteColor
-    @media (orientation portrait) and (max-width 1024px)
-        top 0
-        right 18.5%
-        bottom auto
-        left auto
-    @media (orientation landscape) and (max-width 1024px)
-        left 2%
-    @media (orientation portrait) and (max-width 480px)
-        right 0
-    @media (orientation landscape) and (max-width 960px)
-        display none
     span 
         position absolute
         top 33%
@@ -404,30 +198,14 @@
     position absolute
     top 48.5%
     z-index $z-index1
-    @media (orientation portrait) and (max-width 1024px)
-        top 49%
-    @media (orientation portrait) and (max-width 480px)
-        top 46.5%
 
 .burger__prev
     left 3.5%
     transform rotate(90deg)
-    @media (orientation portrait) and (max-width 1024px)
-        left 4.5%
-    @media (orientation landscape) and (max-width 1024px)
-        left 1.5%
-    @media (orientation portrait) and (max-width 480px)
-        left 0
 
 .burger__next
     right 3.5%
     transform rotate(-90deg)
-    @media (orientation portrait) and (max-width 1024px)
-        right 4.5%
-    @media (orientation landscape) and (max-width 1024px)
-        right 1.5%
-    @media (orientation portrait) and (max-width 480px)
-        right 0
 
 .team
     background url('images/content/team/bg.png') no-repeat top center / cover
@@ -442,39 +220,20 @@
     height 100vh
     padding-left 81px
     background-color rgba(primaryBlackColor,.9)
-    @media (orientation portrait) and (max-width 1024px)
-        max-width 100%
-        padding 0
 
 .team__title
     padding 84px 0 73px 0
     color primaryYellowColor
-    @media (orientation portrait) and (max-width 1024px)
-        padding 15.4% 0 16.3% 0
-    @media (orientation portrait) and (max-width 480px)
-        padding 11.4% 0 18.3% 0
-    @media (orientation landscape) and (max-width 960px)
-        padding 5% 0
 
 .team__acco
     max-width 380px
-    @media (orientation portrait) and (max-width 1024px)
-        max-width 345px
-        margin 0 auto
-        text-align center
 
 .team__sect:not(:last-child)
     margin-bottom 22px
-    @media (orientation portrait) and (max-width 1024px),
-    (orientation landscape) and (max-width 960px)
-        margin-bottom 8.5%
+
 .team__name
     font 14px / 28px baseFontMainTitle
     color primaryYellowColor
-    @media (orientation portrait) and (max-width 1024px)
-        font-size 24px
-    @media (orientation landscape) and (max-width 960px)
-        line-height 1
     span 
         cursor pointer
 
@@ -487,43 +246,24 @@
 .team__wrap
     display flex    
     padding 10px 16px
-    @media (orientation portrait) and (max-width 1024px)
-        flex-direction column
-        padding 4% 0 0 0
 
 .team__pic
     width 100px
     height 100px
     overflow hidden
     border-radius 50%
-    @media (orientation portrait) and (max-width 1024px)
-        margin 0 auto
-    @media (orientation landscape) and (max-width 960px)
-        width 70px
-        height 70px
 
 .team__img
     transform scale(1.4) translate(-3px,11px)
-    @media (orientation landscape) and (max-width 960px)
-        transform scale(1.4) translate(-2px, 7px)
 
 .team__desc
     max-width 240px
     padding-left 23px
     color primaryWhiteColor
-    @media (orientation portrait) and (max-width 1024px)
-        max-width 100%
-        padding 0
-    @media (orientation landscape) and (max-width 960px)
-        padding-left 3%
     h4 
         margin-bottom 16px
         line-height 14px
         font-family baseFontBold
-        @media (orientation portrait) and (max-width 1024px)
-            margin 5.5% 0 4.5% 0
-        @media (orientation landscape) and (max-width 960px)
-            margin-bottom 5%
 
 .team__sect.collapsed
     .team__name
@@ -542,9 +282,6 @@
     left 8.7%
     z-index $z-index3
     color primaryWhiteColor
-    @media (orientation portrait) and (max-width 1024px)
-        top 10.5%
-        left 2.7%
 
 .menu__acco
     position relative
@@ -554,22 +291,15 @@
     height 100vh
 
     justify-content flex-end
-    @media (orientation portrait) and (max-width 480px)
-        flex-direction column
 
 .menu__sect
     display flex
-    @media (orientation portrait) and (max-width 480px)
-        flex-direction column
 
 .menu__pannel
     position relative
     width 80px
     z-index $z-index3
     cursor pointer
-    @media (orientation portrait) and (max-width 480px)
-        width 100%
-        padding 1% 3%
 
 .menu__name
     position absolute
@@ -581,13 +311,6 @@
     white-space nowrap
     color primaryYellowColor
     transform rotate(-90deg)
-    @media (orientation portrait) and (max-width 1024px)
-        top 89.5%
-        left 4%
-    @media (orientation portrait) and (max-width 480px)
-        position static
-        font-size 36px
-        transform rotate(0deg)
 
 .menu__cont
     max-width 541px
@@ -597,18 +320,12 @@
 .menu__desc
     padding 56px 34px
     color primaryWhiteColor
-    @media (orientation portrait) and (max-width 480px)
-        padding 5%
 
 .menu__sect.collapsed
     .menu__name
         color primaryWhiteColor
     .menu__cont
         max-width 0px
-        @media (orientation portrait) and (max-width 480px)
-            max-width 100%
-            height 0
-        
 
 .review__row
     display flex
@@ -625,51 +342,27 @@
     height 100%
     padding 43px 30px 50px 19px
     background-color rgba(primaryBlackColor,.7)
-    @media (orientation portrait) and (max-width 1024px)
-        padding 7.5% 12%
-    @media (orientation portrait) and (max-width 480px)
-        padding 0 12%
 
 .review__col
     position relative
     z-index $z-index2
     flex 1 0 25%
     filter grayscale(100)
-    @media (orientation portrait) and (max-width 1024px)
-        flex 1 0 50%
-        text-align center
     
 .review__col:hover .review__hover
     display block
-    @media (orientation portrait) and (max-width 480px)
-        display flex
-        flex-direction column
-        justify-content center
-        align-items center
 
 .review__desc
     margin-bottom 12px
     color primaryWhiteColor
-    @media (orientation portrait) and (max-width 1024px)
-        margin-bottom 8%
     h3    
         margin-bottom 16px
-        font 14px / 24px baseFontMainTitle 
-        @media (orientation portrait) and (max-width 1024px)
-            margin-bottom 2%
-        @media (orientation portrait) and (max-width 480px)
-            font-size 24px
-            line-height 28px
-    p
-        @media (orientation portrait) and (max-width 480px)
-            display none
+        font 14px / 24px baseFontMainTitle
 
 .review__btn
-    @media (orientation portrait) and (max-width 480px)
         display none
     &_visibility_modile
-        @media (orientation portrait) and (max-width 480px)
-            display inline-block
+        display none
 
 .review__modal
     position absolute
@@ -689,19 +382,8 @@
     padding 22px 20px
     background-color primaryWhiteColor
     border-radius 5px
-    @media (orientation portrait) and (max-width 1024px)
-        max-width 472px
-        padding 3% 2.5%
-    @media (orientation portrait) and (max-width 480px)
-        max-width 460px
-        padding 4% 4.5%
     h4 
         @extend .review__desc h3
-        @media (orientation portrait) and (max-width 1024px)
-            margin-bottom 4%
-        @media (orientation portrait) and (max-width 480px)
-            margin 1% 0 3% 0
-            font-size 14px
 
 .review__close
     position absolute
@@ -718,25 +400,10 @@
 .form__title
     margin 84px 0 76px 0
     text-align center
-    color primaryYellowColor
-    @media (orientation portrait) and (max-width 1024px)
-        margin 16% 0 10% 0
-    @media (orientation portrait) and (max-width 480px)
-        margin 12% 0 4.6% 0
-
-.form__form
-    @media (orientation portrait) and (max-width 1024px)
-        max-width 475px
-        margin 0 auto    
+    color primaryYellowColor  
 
 .form__field
     margin-bottom 12px !important
-    @media (orientation portrait) and (max-width 1024px)
-        margin-bottom 6.8% !important
-        flex-direction column
-        // Переключаем margin у главных колонок
-        & > .form__col:first-child
-            margin 0 0 2.8% 0
 
 .form__row
     display flex
@@ -749,10 +416,6 @@
 
 .form__col:not(:last-child)
     margin-right 20px
-    @media (orientation landscape) and (max-width 1024px)
-        margin-right 14px
-    @media (orientation portrait) and (max-width 480px)
-        margin-right 2.5%
 
 .form__label
     display block
@@ -765,37 +428,21 @@
     border-radius 5px
 
 .form__input[type="text"]
-    padding 9px 20px 
-
-.form__flat
-    @media (orientation portrait) and (max-width 480px)
-        margin 0 !important
-
-.form__floor
-    @media (orientation portrait) and (max-width 480px)
-        display none
+    padding 9px 20px
 
 .form__textarea
     padding 6px 20px
-    @media (orientation portrait) and (max-width 1024px)
-        padding 7px 20px 
 
 .form__set
     margin-top 7px
     color primaryWhiteColor
     .form__label
         margin-bottom 0
-    @media (orientation portrait) and (max-width 480px)
-        margin-top 6%
-        text-align center
 
 .form__puy
     display flex
     margin-bottom 15px
     align-items center
-    @media (orientation portrait) and (max-width 480px)
-        margin-bottom 6.2%
-        justify-content center
 
 .form__change
     margin-right 20px
@@ -831,18 +478,499 @@
 .form__input[type="checkbox"]:checked + label::before
     background-position center
 
-.form__ghost
-    @media (orientation portrait) and (max-width 1024px)
+@media (orientation portrait) and (max-width 1024px)
+    .hero__row
+        width 100%
+        max-width 470px
+        margin 0 auto
+        padding 0
+        flex-direction column
+        text-align center
+
+    .hero__col
+        width 100%
+
+    .hero__pic
+        padding 0 0 0 3.5%
+
+    .hero__burger
+        width 90%
+
+    .hero__drops
+        top -8%
+        left 0%
+
+    .hero__desc
+        padding 0
+
+    .hero__title
+        margin 3% 0
+        & + span 
+            font 65px / 60px baseFontTitle
+            letter-spacing -1.5px
+            color primaryWhiteColor
+
+    .hero__arrow
+        width 100%
+        margin-bottom 26px
+        text-align center
+    .we
+        background url('images/content/we/bg.png') no-repeat center / cover
+
+    .we__title
+        margin 16% 0 23% 0
+
+    .we__row
+        padding 0 12px
+
+    .we__col
+        max-width 230px
+
+    .burger
+        .container
+                align-items center
+
+    .burger__carousel
+        width 100%
+        overflow hidden
+
+    .burger__wrap
+        display flex
+
+    .burger__row 
+        max-width 600px
+        min-height 750px
+        margin 0 auto
+
+        flex-direction column
+        text-align center
+
+    .burger__hover
+        width 320px
+        padding-right 58px
+
+    .burger__close
+        display inline-block
+        top 5.5%
+        right 6.5%
+
+    .burger__comp
+        top 0
+        left 18.5%
+
+    .burger__col
+        width 100%
+
+    .burger__pic
+        margin-bottom 3%
+
+    .burger__burger
+        width 85%
+
+    .burger__col_align_start
+        align-self center
+
+    .burger__cont
+        align-self center
+
+    .burger__desc
+        margin-bottom 5%
+        h2
+            max-width 75%
+            margin 0 auto
+            padding-bottom 20px
+
+    .burger__order
+        max-width 336px
+        margin 0 auto
+
+    .burger__kkal
+        top 0
+        right 18.5%
+        bottom auto
+        left auto
+
+    .burger__prev,
+    .burger__next
+        top 49%
+
+    .burger__prev
+        left 4.5%
+
+    .burger__next
+        right 4.5%
+
+    .team__col
+        max-width 100%
+        padding 0
+
+    .team__title
+        padding 15.4% 0 16.3% 0
+
+    .team__acco
+        max-width 345px
+        margin 0 auto
+        text-align center
+
+    .team__sect:not(:last-child)
+        margin-bottom 8.5%
+
+    .team__name
+        font-size 24px
+
+    .team__wrap
+        flex-direction column
+        padding 4% 0 0 0
+
+    .team__pic
+        margin 0 auto
+
+    .team__desc
+        max-width 100%
+        padding 0
+        h4 
+            margin 5.5% 0 4.5% 0
+
+    .menu__title
+        top 10.5%
+        left 2.7%
+
+    .menu__name
+        top 89.5%
+        left 4%
+
+    .review__hover
+        padding 7.5% 12%
+
+    .review__col
+        flex 1 0 50%
+        text-align center
+
+    .review__desc
+        margin-bottom 8%
+        h3
+            margin-bottom 2%
+
+    .review__popup
+        max-width 472px
+        padding 3% 2.5%
+        h4
+            margin-bottom 4%
+
+    .form__title
+        margin 16% 0 10% 0
+
+    .form__form
+        max-width 475px
+        margin 0 auto    
+
+    .form__field
+        margin-bottom 6.8% !important
+        flex-direction column
+        // Переключаем margin у главных колонок
+        & > .form__col:first-child
+            margin 0 0 2.8% 0
+
+    .form__textarea=
+        padding 7px 20px
+
+    .form__ghost
         display none
 
-.form__order
-    @media (orientation portrait) and (max-width 480px)
+
+@media (orientation portrait) and (max-width 480px)
+    .hero__row
+        max-width 370px
+        padding-top 8%
+
+    .hero__pic
+        padding 0 0 0 4.5%
+
+    .hero__drops
+        top -17%
+        left 1%
+        width 98% !important
+
+    .hero__title
+        margin 11% 0 1% 0
+        font-size 63px
+        line-height 60px
+        & + span
+            font-size 54px
+
+    .hero__arrow
+        margin-bottom 4%
+
+    .we__title
+        margin 10% 0 16% 0
+
+    .we__row
+        flex-direction column
+        padding 0 0 0 4%
+
+    .we__col
+        display flex
+        max-width 100%
+        justify-content space-between
+        &:not(:last-child)
+            margin-bottom 10%
+
+    .we__desc
+        max-width 320px
+        text-align left
+        h3
+            margin 0 0 4% 0
+
+    .we__hand
+        margin-bottom 6%
+
+    .we__natural
+        h3
+            margin 5% 0 4% 0
+
+    .burger
+        .container
+            align-items flex-start
+
+    .burger__slide
+        margin-top 11%
+
+    .burger__row
+        min-height auto
+        padding-top 24%
+
+    .burger__comp
+        left 0
+
+    .burger__pic
+        margin-bottom 1%
+
+    .burger__burger
+        width 88%
+
+    .burger__desc
+        margin-bottom 3%
+        h2
+            padding-bottom 3%
+            font-size 50px
+            line-height 60px
+
+    .burger__order
+        max-width 292px
+
+    .burger__price
+        margin-right 11%
+        font-size 24px
+        span
+            font-size 50px
+
+    .burger__kkal
+        right 0
+
+    .burger__prev,
+    .burger__next
+        top 46.5% 
+
+    .burger__prev
+        left 0
+
+    .burger__next
+        right 0
+
+    .team__title
+        padding 11.4% 0 18.3% 0
+
+    .menu__acco
+        flex-direction column
+
+    .menu__sect
+        flex-direction column
+
+    .menu__pannel
+        width 100%
+        padding 1% 3%
+
+    .menu__name
+        position static
+        font-size 36px
+        transform rotate(0deg)
+
+    .menu__desc
+        padding 5%
+
+    .menu__sect.collapsed
+        .menu__cont
+            max-width 100%
+            height 0
+
+    .review__hover
+        padding 0 12%
+        
+    .review__col:hover .review__hover
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+
+    .review__desc
+        h3
+            font-size 24px
+            line-height 28px
+        p
+            display none
+
+    .review__btn
+        display none
+        &_visibility_modile
+            display inline-block
+
+    .review__popup
+        max-width 460px
+        padding 4% 4.5%
+        h4
+            margin 1% 0 3% 0
+            font-size 14px
+
+    .form__title
+        margin 12% 0 4.6% 0
+
+    .form__col:not(:last-child)
+        margin-right 2.5%
+
+    .form__flat
+        margin 0 !important
+
+    .form__floor
+        display none
+
+    .form__set
+        .form__label
+            margin-top 6%
+            text-align center
+
+    .form__puy
+        margin-bottom 6.2%
+        justify-content center
+
+    .form__order
         padding 1% 0
         text-align center
 
-.form__btn_type_submit
-    @media (orientation portrait) and (max-width 480px)
+    .form__btn_type_submit
         margin-left 3%
+
+
+@media (orientation landscape) and (max-width 960px)
+    .hero__col
+        width 38%
+
+    .hero__drops
+        display none
+
+    .hero__pic
+        padding 0 3% 0 20%
+
+    .hero__title
+        margin 12% 0 2%
+        font-size 52px
+        line-height 58px
+        text-align left
+        & + span 
+            font-size 40px
+            line-height 45px
+
+    .hero__arrow
+        svg 
+            width 32% !important 
+            height 32% !important
+
+    .we__title
+        margin 5% 0
+
+    .we__col
+        svg 
+            width 28% !important 
+            height 28% !important
+
+    .we__desc
+        h3
+            margin 5% 0 3% 0
+
+    .burger
+        .container
+            align-items center
+
+    .burger__comp
+        display none
+
+    .burger__row
+        min-height auto
+
+    .burger__col
+        width 45%
+
+    .burger__desc
+        h2
+            margin-bottom 5%
+            font-size 62px
+            line-height 1
+
+    .burger__kkal
+        display none
+
+    .burger__prev
+        left 1.5%
+
+    .burger__next
+        right 1.5%
+
+    .burger__price
+        margin-right 5%
+        font-size 24px
+        span
+            font-size 50px
+
+    .team__title
+        padding 5% 0
+        text-align left
+
+    .menu__name
+        font-size 38px
+        line-height 62px
+
+    .menu__desc
+        padding 5% 3%
+
+    .review__col
+        text-align center
+
+    .review__hover
+        padding 0 12%
+        
+    .review__col:hover .review__hover
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+
+    .review__desc
+        h3
+            font-size 24px
+            line-height 28px
+        p
+            display none
+
+    .review__btn
+        display none
+        &_visibility_modile
+            display inline-block
+
+    .form__title
+        margin 5% 0
+
+    .form__col
+        &:not(:last-child)
+            margin-right 2%
 
 /* ***************
     main styles end

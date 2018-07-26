@@ -1,8 +1,32 @@
 .navbar
     ul
         display flex
-        @media (orientation portrait) and (max-width 1024px),
-        (orientation landscape) and (max-width 960px)
+    li
+        &:not(:last-child)::after
+            content ''
+            display inline-block
+            width 4px
+            height 4px
+            vertical-align 3px
+            background-color primaryWhiteColor 
+            border-radius 50%
+    a
+        display inline-block
+        margin 0 15.5px
+        font 13px / 30px baseFontMedium
+        text-transform uppercase
+        color primaryWhiteColor
+        &:hover
+            text-decoration underline
+
+.navbar.collapsed
+    .navbar__close
+        display none
+    
+@media (orientation portrait) and (max-width 1024px),
+(orientation landscape) and (max-width 960px)
+    .navbar
+        ul
             position fixed
             top 0
             left 0
@@ -14,48 +38,28 @@
             justify-content center
             align-items center
             background-color rgba(primaryBlackColor,.99)
-    li
-        &:not(:last-child)::after
-            content ''
-            display inline-block
-            width 4px
-            height 4px
-            vertical-align 3px
-            background-color primaryWhiteColor 
-            border-radius 50%
-            @media (orientation portrait) and (max-width 1024px),
-            (orientation landscape) and (max-width 960px)
+        li
+            &:not(:last-child)::after
                 display block
                 margin 0 auto
                 width 7px
                 height 7px
-    a
-        display inline-block
-        margin 0 15.5px
-        font 13px / 30px baseFontMedium
-        text-transform uppercase
-        color primaryWhiteColor
-        @media (orientation portrait) and (max-width 1024px),
-        (orientation landscape) and (max-width 960px)
+        a
             margin 20% 0
             font-size 24px
-        &:hover
-            text-decoration underline
 
-.navbar__close
-    @media (orientation portrait) and (max-width 1024px),
-    (orientation landscape) and (max-width 960px)
+    .navbar__close
         position fixed
         top 3.1%
         right 4.5%
         z-index $z-index1
         display inline-block
 
-.navbar.collapsed
-    ul
-        @media (orientation portrait) and (max-width 1024px),
-        (orientation landscape) and (max-width 960px)
+    .navbar.collapsed
+        ul
             display none
-    .navbar__close
-        display none
-    
+
+@media (orientation landscape) and (max-width 960px)
+    .navbar
+        a
+            font-size 20px

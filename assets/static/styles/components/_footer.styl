@@ -12,13 +12,6 @@
     padding 5px 0
     justify-content space-between
     align-items center
-    @media (orientation portrait) and (max-width 1024px)
-        padding 6px 2%
-    @media (orientation portrait) and (max-width 480px)
-        padding 2%
-
-        flex-direction column
-        text-align center
 
 .footer__address
     color primaryWhiteColor
@@ -28,8 +21,6 @@
     color primaryOrangeColor
     svg 
         margin-right 9px
-    @media (orientation portrait) and (max-width 480px)
-        margin-bottom 18px
 
 .footer__social
     li
@@ -42,3 +33,17 @@
         opacity .3
         &:hover
             opacity 1
+
+@media (orientation portrait) and (max-width 1024px)
+    .footer__inner
+        padding 6px 2%
+
+@media (orientation portrait) and (max-width 480px)
+    .footer__inner
+        padding 2%
+        
+        flex-direction column
+        text-align center
+
+    .footer__phone
+        margin-bottom 18px
