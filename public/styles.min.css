@@ -161,6 +161,18 @@ textarea {
     line-height: 60px;
   }
 }
+@media (orientation: portrait) and (max-width: 425px) {
+  html {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+@media (orientation: portrait) and (max-width: 345px) {
+  .sect__title {
+    font-size: 42px;
+    line-height: 1;
+  }
+}
 @media (orientation: landscape) and (max-width: 960px) {
   html {
     font-size: 12px;
@@ -1259,8 +1271,8 @@ _visibility_modile {
   }
   .burger__prev svg,
   .burger__next svg {
-    width: 72% !important;
-    height: 72% !important;
+    width: 52% !important;
+    height: 52% !important;
   }
   .team__title {
     padding: 5% 0 15% 0;
@@ -1269,7 +1281,8 @@ _visibility_modile {
     top: 5%;
   }
   .menu__name {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 48px;
   }
   .review__popup {
     max-width: 95%;
@@ -1278,6 +1291,117 @@ _visibility_modile {
     margin: 5% 0 15% 0;
     font-size: 36px;
     line-height: 1;
+  }
+}
+@media (orientation: portrait) and (max-width: 375px) {
+  .hero__burger {
+    width: 75%;
+  }
+  .we__desc h3 {
+    font-size: 20px;
+    line-height: 1;
+  }
+  .team__sect:not(:last-child) {
+    margin-bottom: 6.5%;
+  }
+  .team__name {
+    font-size: 20px;
+  }
+  .team__desc h4 {
+    margin: 4.5% 0 3.5% 0;
+  }
+  .form__title {
+    margin: 5% 0 10% 0;
+  }
+}
+@media (orientation: portrait) and (max-width: 345px) {
+  .hero__title {
+    font-size: 44px;
+  }
+  .hero__title + span {
+    font-size: 32px;
+  }
+  .we__row {
+    padding: 0;
+  }
+  .we__desc {
+    max-width: 85%;
+  }
+  .burger__comp {
+    width: 58px;
+    height: 58px;
+    padding-top: 2%;
+  }
+  .burger__comp > svg {
+    width: 88% !important;
+    height: 88% !important;
+  }
+  .burger__hover {
+    width: 280px;
+  }
+  .burger__row {
+    padding-top: 18%;
+  }
+  .burger__desc h2 {
+    font-size: 38px;
+  }
+  .burger__order {
+    max-width: 230px;
+  }
+  .burger__price {
+    margin-right: 7%;
+    font-size: 18px;
+  }
+  .burger__price span {
+    font-size: 38px;
+  }
+  .burger__kkal svg {
+    width: 68% !important;
+    height: 68% !important;
+  }
+  .burger__kkal span {
+    top: 34%;
+    left: 34%;
+    font-size: 12px;
+    line-height: 1;
+  }
+  .team__sect:not(:last-child) {
+    margin-bottom: 5%;
+  }
+  .team__name {
+    font-size: 18px;
+  }
+  .menu__name {
+    font-size: 18px;
+    line-height: 42px;
+  }
+  .review__desc h3 {
+    font-size: 18px;
+    line-height: 1;
+  }
+  .review_btn.review__btn_visibility_modile {
+    font-size: 10px;
+  }
+  .form__title {
+    font-size: 24px;
+  }
+  .form__row:not(:last-child) {
+    margin-bottom: 5%;
+  }
+  .form__label {
+    margin-bottom: 3%;
+    font-size: 10px;
+    line-height: 1;
+  }
+  .form__input[type="text"],
+  .form__textarea {
+    padding: 9px 10px;
+  }
+  .form__textarea {
+    height: 75px;
+  }
+  .form__set .form__label {
+    margin-top: 0;
   }
 }
 @media (orientation: landscape) and (max-width: 960px) {
@@ -1448,7 +1572,7 @@ _visibility_modile {
 }
 @media (orientation: portrait) and (max-width: 480px) {
   .header__inner {
-    padding: 1.5% 2%;
+    padding: 2.5% 2%;
   }
   .header__order {
     margin-right: 6.9%;
@@ -1456,8 +1580,8 @@ _visibility_modile {
 }
 @media (orientation: portrait) and (max-width: 425px) {
   .header__banner svg {
-    width: 32% !important;
-    height: 32% !important;
+    width: 48% !important;
+    height: 48% !important;
   }
 }
 @media (orientation: landscape) and (max-width: 960px) {
@@ -1608,6 +1732,18 @@ _visibility_modile {
   }
   .footer__phone {
     margin-bottom: 18px;
+  }
+}
+@media (orientation: portrait) and (max-width: 345px) {
+  .footer__phone,
+  .footer__address {
+    font-size: 10px;
+  }
+  .footer__phone {
+    margin-bottom: 5%;
+  }
+  .footer__phone svg {
+    vertical-align: -3px;
   }
 }
 
