@@ -190,7 +190,7 @@ gulp.task('fonts:copy', () => {
 
 // Копируем картинки
 gulp.task('img:copy', () => {
-    return gulp.src(options.images.src + '/**/**/*.{png,jpg}')
+    return gulp.src(options.images.src + '/**/**/*.{png,jpg,svg}')
         .pipe(newer(options.images.dest))
         .pipe(imagemin({
             optimizationLevel: 5
@@ -229,7 +229,7 @@ gulp.task('watch', () => {
     gulp.watch(options.stylus.src + '/**/*.styl', gulp.series('css:build'))
     gulp.watch(options.scripts.src + '/*.js', gulp.series('js:build'))
     gulp.watch(options.fonts.src + '/**/*.{ttf,woff,woff2,eot,svg}', gulp.series('fonts:copy'))
-    gulp.watch(options.images.src + '/**/**/*.{png,jpg}', gulp.series('img:copy'))
+    gulp.watch(options.images.src + '/**/**/*.{png,jpg,svg}', gulp.series('img:copy'))
     gulp.watch(options.icons.src + '/**/*.svg', gulp.series('svg:sprite'))
 });
 
