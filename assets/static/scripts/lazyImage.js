@@ -48,12 +48,12 @@ function preloadBackgrounds(img) {
         value = currentSection.hasAttribute(DATA) && currentSection.hasAttribute(DATA_SRC) ? 
         currentSection.getAttribute(DATA_SRC) : false;
 
-    if (value) { 
-        currentSection.style.background = value;
-        currentSection.removeAttribute(DATA);
-    } else {
-        return;
+    if (!value) { 
+        return false;
     }
+    
+    currentSection.style.background = value;
+    currentSection.removeAttribute(DATA);
 }
 
 function onIntersection(entries) {

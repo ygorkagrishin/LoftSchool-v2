@@ -1,6 +1,5 @@
 ymaps.ready(() => {
     initYmaps(ymaps, 'map');
-    console.log('init maps')
 });
 
 function initYmaps(ymaps, container) {

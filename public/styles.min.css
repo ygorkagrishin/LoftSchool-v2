@@ -636,10 +636,7 @@ textarea {
   margin-bottom: 16px;
   font: 14px/24px 'gagalinregular', sans-serif, arial;
 }
-.review__btn {
-  display: none;
-}
-_visibility_modile {
+.review__btn_visibility_mobile {
   display: none;
 }
 .review__modal {
@@ -984,7 +981,7 @@ _visibility_modile {
   .form__field > .form__col:first-child {
     margin: 0 0 2.8% 0;
   }
-  .form__textarea= {
+  .form__textarea {
     padding: 7px 20px;
   }
   .form__ghost {
@@ -1165,7 +1162,7 @@ _visibility_modile {
   .review__btn {
     display: none;
   }
-  .review__btn_visibility_modile {
+  .review__btn_visibility_mobile {
     display: inline-block;
   }
   .review__popup {
@@ -1373,7 +1370,7 @@ _visibility_modile {
     font-size: 18px;
     line-height: 1;
   }
-  .review_btn.review__btn_visibility_modile {
+  .review__btn.review__btn_visibility_mobile {
     font-size: 10px;
   }
   .form__title {
@@ -1529,7 +1526,7 @@ _visibility_modile {
   .review__btn {
     display: none;
   }
-  .review__btn_visibility_modile {
+  .review__btn_visibility_mobile {
     display: inline-block;
   }
   .form__title {

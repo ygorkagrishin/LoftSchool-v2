@@ -12,7 +12,7 @@ block content
         .wrapper
 
             //- section hero
-            section.sect.hero(data-src="url(images/content/hero/bg.png) no-repeat center / cover")
+            section.sect.hero(data-lazy data-src="url(images/content/hero/bg.png) no-repeat center / cover")
                 .container
                     include modules/_header
 
@@ -33,7 +33,7 @@ block content
             //- section hero end
 
             //- section we
-            section.sect.we(data-src="url(images/content/we/bg.png) no-repeat center / cover")
+            section.sect.we(data-lazy data-src="url(images/content/we/bg.png) no-repeat center / cover")
                 .container
                     .sect__cont
                         h2.sect__title.we__title Мы лучшие
@@ -308,7 +308,7 @@ block content
             //- sectino burgers end
 
             //- section team
-            section.sect.team(data-src="url(images/content/team/bg.png) no-repeat center / cover")
+            section.sect.team(data-lazy data-src="url(images/content/team/bg.png) no-repeat center / cover")
                 .team__row
                     .team__col
                         .sect__cont
@@ -389,13 +389,13 @@ block content
             //- section team end
 
             //- section menu
-            section.sect.menu(data-src="url(images/content/menu/bg.png) no-repeat center / cover")
+            section.sect.menu(data-lazy data-src="url(images/content/menu/bg.png) no-repeat center / cover")
                 h2.sect__title.menu__title Меню
 
                 .menu__acco#menu
                     //- section menu #1
                     .menu__sect.collapsed
-                        .menu__pannel(data-src="url('images/content/menu/photo-1468071174046-657d9d351a40.png') no-repeat center / cover")
+                        .menu__pannel(data-lazy data-src="url('images/content/menu/photo-1468071174046-657d9d351a40.png') no-repeat center / cover")
                             h3.menu__name Для мясоедов
                         .menu__cont
                             .menu__desc
@@ -415,7 +415,7 @@ block content
 
                     //- section menu #2
                     .menu__sect.collapsed
-                        .menu__pannel(data-src="url(images/content/menu/photo-1466814314367-45323ac74e2b.png) no-repeat center / cover")
+                        .menu__pannel(data-lazy data-src="url(images/content/menu/photo-1466814314367-45323ac74e2b.png) no-repeat center / cover")
                             h3.menu__name Вегетарианское
                         .menu__cont
                             .menu__desc
@@ -435,7 +435,7 @@ block content
 
                     //- section menu #3
                     .menu__sect.collapsed
-                        .menu__pannel(data-src="url('images/content/menu/IMG_4084.png') no-repeat center / cover")
+                        .menu__pannel(data-lazy data-src="url('images/content/menu/IMG_4084.png') no-repeat center / cover")
                             h3.menu__name Диетическое
                         .menu__cont
                             .menu__desc
@@ -458,7 +458,7 @@ block content
             section.sect.review
                 .review__row.review__reviews
                     //- #1
-                    .review__col.review__review(data-src="url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-src="url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -466,12 +466,12 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-target="#review-popup-1").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-target="#review-popup-1").btn.btn__more.review_btn.review__btn_visibility_modile Читать отзыв
+                            button(type="button", data-popup data-src="#popup-1").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-src="#popup-1").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #1end
 
                     //- popup-#1
-                    .review__modal.collapsed#review-popup-1
+                    .review__modal.collapsed#popup-1
                         .review__popup
                             h4 Констанин Спилберг
                             p
@@ -487,7 +487,7 @@ block content
                     //- popup-#1end
 
                     //- #2
-                    .review__col.review__review(data-src="url(images/content/review/photo-1440606797942-6cc04c045447.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1440606797942-6cc04c045447.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -495,12 +495,12 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-target="#review-popup-2").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-target="#review-popup-2").btn.btn__more.review_btn.review__btn_visibility_modile Читать отзыв
+                            button(type="button", data-popup data-src="#popup-2").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-src="#popup-2").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #2end
 
                     //- popup-#2
-                    .review__modal.collapsed#review-popup-2
+                    .review__modal.collapsed#popup-2
                         .review__popup
                             h4 Констанин Спилберг
                             p
@@ -516,7 +516,7 @@ block content
                     //- popup-#2end
 
                     //- #3
-                    .review__col.review__review(data-src="url(images/content/review/photo-1445404590072-16ef9c18bd83.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1445404590072-16ef9c18bd83.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -524,12 +524,12 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-target="#review-popup-3").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-target="#review-popup-3").btn.btn__more.review_btn.review__btn_visibility_modile Читать отзыв
+                            button(type="button", data-popup data-src="#popup-3").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-src="#popup-3").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #3end
 
                     //- popup-#3
-                    .review__modal.collapsed#review-popup-3
+                    .review__modal.collapsed#popup-3
                         .review__popup
                             h4 Констанин Спилберг
                             p
@@ -545,7 +545,7 @@ block content
                     //- popup-#3end
 
                     //- #4
-                    .review__col.review__review(data-src="url(images/content/review/photo-1468546818829-25bb337b6646.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1468546818829-25bb337b6646.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -553,12 +553,12 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-target="#review-popup-4").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-target="#review-popup-4").btn.btn__more.review_btn.review__btn_visibility_modile Читать отзыв
+                            button(type="button", data-popup data-src="#popup-4").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-src="#popup-4").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #4end
 
                     //- popup-#4
-                    .review__modal.collapsed#review-popup-4
+                    .review__modal.collapsed#popup-4
                         .review__popup
                             h4 Констанин Спилберг
                             p
@@ -574,7 +574,7 @@ block content
                     //- popup-#4end
 
                     //- #5
-                    .review__col.review__review(data-src="url(images/content/review/photo-1438763298591-75a0d42b7265.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1438763298591-75a0d42b7265.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -582,12 +582,12 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-target="#review-popup-5").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-target="#review-popup-5").btn.btn__more.review_btn.review__btn_visibility_modile Читать отзыв
+                            button(type="button", data-popup data-src="#popup-5").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-src="#popup-5").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #5end
 
                     //- popup-#5
-                    .review__modal.collapsed#review-popup-5
+                    .review__modal.collapsed#popup-5
                         .review__popup
                             h4 Констанин Спилберг
                             p
@@ -603,7 +603,7 @@ block content
                     //- popup-#5end
 
                     //- #6
-                    .review__col.review__review(data-src="url(images/content/review/photo-1461332682233-b818af4c3a6e.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1461332682233-b818af4c3a6e.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -611,12 +611,12 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-target="#review-popup-6").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-target="#review-popup-6").btn.btn__more.review_btn.review__btn_visibility_modile Читать отзыв
+                            button(type="button", data-popup data-src="#popup-6").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-src="#popup-6").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #6end
 
                     //- popup-#6
-                    .review__modal.collapsed#review-popup-6
+                    .review__modal.collapsed#popup-6
                         .review__popup
                             h4 Констанин Спилберг
                             p
@@ -632,7 +632,7 @@ block content
                     //- popup-#6end
 
                     //- #7
-                    .review__col.review__review(data-src="url(images/content/review/photo-1457706924510-773f3c796de3.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1457706924510-773f3c796de3.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -640,12 +640,12 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-target="#review-popup-7").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-target="#review-popup-7").btn.btn__more.review_btn.review__btn_visibility_modile Читать отзыв
+                            button(type="button", data-popup data-src="#popup-7").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-src="#popup-7").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #7end
 
                     //- popup-#7
-                    .review__modal.collapsed#review-popup-7
+                    .review__modal.collapsed#popup-7
                         .review__popup
                             h4 Констанин Спилберг
                             p
@@ -661,7 +661,7 @@ block content
                     //- popup-#7end
 
                     //- #8
-                    .review__col.review__review(data-src="url(images/content/review/photo-1458696765561-12142eaead131.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1458696765561-12142eaead131.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -669,12 +669,12 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-target="#review-popup-8").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-target="#review-popup-8").btn.btn__more.review_btn.review__btn_visibility_modile Читать отзыв
+                            button(type="button", data-popup data-src="#popup-8").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-src="#popup-8").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #8end
 
                     //- popup-#8
-                    .review__modal.collapsed#review-popup-8
+                    .review__modal.collapsed#popup-8
                         .review__popup
                             h4 Констанин Спилберг
                             p
@@ -691,7 +691,7 @@ block content
             //- section review end
 
             //- section form
-            section.sect.form(data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover")
+            section.sect.form(data-lazy data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover")
                 .container
                     .sect__cont
                         h2.form__title.sect__title Закажите доставку

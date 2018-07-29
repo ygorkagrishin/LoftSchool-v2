@@ -13,7 +13,7 @@
   <body class="page">
     <main class="page__main">
       <div class="wrapper">
-        <section class="sect hero" data-src="url(images/content/hero/bg.png) no-repeat center / cover">
+        <section class="sect hero" data-lazy data-src="url(images/content/hero/bg.png) no-repeat center / cover">
           <div class="container">
             <header class="header">
               <div class="header__inner">
@@ -66,7 +66,7 @@
             </div>
           </div>
         </section>
-        <section class="sect we" data-src="url(images/content/we/bg.png) no-repeat center / cover">
+        <section class="sect we" data-lazy data-src="url(images/content/we/bg.png) no-repeat center / cover">
           <div class="container">
             <div class="sect__cont">
               <h2 class="sect__title we__title">Мы лучшие</h2>
@@ -373,7 +373,7 @@
             </button>
           </div>
         </section>
-        <section class="sect team" data-src="url(images/content/team/bg.png) no-repeat center / cover">
+        <section class="sect team" data-lazy data-src="url(images/content/team/bg.png) no-repeat center / cover">
           <div class="team__row">
             <div class="team__col">
               <div class="sect__cont">
@@ -464,11 +464,11 @@
             </div>
           </div>
         </section>
-        <section class="sect menu" data-src="url(images/content/menu/bg.png) no-repeat center / cover">
+        <section class="sect menu" data-lazy data-src="url(images/content/menu/bg.png) no-repeat center / cover">
           <h2 class="sect__title menu__title">Меню</h2>
           <div class="menu__acco" id="menu">
             <div class="menu__sect collapsed">
-              <div class="menu__pannel" data-src="url('images/content/menu/photo-1468071174046-657d9d351a40.png') no-repeat center / cover">
+              <div class="menu__pannel" data-lazy data-src="url('images/content/menu/photo-1468071174046-657d9d351a40.png') no-repeat center / cover">
                 <h3 class="menu__name">Для мясоедов</h3>
               </div>
               <div class="menu__cont">
@@ -490,7 +490,7 @@
               </div>
             </div>
             <div class="menu__sect collapsed">
-              <div class="menu__pannel" data-src="url(images/content/menu/photo-1466814314367-45323ac74e2b.png) no-repeat center / cover">
+              <div class="menu__pannel" data-lazy data-src="url(images/content/menu/photo-1466814314367-45323ac74e2b.png) no-repeat center / cover">
                 <h3 class="menu__name">Вегетарианское</h3>
               </div>
               <div class="menu__cont">
@@ -512,7 +512,7 @@
               </div>
             </div>
             <div class="menu__sect collapsed">
-              <div class="menu__pannel" data-src="url('images/content/menu/IMG_4084.png') no-repeat center / cover">
+              <div class="menu__pannel" data-lazy data-src="url('images/content/menu/IMG_4084.png') no-repeat center / cover">
                 <h3 class="menu__name">Диетическое</h3>
               </div>
               <div class="menu__cont">
@@ -537,7 +537,7 @@
         </section>
         <section class="sect review">
           <div class="review__row review__reviews">
-            <div class="review__col review__review" data-src="url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover">
+            <div class="review__col review__review" data-lazy data-src="url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover">
               <div class="review__hover">
                 <div class="review__desc">
                   <h3>Констанин Спилберг</h3>
@@ -547,11 +547,11 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-target="#review-popup-1">Подробнее</button>
-                <button class="btn btn__more review_btn review__btn_visibility_modile" type="button" data-target="#review-popup-1">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-1">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-1">Читать отзыв</button>
               </div>
             </div>
-            <div class="review__modal collapsed" id="review-popup-1">
+            <div class="review__modal collapsed" id="popup-1">
               <div class="review__popup">
                 <h4>Констанин Спилберг</h4>
                 <p>
@@ -569,7 +569,7 @@
                 </button>
               </div>
             </div>
-            <div class="review__col review__review" data-src="url(images/content/review/photo-1440606797942-6cc04c045447.png) no-repeat center / cover">
+            <div class="review__col review__review" data-lazy data-src="url(images/content/review/photo-1440606797942-6cc04c045447.png) no-repeat center / cover">
               <div class="review__hover">
                 <div class="review__desc">
                   <h3>Констанин Спилберг</h3>
@@ -579,11 +579,11 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-target="#review-popup-2">Подробнее</button>
-                <button class="btn btn__more review_btn review__btn_visibility_modile" type="button" data-target="#review-popup-2">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-2">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-2">Читать отзыв</button>
               </div>
             </div>
-            <div class="review__modal collapsed" id="review-popup-2">
+            <div class="review__modal collapsed" id="popup-2">
               <div class="review__popup">
                 <h4>Констанин Спилберг</h4>
                 <p>
@@ -601,7 +601,7 @@
                 </button>
               </div>
             </div>
-            <div class="review__col review__review" data-src="url(images/content/review/photo-1445404590072-16ef9c18bd83.png) no-repeat center / cover">
+            <div class="review__col review__review" data-lazy data-src="url(images/content/review/photo-1445404590072-16ef9c18bd83.png) no-repeat center / cover">
               <div class="review__hover">
                 <div class="review__desc">
                   <h3>Констанин Спилберг</h3>
@@ -611,11 +611,11 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-target="#review-popup-3">Подробнее</button>
-                <button class="btn btn__more review_btn review__btn_visibility_modile" type="button" data-target="#review-popup-3">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-3">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-3">Читать отзыв</button>
               </div>
             </div>
-            <div class="review__modal collapsed" id="review-popup-3">
+            <div class="review__modal collapsed" id="popup-3">
               <div class="review__popup">
                 <h4>Констанин Спилберг</h4>
                 <p>
@@ -633,7 +633,7 @@
                 </button>
               </div>
             </div>
-            <div class="review__col review__review" data-src="url(images/content/review/photo-1468546818829-25bb337b6646.png) no-repeat center / cover">
+            <div class="review__col review__review" data-lazy data-src="url(images/content/review/photo-1468546818829-25bb337b6646.png) no-repeat center / cover">
               <div class="review__hover">
                 <div class="review__desc">
                   <h3>Констанин Спилберг</h3>
@@ -643,11 +643,11 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-target="#review-popup-4">Подробнее</button>
-                <button class="btn btn__more review_btn review__btn_visibility_modile" type="button" data-target="#review-popup-4">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-4">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-4">Читать отзыв</button>
               </div>
             </div>
-            <div class="review__modal collapsed" id="review-popup-4">
+            <div class="review__modal collapsed" id="popup-4">
               <div class="review__popup">
                 <h4>Констанин Спилберг</h4>
                 <p>
@@ -665,7 +665,7 @@
                 </button>
               </div>
             </div>
-            <div class="review__col review__review" data-src="url(images/content/review/photo-1438763298591-75a0d42b7265.png) no-repeat center / cover">
+            <div class="review__col review__review" data-lazy data-src="url(images/content/review/photo-1438763298591-75a0d42b7265.png) no-repeat center / cover">
               <div class="review__hover">
                 <div class="review__desc">
                   <h3>Констанин Спилберг</h3>
@@ -675,11 +675,11 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-target="#review-popup-5">Подробнее</button>
-                <button class="btn btn__more review_btn review__btn_visibility_modile" type="button" data-target="#review-popup-5">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-5">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-5">Читать отзыв</button>
               </div>
             </div>
-            <div class="review__modal collapsed" id="review-popup-5">
+            <div class="review__modal collapsed" id="popup-5">
               <div class="review__popup">
                 <h4>Констанин Спилберг</h4>
                 <p>
@@ -697,7 +697,7 @@
                 </button>
               </div>
             </div>
-            <div class="review__col review__review" data-src="url(images/content/review/photo-1461332682233-b818af4c3a6e.png) no-repeat center / cover">
+            <div class="review__col review__review" data-lazy data-src="url(images/content/review/photo-1461332682233-b818af4c3a6e.png) no-repeat center / cover">
               <div class="review__hover">
                 <div class="review__desc">
                   <h3>Констанин Спилберг</h3>
@@ -707,11 +707,11 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-target="#review-popup-6">Подробнее</button>
-                <button class="btn btn__more review_btn review__btn_visibility_modile" type="button" data-target="#review-popup-6">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-6">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-6">Читать отзыв</button>
               </div>
             </div>
-            <div class="review__modal collapsed" id="review-popup-6">
+            <div class="review__modal collapsed" id="popup-6">
               <div class="review__popup">
                 <h4>Констанин Спилберг</h4>
                 <p>
@@ -729,7 +729,7 @@
                 </button>
               </div>
             </div>
-            <div class="review__col review__review" data-src="url(images/content/review/photo-1457706924510-773f3c796de3.png) no-repeat center / cover">
+            <div class="review__col review__review" data-lazy data-src="url(images/content/review/photo-1457706924510-773f3c796de3.png) no-repeat center / cover">
               <div class="review__hover">
                 <div class="review__desc">
                   <h3>Констанин Спилберг</h3>
@@ -739,11 +739,11 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-target="#review-popup-7">Подробнее</button>
-                <button class="btn btn__more review_btn review__btn_visibility_modile" type="button" data-target="#review-popup-7">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-7">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-7">Читать отзыв</button>
               </div>
             </div>
-            <div class="review__modal collapsed" id="review-popup-7">
+            <div class="review__modal collapsed" id="popup-7">
               <div class="review__popup">
                 <h4>Констанин Спилберг</h4>
                 <p>
@@ -761,7 +761,7 @@
                 </button>
               </div>
             </div>
-            <div class="review__col review__review" data-src="url(images/content/review/photo-1458696765561-12142eaead131.png) no-repeat center / cover">
+            <div class="review__col review__review" data-lazy data-src="url(images/content/review/photo-1458696765561-12142eaead131.png) no-repeat center / cover">
               <div class="review__hover">
                 <div class="review__desc">
                   <h3>Констанин Спилберг</h3>
@@ -771,11 +771,11 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-target="#review-popup-8">Подробнее</button>
-                <button class="btn btn__more review_btn review__btn_visibility_modile" type="button" data-target="#review-popup-8">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-8">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-8">Читать отзыв</button>
               </div>
             </div>
-            <div class="review__modal collapsed" id="review-popup-8">
+            <div class="review__modal collapsed" id="popup-8">
               <div class="review__popup">
                 <h4>Констанин Спилберг</h4>
                 <p>
@@ -795,7 +795,7 @@
             </div>
           </div>
         </section>
-        <section class="sect form" data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover">
+        <section class="sect form" data-lazy data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover">
           <div class="container">
             <div class="sect__cont">
               <h2 class="form__title sect__title">Закажите доставку</h2>
@@ -870,7 +870,7 @@
         <section class="sect cont">
           <div class="cont__map" id="map"> </div>
         </section>
-        <footer class="footer" data-src="url('images/content/footer/chalkboard_texture_mc2015_by_mattiamc-d8dbnacb.png') no-repeat center / cover">
+        <footer class="footer" data-lazy data-src="url('images/content/footer/chalkboard_texture_mc2015_by_mattiamc-d8dbnacb.png') no-repeat center / cover">
           <div class="container">
             <div class="footer__inner">
               <div class="footer__info">
