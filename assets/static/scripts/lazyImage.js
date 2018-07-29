@@ -1,44 +1,59 @@
 (() => {
 
-const data = 'data-src',
-images = document.querySelectorAll(`[${data}]`);
+const 
+    $W = window,
+    $D = document;
 
-const configuration = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5
+const 
+    DATA = 'data-lazy',
+    DATA_SRC = 'data-src';
+    
+const 
+    IMAGES = $D.querySelectorAll(`[${DATA}]`);
+
+const 
+    CONFIG = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
 }
 
-const imagesCount = images.length;
+const IMAGES_COUNT = IMAGES.length;
 
-let observer = !('IntersectionObserver' in window) ?
-loadBackgroundsImmediately(images) : initIntersectionObserver(onIntersection, configuration);
+let observer = !('IntersectionObserver' in $W) ? loadBackgroundsImmediately(IMAGES) : 
+initIntersectionObserver(onIntersection, CONFIG);
 
 function initIntersectionObserver(onIntersection, configuration) {
     observer = new IntersectionObserver(onIntersection, configuration);
     
-    for (let i=0; i<imagesCount; i++) {
-        let image = images[i];
-        observer.observe(image);
+    for (let i=0; i<IMAGES_COUNT; i++) {
+        let img = IMAGES[i];
+        observer.observe(img);
     }
 
     return observer
 }
 
 function loadBackgroundsImmediately() {
-    for (let i=0; i<imagesCount; i++) {
-        let image = imagesCount[l];
+    for (let i=0; i<IMAGES_COUNT; i++) {
+        let img = IMAGES_COUNT[i];
 
-        preloadBackgrounds(image);
+        preloadBackgrounds(img);
     }
 }
 
-function preloadBackgrounds(image) {
-    let value = image.getAttribute(data),
-    currentSection = image;
+function preloadBackgrounds(img) {
+    let 
+        currentSection = img,
+        value = currentSection.hasAttribute(DATA) && currentSection.hasAttribute(DATA_SRC) ? 
+        currentSection.getAttribute(DATA_SRC) : false;
 
-    currentSection.style.background = value;
-    currentSection.removeAttribute(data);
+    if (value) { 
+        currentSection.style.background = value;
+        currentSection.removeAttribute(DATA);
+    } else {
+        return;
+    }
 }
 
 function onIntersection(entries) {
