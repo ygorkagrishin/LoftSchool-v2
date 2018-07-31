@@ -19,13 +19,13 @@
         &:hover
             text-decoration underline
 
-.navbar.collapsed
-    .navbar__close
-        display none
+.navbar__close
+    display none
     
 @media (orientation portrait) and (max-width 1024px),
 (orientation landscape) and (max-width 960px)
     .navbar
+        display none
         ul
             position fixed
             top 0
@@ -55,9 +55,8 @@
         z-index $z-index1
         display inline-block
 
-    .navbar.collapsed
-        ul
-            display none
+    .navbar.navbar_state_active
+        display block
 
 @media (orientation portrait) and (max-width 425px)
     .navbar 
