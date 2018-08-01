@@ -500,9 +500,14 @@ textarea {
 }
 .team__arrow {
   margin-right: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .team__cont {
+  height: 0px;
   overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .team__wrap {
   display: -webkit-box;
@@ -536,9 +541,6 @@ textarea {
 .team__sect.collapsed .team__arrow {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
-}
-.team__sect.collapsed .team__cont {
-  height: 0px;
 }
 .menu__title {
   position: absolute;
