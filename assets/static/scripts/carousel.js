@@ -23,7 +23,8 @@ let
 
 let
     products = carousel.querySelectorAll('.burger__comp'),
-    closeProducts = carousel.querySelectorAll('.burger__close');
+    closeProducts = carousel.querySelectorAll('.burger__close'),
+    productHover = false;
 
 let 
     x = 0,
@@ -42,16 +43,48 @@ let
 
 for (let i = 0, len = products.length; i < len; i++) {
     let product = products[i];
+    product.addEventListener('mouseover', productsOnHoverHandler);
+}
+
+function productsOnHoverHandler(e) {
+    productHover = true;
+    
+    let product = slides[position].querySelector('.burger__comp');
+
+    return !product.classList.contains('active') ?
+    product.classList.add('active') : false;
+}
+
+for (let i = 0, len = products.length; i < len; i++) {
+    let product = products[i];
+    product.addEventListener('mouseout', productOffHoverHandler);
+}
+
+function productOffHoverHandler() {
+    productHover = false;
+
+    let product = slides[position].querySelector('.burger__comp');
+
+    return product.classList.contains('active') ?
+    product.classList.remove('active') : false;
+}
+
+for (let i = 0, len = products.length; i < len; i++) {
+    let product = products[i];
     product.addEventListener('click', productsHandler, false);
 }
 
 function productsHandler() {
     autoPlayClear();
 
+    if (productHover) {
+        return;
+    }
+
     let product = slides[position].querySelector('.burger__comp');
 
     return !product.classList.contains('active') ?
-    product.classList.add('active') : false;
+    product.classList.add('active') : product.classList.remove('active');
 }
 
 for (let i = 0, len = closeProducts.length; i < len; i++) {
@@ -132,7 +165,9 @@ carousel.addEventListener('touchstart', function (e) {
 })
 
 carousel.addEventListener('touchmove', function (e) {
-    e.preventDefault();
+    if (e.changedTouches.length !== 1) {
+        return;
+    }
 })
 
 carousel.addEventListener('touchend', function (e) {
@@ -153,7 +188,7 @@ carousel.addEventListener('touchend', function (e) {
     }
 
     return x > newX ? toSwitchToNextSlide().then(toSwitchSlide, toSwitchToFirstSlide) :
-    toSwitchToPrevSlide().then(toSwitchSlide, toSwitchToFirstSlide);
+    toSwitchToPrevSlide().then(toSwitchSlide, toSwitchToLastSlide);
 })
 
 function toSwitchToFirstSlide() {
@@ -196,3 +231,5 @@ window.addEventListener('load', function () {
 })
 
 })()
+
+//TODO: Додеать autoPlay. Как запустить рестарт autoPlay.
