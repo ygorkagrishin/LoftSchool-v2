@@ -65,6 +65,12 @@ function closeProductHandler(e) {
     products.classList.remove('active') : false;
 }
 
+next.addEventListener('click', function () {
+    autoPlayClear();
+
+    return toSwitchToNextSlide().then(toSwitchSlide, toSwitchToFirstSlide);
+})
+
 function toSwitchToNextSlide() {
     return new Promise((resolve, reject) => {
         ++position;
@@ -77,8 +83,10 @@ function toSwitchToNextSlide() {
     });
 }
 
-next.addEventListener('click', function () {
-    return toSwitchToNextSlide().then(toSwitchSlide, toSwitchToFirstSlide);
+prev.addEventListener('click', function () {
+    autoPlayClear();
+
+    return toSwitchToPrevSlide().then(toSwitchSlide, toSwitchToLastSlide);
 })
 
 function toSwitchToPrevSlide() {
@@ -91,6 +99,22 @@ function toSwitchToPrevSlide() {
 
         resolve();
     });
+}
+
+function autoPlay() {
+    autoPlayClear();
+
+    if (!autoPlayTimer) {
+        autoPlayTimer = setInterval(() => {
+            toSwitchToNextSlide().then(toSwitchSlide, toSwitchToFirstSlide);
+        }, 3000)
+    }
+}
+
+function autoPlayClear() {
+    if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+    }
 }
 
 function toSwitchToFirstSlide() {
@@ -127,5 +151,9 @@ function toSwitchSlide() {
         style.transform = `translate(-${position}00%, 0)`;
     }, 25);
 }
+
+window.addEventListener('load', function () {
+    autoPlay();
+})
 
 })()
