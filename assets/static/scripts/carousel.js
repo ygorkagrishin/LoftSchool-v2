@@ -37,7 +37,8 @@ let
     duration = 700;
 
 let
-    autoPlayTimer;
+    autoPlayTimer,
+    autoPlaySpeed = 5000;
 
 for (let i = 0, len = products.length; i < len; i++) {
     let product = products[i];
@@ -45,6 +46,8 @@ for (let i = 0, len = products.length; i < len; i++) {
 }
 
 function productsHandler() {
+    autoPlayClear();
+
     let product = slides[position].querySelector('.burger__comp');
 
     return !product.classList.contains('active') ?
@@ -85,7 +88,7 @@ function toSwitchToNextSlide() {
 
 prev.addEventListener('click', function () {
     autoPlayClear();
-
+    
     return toSwitchToPrevSlide().then(toSwitchSlide, toSwitchToLastSlide);
 })
 
@@ -102,12 +105,10 @@ function toSwitchToPrevSlide() {
 }
 
 function autoPlay() {
-    autoPlayClear();
-
     if (!autoPlayTimer) {
         autoPlayTimer = setInterval(() => {
             toSwitchToNextSlide().then(toSwitchSlide, toSwitchToFirstSlide);
-        }, 3000)
+        }, autoPlaySpeed)
     }
 }
 
@@ -116,6 +117,44 @@ function autoPlayClear() {
         clearInterval(autoPlayTimer);
     }
 }
+
+carousel.addEventListener('touchstart', function (e) {
+    if (e.changedTouches.length !== 1) {
+        return;
+    }
+
+    autoPlayClear();
+
+    let touch = e.changedTouches[0];
+
+    x = touch.pageX;
+    y = touch.pageY;
+})
+
+carousel.addEventListener('touchmove', function (e) {
+    e.preventDefault();
+})
+
+carousel.addEventListener('touchend', function (e) {
+    if (e.changedTouches.length !== 1) {
+        return;
+    }
+    
+    let touch = e.changedTouches[0];
+
+    newX = touch.pageX;
+    newY = touch.pageY;
+
+    let deltaX = x - newX,
+        deltaY = y - newY;
+
+    if (Math.abs(deltaY) >= Math.abs(deltaX)) {
+        return;
+    }
+
+    return x > newX ? toSwitchToNextSlide().then(toSwitchSlide, toSwitchToFirstSlide) :
+    toSwitchToPrevSlide().then(toSwitchSlide, toSwitchToFirstSlide);
+})
 
 function toSwitchToFirstSlide() {
     position = 0;
