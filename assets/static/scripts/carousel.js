@@ -19,7 +19,7 @@ const
 
 let 
     position = 0,
-    max_position = slides.length-1;
+    maxPosition = slides.length-1;
 
 let
     products = carousel.querySelectorAll('.burger__comp'),
@@ -35,6 +35,9 @@ let
 
 let 
     duration = 700;
+
+let
+    autoPlayTimer;
 
 for (let i = 0, len = products.length; i < len; i++) {
     let product = products[i];
@@ -65,63 +68,64 @@ function closeProductHandler(e) {
 function toSwitchToNextSlide() {
     return new Promise((resolve, reject) => {
         ++position;
-        
-        if (position > max_position) {
+
+        if (position > maxPosition) {
             reject();
-        } else {
-            resolve();
-        }
+        } 
+
+        resolve();
     });
 }
 
 next.addEventListener('click', function () {
-    toSwitchToNextSlide().then(() => {
-        toSwitchSlide()
-    }, () => {
-        toSwitchToFirstSlide();
-    });
-});
+    return toSwitchToNextSlide().then(toSwitchSlide, toSwitchToFirstSlide);
+})
 
 function toSwitchToPrevSlide() {
     return new Promise((resolve, reject) => {
         --position;
 
-        if (position < 0)
+        if (position < 0) {
             reject();
-        else
-            resolve();
+        } 
+
+        resolve();
     });
 }
-
-prev.addEventListener('click', function () {
-    toSwitchToPrevSlide().then(() => {
-        toSwitchSlide()
-    }, () => {
-        toSwitchToLastSlide();
-    });
-});
 
 function toSwitchToFirstSlide() {
-    setTimeout(() => {
-        position = 0;
+    position = 0;
 
-        wrapper.style.transition = `all 0ms`;
-        wrapper.style.transform = `translate(-${position}00%, 0)`;
-    }, 25)
+    let style = wrapper.style;
+
+    style.transition = `all 0ms`;
+    style.transform = `translate(-${position}00%, 0)`;
+
+    ++position;
+
+    toSwitchSlide();
 }
 
-function toSwitchToLastSlide () {
-    setTimeout(() => {
-        position = max_position;
+function toSwitchToLastSlide() {
+    position = maxPosition;
 
-        wrapper.style.transition = `all 0ms`;
-        wrapper.style.transform = `translate(-${position}00%, 0)`;
-    }, 25)
+    let style = wrapper.style;
+
+    style.transition = `all 0ms`;
+    style.transform = `translate(-${position}00%, 0)`;
+
+    --position;
+
+    toSwitchSlide();
 }
 
 function toSwitchSlide() {
-    wrapper.style.transition = `all ${duration}ms`;
-    wrapper.style.transform = `translate(-${position}00%, 0)`;
+    setTimeout(() => {
+        let style = wrapper.style;
+
+        style.transition = `all ${duration}ms`;
+        style.transform = `translate(-${position}00%, 0)`;
+    }, 25);
 }
 
 })()
