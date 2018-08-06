@@ -104,7 +104,8 @@ function closeProductHandler(e) {
 next.addEventListener('click', function () {
     autoPlayClear();
 
-    return toSwitchToNextSlide().then(toSwitchSlide, toSwitchToFirstSlide);
+    return toSwitchToNextSlide()
+        .then(toSwitchSlide, toSwitchToFirstSlide);
 })
 
 function toSwitchToNextSlide() {
@@ -122,7 +123,8 @@ function toSwitchToNextSlide() {
 prev.addEventListener('click', function () {
     autoPlayClear();
     
-    return toSwitchToPrevSlide().then(toSwitchSlide, toSwitchToLastSlide);
+    return toSwitchToPrevSlide()
+        .then(toSwitchSlide, toSwitchToLastSlide);
 })
 
 function toSwitchToPrevSlide() {
@@ -137,17 +139,26 @@ function toSwitchToPrevSlide() {
     });
 }
 
+window.addEventListener('load', () => {
+    return autoPlay();
+})
+
+carousel.addEventListener('mouseover', () => {
+    return autoPlayClear();
+})
+
 function autoPlay() {
-    if (!autoPlayTimer) {
-        autoPlayTimer = setInterval(() => {
-            toSwitchToNextSlide().then(toSwitchSlide, toSwitchToFirstSlide);
-        }, autoPlaySpeed)
-    }
+    autoPlayClear();
+    
+    autoPlayTimer = setInterval(() => {
+        return toSwitchToNextSlide()
+            .then(toSwitchSlide, toSwitchToFirstSlide);
+    }, autoPlaySpeed)
 }
 
 function autoPlayClear() {
     if (autoPlayTimer) {
-        clearInterval(autoPlayTimer);
+        return clearInterval(autoPlayTimer);
     }
 }
 
@@ -226,10 +237,4 @@ function toSwitchSlide() {
     }, 25);
 }
 
-window.addEventListener('load', function () {
-    autoPlay();
-})
-
 })()
-
-//TODO: Додеать autoPlay. Как запустить рестарт autoPlay.
