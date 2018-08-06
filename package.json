@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp",
-    "build": "set NODE_ENV='production' && npm run start"
+    "build": "set NODE_ENV='production' && gulp build"
   },
   "repository": {
     "type": "git",
@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "normalize.css": "^8.0.0"
+    "normalize.css": "^8.0.0",
+    "npm": "^6.3.0"
   }
 }
