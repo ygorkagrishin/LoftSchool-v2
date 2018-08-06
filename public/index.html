@@ -11,6 +11,11 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   </head>
   <body class="page">
+    <div class="err" hidden>
+      <div class="err__err err__orient">
+        <div class="err__text">Переведите устройство в портретный режим.</div>
+      </div>
+    </div>
     <main class="page__main">
       <div class="wrapper">
         <section class="sect hero" data-lazy data-src="url(images/content/hero/bg.png) no-repeat center / cover">
@@ -207,50 +212,57 @@
                       <use xlink:href="icons/sprite-svg.svg#burger"></use>
                     </svg>
                     <p>Состав</p>
-                    <ul class="burger__list">
-                      <li>
-                        <svg width="44px" height="39px" viewBox="0 0 44 39.212">
-                          <use xlink:href="icons/sprite-svg.svg#beef"></use>
+                    <div class="burger__hover">
+                      <ul class="burger__list">
+                        <li>
+                          <svg width="44px" height="39px" viewBox="0 0 44 39.212">
+                            <use xlink:href="icons/sprite-svg.svg#beef"></use>
+                          </svg>
+                          <div class="burger__product">Говядина</div>
+                          <div class="burger__weight">300г</div>
+                        </li>
+                        <li>
+                          <svg width="38px" height="30px" viewBox="0 0 48 30.317">
+                            <use xlink:href="icons/sprite-svg.svg#buns"></use>
+                          </svg>
+                          <div class="burger__product">Булочки</div>
+                          <div class="burger__weight">100г</div>
+                        </li>
+                        <li>
+                          <svg width="38px" height="38px" viewBox="0 0 38 38.638">
+                            <use xlink:href="icons/sprite-svg.svg#salad"></use>
+                          </svg>
+                          <div class="burger__product">Зелень</div>
+                          <div class="burger__weight">70г</div>
+                        </li>
+                        <li>
+                          <svg width="41px" height="44px" viewBox="0 0 40.189 43.416">
+                            <use xlink:href="icons/sprite-svg.svg#sauce"></use>
+                          </svg>
+                          <div class="burger__product">Соус</div>
+                          <div class="burger__weight">150г</div>
+                        </li>
+                        <li>
+                          <svg width="43px" height="37px" viewBox="0 0 42 37.754">
+                            <use xlink:href="icons/sprite-svg.svg#cucumber"></use>
+                          </svg>
+                          <div class="burger__product">Овощи</div>
+                          <div class="burger__weight">200г</div>
+                        </li>
+                        <li>
+                          <svg width="40px" height="34px" viewBox="0 0 38.126 34.138">
+                            <use xlink:href="icons/sprite-svg.svg#cheese"></use>
+                          </svg>
+                          <div class="burger__product">Сыр</div>
+                          <div class="burger__weight">80г</div>
+                        </li>
+                      </ul>
+                      <button class="burger__close" type="button">
+                        <svg width="18px" height="18px" viewBox="0 0 14.988 14.988">
+                          <use xlink:href="icons/sprite-svg.svg#close"></use>
                         </svg>
-                        <div class="burger__product">Говядина</div>
-                        <div class="burger__weight">300г</div>
-                      </li>
-                      <li>
-                        <svg width="38px" height="30px" viewBox="0 0 48 30.317">
-                          <use xlink:href="icons/sprite-svg.svg#buns"></use>
-                        </svg>
-                        <div class="burger__product">Булочки</div>
-                        <div class="burger__weight">100г</div>
-                      </li>
-                      <li>
-                        <svg width="38px" height="38px" viewBox="0 0 38 38.638">
-                          <use xlink:href="icons/sprite-svg.svg#salad"></use>
-                        </svg>
-                        <div class="burger__product">Зелень</div>
-                        <div class="burger__weight">70г</div>
-                      </li>
-                      <li>
-                        <svg width="41px" height="44px" viewBox="0 0 40.189 43.416">
-                          <use xlink:href="icons/sprite-svg.svg#sauce"></use>
-                        </svg>
-                        <div class="burger__product">Соус</div>
-                        <div class="burger__weight">150г</div>
-                      </li>
-                      <li>
-                        <svg width="43px" height="37px" viewBox="0 0 42 37.754">
-                          <use xlink:href="icons/sprite-svg.svg#cucumber"></use>
-                        </svg>
-                        <div class="burger__product">Овощи</div>
-                        <div class="burger__weight">200г</div>
-                      </li>
-                      <li>
-                        <svg width="40px" height="34px" viewBox="0 0 38.126 34.138">
-                          <use xlink:href="icons/sprite-svg.svg#cheese"></use>
-                        </svg>
-                        <div class="burger__product">Сыр</div>
-                        <div class="burger__weight">80г</div>
-                      </li>
-                    </ul>
+                      </button>
+                    </div>
                   </div>
                   <div class="burger__row">
                     <div class="burger__col">
@@ -286,50 +298,57 @@
                       <use xlink:href="icons/sprite-svg.svg#burger"></use>
                     </svg>
                     <p>Состав</p>
-                    <ul class="burger__list">
-                      <li>
-                        <svg width="44px" height="39px" viewBox="0 0 44 39.212">
-                          <use xlink:href="icons/sprite-svg.svg#beef"></use>
+                    <div class="burger__hover">
+                      <ul class="burger__list">
+                        <li>
+                          <svg width="44px" height="39px" viewBox="0 0 44 39.212">
+                            <use xlink:href="icons/sprite-svg.svg#beef"></use>
+                          </svg>
+                          <div class="burger__product">Говядина</div>
+                          <div class="burger__weight">300г</div>
+                        </li>
+                        <li>
+                          <svg width="38px" height="30px" viewBox="0 0 48 30.317">
+                            <use xlink:href="icons/sprite-svg.svg#buns"></use>
+                          </svg>
+                          <div class="burger__product">Булочки</div>
+                          <div class="burger__weight">100г</div>
+                        </li>
+                        <li>
+                          <svg width="38px" height="38px" viewBox="0 0 38 38.638">
+                            <use xlink:href="icons/sprite-svg.svg#salad"></use>
+                          </svg>
+                          <div class="burger__product">Зелень</div>
+                          <div class="burger__weight">70г</div>
+                        </li>
+                        <li>
+                          <svg width="41px" height="44px" viewBox="0 0 40.189 43.416">
+                            <use xlink:href="icons/sprite-svg.svg#sauce"></use>
+                          </svg>
+                          <div class="burger__product">Соус</div>
+                          <div class="burger__weight">150г</div>
+                        </li>
+                        <li>
+                          <svg width="43px" height="37px" viewBox="0 0 42 37.754">
+                            <use xlink:href="icons/sprite-svg.svg#cucumber"></use>
+                          </svg>
+                          <div class="burger__product">Овощи</div>
+                          <div class="burger__weight">200г</div>
+                        </li>
+                        <li>
+                          <svg width="40px" height="34px" viewBox="0 0 38.126 34.138">
+                            <use xlink:href="icons/sprite-svg.svg#cheese"></use>
+                          </svg>
+                          <div class="burger__product">Сыр</div>
+                          <div class="burger__weight">80г</div>
+                        </li>
+                      </ul>
+                      <button class="burger__close" type="button">
+                        <svg width="18px" height="18px" viewBox="0 0 14.988 14.988">
+                          <use xlink:href="icons/sprite-svg.svg#close"></use>
                         </svg>
-                        <div class="burger__product">Говядина</div>
-                        <div class="burger__weight">300г</div>
-                      </li>
-                      <li>
-                        <svg width="38px" height="30px" viewBox="0 0 48 30.317">
-                          <use xlink:href="icons/sprite-svg.svg#buns"></use>
-                        </svg>
-                        <div class="burger__product">Булочки</div>
-                        <div class="burger__weight">100г</div>
-                      </li>
-                      <li>
-                        <svg width="38px" height="38px" viewBox="0 0 38 38.638">
-                          <use xlink:href="icons/sprite-svg.svg#salad"></use>
-                        </svg>
-                        <div class="burger__product">Зелень</div>
-                        <div class="burger__weight">70г</div>
-                      </li>
-                      <li>
-                        <svg width="41px" height="44px" viewBox="0 0 40.189 43.416">
-                          <use xlink:href="icons/sprite-svg.svg#sauce"></use>
-                        </svg>
-                        <div class="burger__product">Соус</div>
-                        <div class="burger__weight">150г</div>
-                      </li>
-                      <li>
-                        <svg width="43px" height="37px" viewBox="0 0 42 37.754">
-                          <use xlink:href="icons/sprite-svg.svg#cucumber"></use>
-                        </svg>
-                        <div class="burger__product">Овощи</div>
-                        <div class="burger__weight">200г</div>
-                      </li>
-                      <li>
-                        <svg width="40px" height="34px" viewBox="0 0 38.126 34.138">
-                          <use xlink:href="icons/sprite-svg.svg#cheese"></use>
-                        </svg>
-                        <div class="burger__product">Сыр</div>
-                        <div class="burger__weight">80г</div>
-                      </li>
-                    </ul>
+                      </button>
+                    </div>
                   </div>
                   <div class="burger__row">
                     <div class="burger__col">

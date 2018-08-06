@@ -53,7 +53,7 @@ function preloadBackgrounds(img) {
     }
     
     currentSection.style.background = value;
-    currentSection.removeAttribute(DATA);
+    currentSection.removeAttribute(DATA_SRC);
 }
 
 function onIntersection(entries) {

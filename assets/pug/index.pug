@@ -5,6 +5,15 @@ block title
 
 block content
 
+    //- Errors 
+    .err(hidden)
+        //- Error orientation
+        .err__err.err__orient
+            .err__text
+                | Переведите устройство в портретный режим.
+        //- Error orientation end
+    //- Errors end
+
     //- page main content!!!
     main.page__main
 
@@ -157,49 +166,53 @@ block content
                                     svg(width="46px", height="42px", viewBox="0 0 45.748 44.625")
                                         use(xlink:href="icons/sprite-svg.svg#burger")
                                     p Состав
-                                    ul.burger__list
-                                        //- #1 
-                                        li
-                                            svg(width="44px", height="39px", viewBox="0 0 44 39.212")
-                                                use(xlink:href="icons/sprite-svg.svg#beef")
-                                            .burger__product Говядина
-                                            .burger__weight 300г
-                                        //- #1end
-                                        //- #2
-                                        li
-                                            svg(width="38px" height="30px" viewBox="0 0 48 30.317")
-                                                use(xlink:href="icons/sprite-svg.svg#buns")
-                                            .burger__product Булочки
-                                            .burger__weight 100г
-                                        //- #2end
-                                        //- #3
-                                        li
-                                            svg(width="38px" height="38px" viewBox="0 0 38 38.638")
-                                                use(xlink:href="icons/sprite-svg.svg#salad")
-                                            .burger__product Зелень
-                                            .burger__weight 70г
-                                        //- #3end
-                                        //- #4
-                                        li
-                                            svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
-                                                use(xlink:href="icons/sprite-svg.svg#sauce")
-                                            .burger__product Соус
-                                            .burger__weight 150г
-                                        //- #4end
-                                        //- #5
-                                        li
-                                            svg(width="43px", height="37px", viewBox="0 0 42 37.754")
-                                                use(xlink:href="icons/sprite-svg.svg#cucumber")
-                                            .burger__product Овощи
-                                            .burger__weight 200г
-                                        //- #5end
-                                        //- #6
-                                        li
-                                            svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
-                                                use(xlink:href="icons/sprite-svg.svg#cheese")
-                                            .burger__product Сыр
-                                            .burger__weight 80г
-                                        //- #6end
+                                    .burger__hover
+                                        ul.burger__list
+                                            //- #1 
+                                            li
+                                                svg(width="44px", height="39px", viewBox="0 0 44 39.212")
+                                                    use(xlink:href="icons/sprite-svg.svg#beef")
+                                                .burger__product Говядина
+                                                .burger__weight 300г
+                                            //- #1end
+                                            //- #2
+                                            li
+                                                svg(width="38px" height="30px" viewBox="0 0 48 30.317")
+                                                    use(xlink:href="icons/sprite-svg.svg#buns")
+                                                .burger__product Булочки
+                                                .burger__weight 100г
+                                            //- #2end
+                                            //- #3
+                                            li
+                                                svg(width="38px" height="38px" viewBox="0 0 38 38.638")
+                                                    use(xlink:href="icons/sprite-svg.svg#salad")
+                                                .burger__product Зелень
+                                                .burger__weight 70г
+                                            //- #3end
+                                            //- #4
+                                            li
+                                                svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
+                                                    use(xlink:href="icons/sprite-svg.svg#sauce")
+                                                .burger__product Соус
+                                                .burger__weight 150г
+                                            //- #4end
+                                            //- #5
+                                            li
+                                                svg(width="43px", height="37px", viewBox="0 0 42 37.754")
+                                                    use(xlink:href="icons/sprite-svg.svg#cucumber")
+                                                .burger__product Овощи
+                                                .burger__weight 200г
+                                            //- #5end
+                                            //- #6
+                                            li
+                                                svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
+                                                    use(xlink:href="icons/sprite-svg.svg#cheese")
+                                                .burger__product Сыр
+                                                .burger__weight 80г
+                                            //- #6end
+                                        button(type="button").burger__close
+                                            svg(width="18px", height="18px", viewBox="0 0 14.988 14.988")
+                                                use(xlink:href="icons/sprite-svg.svg#close")
                                 .burger__row
                                     .burger__col
                                         .burger__pic
@@ -231,49 +244,53 @@ block content
                                     svg(width="46px", height="42px", viewBox="0 0 45.748 44.625")
                                         use(xlink:href="icons/sprite-svg.svg#burger")
                                     p Состав
-                                    ul.burger__list
-                                        //- #1 
-                                        li
-                                            svg(width="44px", height="39px", viewBox="0 0 44 39.212")
-                                                use(xlink:href="icons/sprite-svg.svg#beef")
-                                            .burger__product Говядина
-                                            .burger__weight 300г
-                                        //- #1end
-                                        //- #2
-                                        li
-                                            svg(width="38px" height="30px" viewBox="0 0 48 30.317")
-                                                use(xlink:href="icons/sprite-svg.svg#buns")
-                                            .burger__product Булочки
-                                            .burger__weight 100г
-                                        //- #2end
-                                        //- #3
-                                        li
-                                            svg(width="38px" height="38px" viewBox="0 0 38 38.638")
-                                                use(xlink:href="icons/sprite-svg.svg#salad")
-                                            .burger__product Зелень
-                                            .burger__weight 70г
-                                        //- #3end
-                                        //- #4
-                                        li
-                                            svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
-                                                use(xlink:href="icons/sprite-svg.svg#sauce")
-                                            .burger__product Соус
-                                            .burger__weight 150г
-                                        //- #4end
-                                        //- #5
-                                        li
-                                            svg(width="43px", height="37px", viewBox="0 0 42 37.754")
-                                                use(xlink:href="icons/sprite-svg.svg#cucumber")
-                                            .burger__product Овощи
-                                            .burger__weight 200г
-                                        //- #5end
-                                        //- #6
-                                        li
-                                            svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
-                                                use(xlink:href="icons/sprite-svg.svg#cheese")
-                                            .burger__product Сыр
-                                            .burger__weight 80г
-                                        //- #6end
+                                    .burger__hover
+                                        ul.burger__list
+                                            //- #1 
+                                            li
+                                                svg(width="44px", height="39px", viewBox="0 0 44 39.212")
+                                                    use(xlink:href="icons/sprite-svg.svg#beef")
+                                                .burger__product Говядина
+                                                .burger__weight 300г
+                                            //- #1end
+                                            //- #2
+                                            li
+                                                svg(width="38px" height="30px" viewBox="0 0 48 30.317")
+                                                    use(xlink:href="icons/sprite-svg.svg#buns")
+                                                .burger__product Булочки
+                                                .burger__weight 100г
+                                            //- #2end
+                                            //- #3
+                                            li
+                                                svg(width="38px" height="38px" viewBox="0 0 38 38.638")
+                                                    use(xlink:href="icons/sprite-svg.svg#salad")
+                                                .burger__product Зелень
+                                                .burger__weight 70г
+                                            //- #3end
+                                            //- #4
+                                            li
+                                                svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
+                                                    use(xlink:href="icons/sprite-svg.svg#sauce")
+                                                .burger__product Соус
+                                                .burger__weight 150г
+                                            //- #4end
+                                            //- #5
+                                            li
+                                                svg(width="43px", height="37px", viewBox="0 0 42 37.754")
+                                                    use(xlink:href="icons/sprite-svg.svg#cucumber")
+                                                .burger__product Овощи
+                                                .burger__weight 200г
+                                            //- #5end
+                                            //- #6
+                                            li
+                                                svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
+                                                    use(xlink:href="icons/sprite-svg.svg#cheese")
+                                                .burger__product Сыр
+                                                .burger__weight 80г
+                                            //- #6end
+                                        button(type="button").burger__close
+                                            svg(width="18px", height="18px", viewBox="0 0 14.988 14.988")
+                                                use(xlink:href="icons/sprite-svg.svg#close")
                                 .burger__row
                                     .burger__col
                                         .burger__pic
@@ -761,7 +778,6 @@ block content
             //- footer
             include modules/_footer
             //- footer end
-
         //- one page scroll end
 
     //- page main content end

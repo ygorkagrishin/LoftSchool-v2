@@ -132,12 +132,15 @@
     background-color primaryOrangeColor
     border-radius 5px
     cursor pointer
+    opacity .9
     p 
         font 14px / 14px baseFontMainTitle 
         color primaryWhiteColor
-    
-.burger__comp:hover .burger__hover
-    display block
+
+.burger__comp.active
+    opacity 1
+    .burger__hover
+        display block !important
 
 .burger__product
     flex 2
@@ -538,6 +541,9 @@
     .burger__hover
         width 320px
         padding-right 58px
+
+    .burger__comp:hover .burger__hover
+        display none
 
     .burger__close
         display inline-block
@@ -1188,4 +1194,4 @@
 @import 'components/_nav.styl'
 @import 'components/_footer.styl'
 
-@import 'components/_error.styl'
+@import 'components/_err.styl'

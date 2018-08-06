@@ -378,13 +378,17 @@ textarea {
   background-color: #e45028;
   border-radius: 5px;
   cursor: pointer;
+  opacity: 0.9;
 }
 .burger__comp p {
   font: 14px/14px 'gagalinregular', sans-serif, arial;
   color: #fff;
 }
-.burger__comp:hover .burger__hover {
-  display: block;
+.burger__comp.active {
+  opacity: 1;
+}
+.burger__comp.active .burger__hover {
+  display: block !important;
 }
 .burger__product {
   -webkit-box-flex: 2;
@@ -846,6 +850,9 @@ textarea {
   .burger__hover {
     width: 320px;
     padding-right: 58px;
+  }
+  .burger__comp:hover .burger__hover {
+    display: none;
   }
   .burger__close {
     display: inline-block;
@@ -1765,6 +1772,42 @@ textarea {
   }
   .footer__phone svg {
     vertical-align: -3px;
+  }
+}
+.err__err {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #2f3234;
+}
+.err__err.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.err__text {
+  font: 48px/1 'gagalinregular', sans-serif, arial;
+  color: #f9b43b;
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .err__text {
+    font-size: 32px;
+  }
+}
+@media (orientation: portrait) and (max-width: 480px), (orientation: landscape) and (max-width: 960px) {
+  .err__text {
+    font-size: 24px;
   }
 }
 

@@ -1,45 +1,49 @@
 (function () {
 
+const 
+    win = window,
+    doc = document;
+
 const   
-    trigger = document.querySelector('.navbar-trigger');
+    menu = doc.querySelector('#menu'),
+    menuSectCollection = menu.children;
 
-const
-    navbar = document.querySelector('.navbar'),
-    navbarClose = document.querySelector('.navbar__close');
+const 
+    state = 'collapsed';
 
-const
-    stateActive = 'navbar_state_active',
-    bodyStateActive = 'navbar-mobile-active';
-
-function getState() {
-    return !navbar.classList.contains(stateActive) && 
-    !document.body.classList.contains(bodyStateActive) ? false : true;
+for (let i = 0, len = menuSectCollection.length; i < len; i++) {
+    let menuSect = menuSectCollection[i];
+    menuSect.addEventListener('click', menuSectHandler, false);
 }
 
-function menuOpen() {
-    if (!getState()) {
-        navbar.classList.add(stateActive)
-        document.body.classList.add(bodyStateActive);
+function menuSectHandler() {
+    let currentSection = this;
+    return currentSection.classList.contains(state) ? 
+    openSect(currentSection) : closeSect(currentSection);
+}
+
+function openSect(sect) {
+    destroy();
+    
+    let section = sect;
+    return section.classList.remove(state);
+}
+
+function closeSect(sect) {
+    let section = sect;
+    return section.classList.add(state);
+}
+
+function destroy() {
+    for (let i = 0, len = menuSectCollection.length; i < len; i++) {
+        let menuSect = menuSectCollection[i];
+
+        if (!menuSect.classList.contains(state)) {
+            menuSect.classList.add(state);
+        } else {
+            continue;
+        }
     }
-}
-
-trigger.addEventListener('click', menuOpen);
-
-function menuClose() {
-    if (getState()) {
-        navbar.classList.remove(stateActive)
-        document.body.classList.remove(bodyStateActive);
-    }
-}
-
-navbarClose.addEventListener('click', menuClose);
-
-function handler(e) {
-    if (e.target.tagName.toLowerCase() === 'a') {
-        return getState() ? menuClose() : false;
-    }
-}
-
-navbar.addEventListener('click', handler);
+} 
 
 })();
