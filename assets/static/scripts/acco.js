@@ -4,64 +4,57 @@ const
     win = window,
     doc = document;
 
-const
+const 
     acco = doc.querySelector('#acco'),
     sections = acco.children;
 
-let sectionContent = null;
-
 let collapsed = 'collapsed';
 
-function handler(e) {
-    e.preventDefault();
+for (let i = 0, len = sections.length; i < len; i++) {
+    let section = sections[i];
 
-    let that = this;
-
-    return that.classList.contains(collapsed) ? 
-    openSection(that) : closeSection(that);
+    section.addEventListener('click', sectionHandler, false);
 }
 
-function destroy() {
-    if (sectionContent === null) {
-        return;
-    }
+function sectionHandler(e) {
+    e.preventDefault();
 
+    let section = this;
+
+    return section.classList.contains(collapsed) ?
+    toOpenSection(section) : toCloseSection(section);
+}
+
+function toOpenSection(sect) {
+    let section = sect,
+    sectionContent = section.querySelector('.team__cont'),
+    sectionContentHeight = sectionContent.firstElementChild.clientHeight;
+
+    toCloseSections();
+
+    section.classList.remove(collapsed);
+    sectionContent.style.height = `${sectionContentHeight}px`;
+}
+
+function toCloseSection(sect) {
+    let section = sect,
+    sectionContent = section.querySelector('.team__cont'),
+    sectionContentHeight = sectionContent.firstElementChild.clientHeight;
+
+    sectionContent.removeAttribute('style');
+    section.classList.add(collapsed);
+}
+
+function toCloseSections() {
     for (let i = 0, len = sections.length; i < len; i++) {
-        let currentSection = sections[i];
+        let section = sections[i];
 
-        if (currentSection.classList.contains(collapsed)) {
+        if (section.classList.contains(collapsed)) {
             continue;
         }
 
-        console.log(currentSection);
-        closeSection(currentSection);
+        toCloseSection(section);
     }
-}
-
-function openSection(sect) {
-    let section = sect;
-
-    destroy();
-    sectionContent = section.querySelector('.team__cont');
-
-    let sectionContentHeight = sectionContent.firstElementChild.clientHeight;
-
-    section.classList.remove(collapsed);
-    sectionContent.style.height = `${sectionContentHeight}px`
-
-}
-
-function closeSection(sect) {
-    let section = sect;
-
-    section.classList.add(collapsed);
-    sectionContent.removeAttribute('style');
-}
-
-for (let i = 0, len = sections.length; i < len; i++) {
-    let currentSection = sections[i];
-
-    currentSection.addEventListener('click', handler, false);
 }
 
 })();
