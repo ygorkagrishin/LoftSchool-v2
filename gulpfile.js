@@ -77,7 +77,7 @@ const paths = {
     },
     icons: {
         src: 'assets/static/icons',
-        dest: 'public/icons/'
+        dest: 'public/'
     },
     baseDir: 'public'
 }
