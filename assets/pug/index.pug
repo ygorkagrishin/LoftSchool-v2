@@ -16,21 +16,20 @@ block content
 
     //- page main content!!!
     main.page__main
-
         //- oner page scroll
         .wrapper
 
             //- section hero
-            section.sect.hero(data-lazy data-src="url(images/content/hero/bg.png) no-repeat center / cover")
+            section.sect.hero(data-lazy data-lazy-bg data-src="url(images/content/hero/bg.png) no-repeat center / cover")
                 .container
                     include modules/_header
 
                     .hero__row
                         .hero__col
                             .hero__pic
-                                img(src="images/content/hero/steam.png", alt="burger pic").hero__burger
+                                img(src="", alt="burger pic" data-lazy data-lazy-pic data-src="images/content/hero/steam.png").hero__burger
                                 svg(width="450.527px", height="241.369px", viewBox="0 0 450.527 241.369").hero__drops
-                                    use(xlink:href="icons/sprite-svg.svg#drops")
+                                    use(xlink:href="sprite-svg.svg#drops")
                         .hero__col
                             .hero__desc
                                 h1.hero__title.sect__title Мы делаем 
@@ -38,11 +37,11 @@ block content
                     .hero__arrow
                         button(type="button").btn.btn__arrow
                             svg(width="28px", height="14px", viewBox="0 0 28.685 14.479")
-                                use(xlink:href="icons/sprite-svg.svg#arrow-scroll")
+                                use(xlink:href="sprite-svg.svg#arrow-scroll")
             //- section hero end
 
             //- section we
-            section.sect.we(data-lazy data-src="url(images/content/we/bg.png) no-repeat center / cover")
+            section.sect.we(data-lazy data-lazy-bg data-src="url(images/content/we/bg.png) no-repeat center / cover")
                 .container
                     .sect__cont
                         h2.sect__title.we__title Мы лучшие
@@ -50,7 +49,7 @@ block content
                         .we__row
                             .we__col.we__meat
                                 svg(width="96.428px", height="89.246px", viewBox="0 0 96.428 89.246")
-                                    use(xlink:href="icons/sprite-svg.svg#meat")
+                                    use(xlink:href="sprite-svg.svg#meat")
                                 .we__desc
                                     h3 100% свежее мясо
                                     p
@@ -58,7 +57,7 @@ block content
                                         | Анапест представляет собой анапест. Ямб неравномерен.
                             .we__col.we__hand
                                 svg(width="73px", height="85.875px", viewBox="0 0 73 85.875")
-                                    use(xlink:href="icons/sprite-svg.svg#hand")
+                                    use(xlink:href="sprite-svg.svg#hand")
                                 .we__desc
                                     h3 Ручная сборка 
                                     p
@@ -66,7 +65,7 @@ block content
                                         | Первое полустишие притягивает сюжетный реформаторский пафос.
                             .we__col.we__natural
                                 svg(width="88px", height="75.534px", viewBox="0 0 88 75.534")
-                                    use(xlink:href="icons/sprite-svg.svg#natural")
+                                    use(xlink:href="sprite-svg.svg#natural")
                                 .we__desc
                                     h3 Натуральные ингредиенты
                                     p
@@ -86,59 +85,59 @@ block content
                             .burger__slide
                                 .burger__comp
                                     svg(width="46px", height="42px", viewBox="0 0 45.748 44.625")
-                                        use(xlink:href="icons/sprite-svg.svg#burger")
+                                        use(xlink:href="sprite-svg.svg#burger")
                                     p Состав
                                     .burger__hover
                                         ul.burger__list
                                             //- #1 
                                             li
                                                 svg(width="44px", height="39px", viewBox="0 0 44 39.212")
-                                                    use(xlink:href="icons/sprite-svg.svg#beef")
+                                                    use(xlink:href="sprite-svg.svg#beef")
                                                 .burger__product Говядина
                                                 .burger__weight 300г
                                             //- #1end
                                             //- #2
                                             li
                                                 svg(width="38px" height="30px" viewBox="0 0 48 30.317")
-                                                    use(xlink:href="icons/sprite-svg.svg#buns")
+                                                    use(xlink:href="sprite-svg.svg#buns")
                                                 .burger__product Булочки
                                                 .burger__weight 100г
                                             //- #2end
                                             //- #3
                                             li
                                                 svg(width="38px" height="38px" viewBox="0 0 38 38.638")
-                                                    use(xlink:href="icons/sprite-svg.svg#salad")
+                                                    use(xlink:href="sprite-svg.svg#salad")
                                                 .burger__product Зелень
                                                 .burger__weight 70г
                                             //- #3end
                                             //- #4
                                             li
                                                 svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
-                                                    use(xlink:href="icons/sprite-svg.svg#sauce")
+                                                    use(xlink:href="sprite-svg.svg#sauce")
                                                 .burger__product Соус
                                                 .burger__weight 150г
                                             //- #4end
                                             //- #5
                                             li
                                                 svg(width="43px", height="37px", viewBox="0 0 42 37.754")
-                                                    use(xlink:href="icons/sprite-svg.svg#cucumber")
+                                                    use(xlink:href="sprite-svg.svg#cucumber")
                                                 .burger__product Овощи
                                                 .burger__weight 200г
                                             //- #5end
                                             //- #6
                                             li
                                                 svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
-                                                    use(xlink:href="icons/sprite-svg.svg#cheese")
+                                                    use(xlink:href="sprite-svg.svg#cheese")
                                                 .burger__product Сыр
                                                 .burger__weight 80г
                                             //- #6end
                                         button(type="button").burger__close
                                             svg(width="18px", height="18px", viewBox="0 0 14.988 14.988")
-                                                use(xlink:href="icons/sprite-svg.svg#close")
+                                                use(xlink:href="sprite-svg.svg#close")
                                 .burger__row
                                     .burger__col
                                         .burger__pic
-                                            img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic").burger__burger
+                                            img.burger__img(src="", alt="dark beef burger pic", data-lazy data-lazy-pic data-src="images/content/burger/darkbeefburger.png" ).burger__burger
                                     .burger__col.burger__col_align_start
                                         .burger__cont
                                             .burger__desc
@@ -155,7 +154,7 @@ block content
                                                 a(href="javascript:void(0);").btn.btn__order Заказать
                                 .burger__kkal
                                     svg(width="60px", height="60px", viewBox="0 0 60 60.178")
-                                        use(xlink:href="icons/sprite-svg.svg#kkal")
+                                        use(xlink:href="sprite-svg.svg#kkal")
                                     span 1200
                                     p Ккал
                             //- #1 end
@@ -164,59 +163,59 @@ block content
                             .burger__slide
                                 .burger__comp
                                     svg(width="46px", height="42px", viewBox="0 0 45.748 44.625")
-                                        use(xlink:href="icons/sprite-svg.svg#burger")
+                                        use(xlink:href="sprite-svg.svg#burger")
                                     p Состав
                                     .burger__hover
                                         ul.burger__list
                                             //- #1 
                                             li
                                                 svg(width="44px", height="39px", viewBox="0 0 44 39.212")
-                                                    use(xlink:href="icons/sprite-svg.svg#beef")
+                                                    use(xlink:href="sprite-svg.svg#beef")
                                                 .burger__product Говядина
                                                 .burger__weight 300г
                                             //- #1end
                                             //- #2
                                             li
                                                 svg(width="38px" height="30px" viewBox="0 0 48 30.317")
-                                                    use(xlink:href="icons/sprite-svg.svg#buns")
+                                                    use(xlink:href="sprite-svg.svg#buns")
                                                 .burger__product Булочки
                                                 .burger__weight 100г
                                             //- #2end
                                             //- #3
                                             li
                                                 svg(width="38px" height="38px" viewBox="0 0 38 38.638")
-                                                    use(xlink:href="icons/sprite-svg.svg#salad")
+                                                    use(xlink:href="sprite-svg.svg#salad")
                                                 .burger__product Зелень
                                                 .burger__weight 70г
                                             //- #3end
                                             //- #4
                                             li
                                                 svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
-                                                    use(xlink:href="icons/sprite-svg.svg#sauce")
+                                                    use(xlink:href="sprite-svg.svg#sauce")
                                                 .burger__product Соус
                                                 .burger__weight 150г
                                             //- #4end
                                             //- #5
                                             li
                                                 svg(width="43px", height="37px", viewBox="0 0 42 37.754")
-                                                    use(xlink:href="icons/sprite-svg.svg#cucumber")
+                                                    use(xlink:href="sprite-svg.svg#cucumber")
                                                 .burger__product Овощи
                                                 .burger__weight 200г
                                             //- #5end
                                             //- #6
                                             li
                                                 svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
-                                                    use(xlink:href="icons/sprite-svg.svg#cheese")
+                                                    use(xlink:href="sprite-svg.svg#cheese")
                                                 .burger__product Сыр
                                                 .burger__weight 80г
                                             //- #6end
                                         button(type="button").burger__close
                                             svg(width="18px", height="18px", viewBox="0 0 14.988 14.988")
-                                                use(xlink:href="icons/sprite-svg.svg#close")
+                                                use(xlink:href="sprite-svg.svg#close")
                                 .burger__row
                                     .burger__col
                                         .burger__pic
-                                            img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic").burger__burger
+                                            img.burger__img(src="", alt="dark beef burger pic", data-lazy data-lazy-pic data-src="images/content/burger/darkbeefburger.png").burger__burger
                                     .burger__col.burger__col_align_start
                                         .burger__cont
                                             .burger__desc
@@ -233,7 +232,7 @@ block content
                                                 a(href="javascript:void(0);").btn.btn__order Заказать
                                 .burger__kkal
                                     svg(width="60px", height="60px", viewBox="0 0 60 60.178")
-                                        use(xlink:href="icons/sprite-svg.svg#kkal")
+                                        use(xlink:href="sprite-svg.svg#kkal")
                                     span 1200
                                     p Ккал
                             //- #2 end
@@ -242,59 +241,59 @@ block content
                             .burger__slide
                                 .burger__comp
                                     svg(width="46px", height="42px", viewBox="0 0 45.748 44.625")
-                                        use(xlink:href="icons/sprite-svg.svg#burger")
+                                        use(xlink:href="sprite-svg.svg#burger")
                                     p Состав
                                     .burger__hover
                                         ul.burger__list
                                             //- #1 
                                             li
                                                 svg(width="44px", height="39px", viewBox="0 0 44 39.212")
-                                                    use(xlink:href="icons/sprite-svg.svg#beef")
+                                                    use(xlink:href="sprite-svg.svg#beef")
                                                 .burger__product Говядина
                                                 .burger__weight 300г
                                             //- #1end
                                             //- #2
                                             li
                                                 svg(width="38px" height="30px" viewBox="0 0 48 30.317")
-                                                    use(xlink:href="icons/sprite-svg.svg#buns")
+                                                    use(xlink:href="sprite-svg.svg#buns")
                                                 .burger__product Булочки
                                                 .burger__weight 100г
                                             //- #2end
                                             //- #3
                                             li
                                                 svg(width="38px" height="38px" viewBox="0 0 38 38.638")
-                                                    use(xlink:href="icons/sprite-svg.svg#salad")
+                                                    use(xlink:href="sprite-svg.svg#salad")
                                                 .burger__product Зелень
                                                 .burger__weight 70г
                                             //- #3end
                                             //- #4
                                             li
                                                 svg(width="41px" height="44px" viewBox="0 0 40.189 43.416")
-                                                    use(xlink:href="icons/sprite-svg.svg#sauce")
+                                                    use(xlink:href="sprite-svg.svg#sauce")
                                                 .burger__product Соус
                                                 .burger__weight 150г
                                             //- #4end
                                             //- #5
                                             li
                                                 svg(width="43px", height="37px", viewBox="0 0 42 37.754")
-                                                    use(xlink:href="icons/sprite-svg.svg#cucumber")
+                                                    use(xlink:href="sprite-svg.svg#cucumber")
                                                 .burger__product Овощи
                                                 .burger__weight 200г
                                             //- #5end
                                             //- #6
                                             li
                                                 svg(width="40px" height="34px" viewBox="0 0 38.126 34.138")
-                                                    use(xlink:href="icons/sprite-svg.svg#cheese")
+                                                    use(xlink:href="sprite-svg.svg#cheese")
                                                 .burger__product Сыр
                                                 .burger__weight 80г
                                             //- #6end
                                         button(type="button").burger__close
                                             svg(width="18px", height="18px", viewBox="0 0 14.988 14.988")
-                                                use(xlink:href="icons/sprite-svg.svg#close")
+                                                use(xlink:href="sprite-svg.svg#close")
                                 .burger__row
                                     .burger__col
                                         .burger__pic
-                                            img.burger__img(src="images/content/burger/darkbeefburger.png", alt="dark beef burger pic").burger__burger
+                                            img.burger__img(src="", alt="dark beef burger pic", data-lazy data-lazy-pic data-src="images/content/burger/darkbeefburger.png").burger__burger
                                     .burger__col.burger__col_align_start
                                         .burger__cont
                                             .burger__desc
@@ -311,21 +310,21 @@ block content
                                                 a(href="javascript:void(0);").btn.btn__order Заказать
                                 .burger__kkal
                                     svg(width="60px", height="60px", viewBox="0 0 60 60.178")
-                                        use(xlink:href="icons/sprite-svg.svg#kkal")
+                                        use(xlink:href="sprite-svg.svg#kkal")
                                     span 1200
                                     p Ккал
                             //- #3 end
                     //- Carousel end
                     button(type="button").burger__prev
                         svg(width="28px", height="14px", viewBox="0 0 28.685 14.479")
-                            use(xlink:href="icons/sprite-svg.svg#arrow-scroll")
+                            use(xlink:href="sprite-svg.svg#arrow-scroll")
                     button(type="button").burger__next
                         svg(width="28px", height="14px", viewBox="0 0 28.685 14.479")
-                            use(xlink:href="icons/sprite-svg.svg#arrow-scroll")
+                            use(xlink:href="sprite-svg.svg#arrow-scroll")
             //- sectino burgers end
 
             //- section team
-            section.sect.team(data-lazy data-src="url(images/content/team/bg.png) no-repeat center / cover")
+            section.sect.team(data-lazy data-lazy-bg data-src="url(images/content/team/bg.png) no-repeat center / cover")
                 .team__row
                     .team__col
                         .sect__cont
@@ -336,12 +335,12 @@ block content
                                 .team__sect.collapsed
                                     h3.team__name 
                                         svg(width="9px", height="6px", viewBox="0 0 16 16").team__arrow
-                                            use(xlink:href="icons/sprite-svg.svg#triangle-pointing-up")
+                                            use(xlink:href="sprite-svg.svg#triangle-pointing-up")
                                         span Дэниэл Редклиф
                                     .team__cont
                                         .team__wrap
                                             .team__pic
-                                                img(src="images/content/team/aphex.png", alt="avatar pic").team__img
+                                                img(src="", alt="avatar pic", data-lazy data-lazy-pic data-src="images/content/team/aphex.png").team__img
                                             .team__desc
                                                 h4 Оператор
                                                 p 
@@ -354,12 +353,12 @@ block content
                                 .team__sect.collapsed
                                     h3.team__name 
                                         svg(width="9px", height="6px", viewBox="0 0 16 16").team__arrow
-                                            use(xlink:href="icons/sprite-svg.svg#triangle-pointing-up")
+                                            use(xlink:href="sprite-svg.svg#triangle-pointing-up")
                                         span Ричард Джеймс
                                     .team__cont
                                         .team__wrap
                                             .team__pic
-                                                img(src="images/content/team/aphex.png", alt="avatar pic").team__img
+                                                img(src="", alt="avatar pic", data-lazy data-lazy-pic data-src="images/content/team/aphex.png").team__img
                                             .team__desc
                                                 h4 Оператор
                                                 p 
@@ -372,12 +371,12 @@ block content
                                 .team__sect.collapsed
                                     h3.team__name 
                                         svg(width="9px", height="6px", viewBox="0 0 16 16").team__arrow
-                                            use(xlink:href="icons/sprite-svg.svg#triangle-pointing-up")
+                                            use(xlink:href="sprite-svg.svg#triangle-pointing-up")
                                         span Джейк Финн
                                     .team__cont
                                         .team__wrap
                                             .team__pic
-                                                img(src="images/content/team/aphex.png", alt="avatar pic").team__img
+                                                img(src="", alt="avatar pic", data-lazy data-lazy-pic data-src="images/content/team/aphex.png").team__img
                                             .team__desc
                                                 h4 Оператор
                                                 p 
@@ -390,12 +389,12 @@ block content
                                 .team__sect.collapsed
                                     h3.team__name 
                                         svg(width="9px", height="6px", viewBox="0 0 16 16").team__arrow
-                                            use(xlink:href="icons/sprite-svg.svg#triangle-pointing-up")
+                                            use(xlink:href="sprite-svg.svg#triangle-pointing-up")
                                         span Николай Иванов
                                     .team__cont
                                         .team__wrap
                                             .team__pic
-                                                img(src="images/content/team/aphex.png", alt="avatar pic").team__img
+                                                img(src="", alt="avatar pic", data-lazy data-lazy-pic data-src="images/content/team/aphex.png").team__img
                                             .team__desc
                                                 h4 Оператор
                                                 p 
@@ -406,13 +405,13 @@ block content
             //- section team end
 
             //- section menu
-            section.sect.menu(data-lazy data-src="url(images/content/menu/bg.png) no-repeat center / cover")
+            section.sect.menu(data-lazy data-lazy-bg data-src="url(images/content/menu/bg.png) no-repeat center / cover")
                 h2.sect__title.menu__title Меню
 
                 .menu__acco#menu
                     //- section menu #1
                     .menu__sect.collapsed
-                        .menu__pannel(data-lazy data-src="url('images/content/menu/photo-1468071174046-657d9d351a40.png') no-repeat center / cover")
+                        .menu__pannel(data-lazy data-lazy-bg data-src="url('images/content/menu/photo-1468071174046-657d9d351a40.png') no-repeat center / cover")
                             h3.menu__name Для мясоедов
                         .menu__cont
                             .menu__desc
@@ -432,7 +431,7 @@ block content
 
                     //- section menu #2
                     .menu__sect.collapsed
-                        .menu__pannel(data-lazy data-src="url(images/content/menu/photo-1466814314367-45323ac74e2b.png) no-repeat center / cover")
+                        .menu__pannel(data-lazy data-lazy-bg data-src="url(images/content/menu/photo-1466814314367-45323ac74e2b.png) no-repeat center / cover")
                             h3.menu__name Вегетарианское
                         .menu__cont
                             .menu__desc
@@ -452,7 +451,7 @@ block content
 
                     //- section menu #3
                     .menu__sect.collapsed
-                        .menu__pannel(data-lazy data-src="url('images/content/menu/IMG_4084.png') no-repeat center / cover")
+                        .menu__pannel(data-lazy data-lazy-bg data-src="url('images/content/menu/IMG_4084.png') no-repeat center / cover")
                             h3.menu__name Диетическое
                         .menu__cont
                             .menu__desc
@@ -475,7 +474,7 @@ block content
             section.sect.review
                 .review__row.review__reviews
                     //- #1
-                    .review__col.review__review(data-lazy data-src="url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-lazy-bg data-src="url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -500,11 +499,11 @@ block content
                                 | котлетка такой сочной, а сыр таким расплавленным.
                             button(type="button").review__close
                                 svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
-                                    use(xlink:href="icons/sprite-svg.svg#close")
+                                    use(xlink:href="sprite-svg.svg#close")
                     //- popup-#1end
 
                     //- #2
-                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1440606797942-6cc04c045447.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-lazy-bg data-src="url(images/content/review/photo-1440606797942-6cc04c045447.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -529,11 +528,11 @@ block content
                                 | котлетка такой сочной, а сыр таким расплавленным.
                             button(type="button").review__close
                                 svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
-                                    use(xlink:href="icons/sprite-svg.svg#close")
+                                    use(xlink:href="sprite-svg.svg#close")
                     //- popup-#2end
 
                     //- #3
-                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1445404590072-16ef9c18bd83.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-lazy-bg data-src="url(images/content/review/photo-1445404590072-16ef9c18bd83.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -558,11 +557,11 @@ block content
                                 | котлетка такой сочной, а сыр таким расплавленным.
                             button(type="button").review__close
                                 svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
-                                    use(xlink:href="icons/sprite-svg.svg#close")
+                                    use(xlink:href="sprite-svg.svg#close")
                     //- popup-#3end
 
                     //- #4
-                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1468546818829-25bb337b6646.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-lazy-bg data-src="url(images/content/review/photo-1468546818829-25bb337b6646.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -587,11 +586,11 @@ block content
                                 | котлетка такой сочной, а сыр таким расплавленным.
                             button(type="button").review__close
                                 svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
-                                    use(xlink:href="icons/sprite-svg.svg#close")
+                                    use(xlink:href="sprite-svg.svg#close")
                     //- popup-#4end
 
                     //- #5
-                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1438763298591-75a0d42b7265.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-lazy-bg data-src="url(images/content/review/photo-1438763298591-75a0d42b7265.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -616,11 +615,11 @@ block content
                                 | котлетка такой сочной, а сыр таким расплавленным.
                             button(type="button").review__close
                                 svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
-                                    use(xlink:href="icons/sprite-svg.svg#close")
+                                    use(xlink:href="sprite-svg.svg#close")
                     //- popup-#5end
 
                     //- #6
-                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1461332682233-b818af4c3a6e.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-lazy-bg data-src="url(images/content/review/photo-1461332682233-b818af4c3a6e.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -645,11 +644,11 @@ block content
                                 | котлетка такой сочной, а сыр таким расплавленным.
                             button(type="button").review__close
                                 svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
-                                    use(xlink:href="icons/sprite-svg.svg#close")
+                                    use(xlink:href="sprite-svg.svg#close")
                     //- popup-#6end
 
                     //- #7
-                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1457706924510-773f3c796de3.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-lazy-bg data-src="url(images/content/review/photo-1457706924510-773f3c796de3.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -674,11 +673,11 @@ block content
                                 | котлетка такой сочной, а сыр таким расплавленным.
                             button(type="button").review__close
                                 svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
-                                    use(xlink:href="icons/sprite-svg.svg#close")
+                                    use(xlink:href="sprite-svg.svg#close")
                     //- popup-#7end
 
                     //- #8
-                    .review__col.review__review(data-lazy data-src="url(images/content/review/photo-1458696765561-12142eaead131.png) no-repeat center / cover")
+                    .review__col.review__review(data-lazy data-lazy-bg data-src="url(images/content/review/photo-1458696765561-12142eaead131.png) no-repeat center / cover")
                         .review__hover
                             .review__desc
                                 h3 Констанин Спилберг
@@ -703,12 +702,12 @@ block content
                                 | котлетка такой сочной, а сыр таким расплавленным.
                             button(type="button").review__close
                                 svg(width="15px", height="15px", viewBox="0 0 14.988 14.988")
-                                    use(xlink:href="icons/sprite-svg.svg#close")
+                                    use(xlink:href="sprite-svg.svg#close")
                     //- popup-#8end
             //- section review end
 
             //- section form
-            section.sect.form(data-lazy data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover")
+            section.sect.form(data-lazy data-lazy-bg data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover")
                 .container
                     .sect__cont
                         h2.form__title.sect__title Закажите доставку
@@ -779,5 +778,4 @@ block content
             include modules/_footer
             //- footer end
         //- one page scroll end
-
     //- page main content end

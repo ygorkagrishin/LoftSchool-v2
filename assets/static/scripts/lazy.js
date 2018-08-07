@@ -1,59 +1,83 @@
 (() => {
 
 const 
-    $W = window,
-    $D = document;
+    win = window,
+    doc = document;
 
 const 
-    DATA = 'data-lazy',
-    DATA_SRC = 'data-src';
+    data = 'data-lazy',
+    dataSrc = 'data-src';
+
+const
+    dataLazyBg = 'data-lazy-bg',
+    dataLazyPic = 'data-lazy-pic';
     
 const 
-    IMAGES = $D.querySelectorAll(`[${DATA}]`);
+    dataTargets = doc.querySelectorAll(`[${data}]`);
 
 const 
-    CONFIG = {
+    config = {
         root: null,
         rootMargin: '0px',
         threshold: 0.5
 }
 
-const IMAGES_COUNT = IMAGES.length;
+const dataTargetsCount = dataTargets.length;
 
-let observer = !('IntersectionObserver' in $W) ? loadBackgroundsImmediately(IMAGES) : 
-initIntersectionObserver(onIntersection, CONFIG);
+let observer = !('IntersectionObserver' in win) ? loadImagesImmediately() : 
+initIntersectionObserver(onIntersection, config);
 
 function initIntersectionObserver(onIntersection, configuration) {
     observer = new IntersectionObserver(onIntersection, configuration);
     
-    for (let i=0; i<IMAGES_COUNT; i++) {
-        let img = IMAGES[i];
-        observer.observe(img);
+    for (let i = 0; i < dataTargetsCount; i++) {
+        let dataTarget = dataTargets[i];
+        observer.observe(dataTarget);
     }
 
     return observer
 }
 
-function loadBackgroundsImmediately() {
-    for (let i=0; i<IMAGES_COUNT; i++) {
-        let img = IMAGES_COUNT[i];
+function loadImagesImmediately() {
+    for (let i = 0; i < dataTargetsCount; i++) {
+        let dataTarget = dataTargetsCount[i];
 
-        preloadBackgrounds(img);
+        if (dataTarget.hasAttribute(dataLazyBg)) {
+            preloadBackground(dataTarget);
+        } else if (dataTarget.hasAttribute(dataLazyPic)) {
+            preloadImg(dataTarget);
+        } else {
+            return;
+        }
     }
 }
 
-function preloadBackgrounds(img) {
+function preloadBackground(target) {
     let 
-        currentSection = img,
-        value = currentSection.hasAttribute(DATA) && currentSection.hasAttribute(DATA_SRC) ? 
-        currentSection.getAttribute(DATA_SRC) : false;
+        elem = target,
+        path = elem.hasAttribute(data) && elem.hasAttribute(dataSrc) ? 
+        elem.getAttribute(dataSrc) : false;
 
-    if (!value) { 
+    if (!path) { 
         return false;
     }
     
-    currentSection.style.background = value;
-    currentSection.removeAttribute(DATA_SRC);
+    elem.style.background = path;
+    elem.removeAttribute(dataSrc);
+}
+
+function preloadImg(target) {
+    let 
+        img = target,
+        path = img.hasAttribute(data) && img.hasAttribute(dataSrc) ? 
+        img.getAttribute(dataSrc) : false;
+
+    if (!path) { 
+        return false;
+    }
+    
+    img.setAttribute('src', path);
+    img.removeAttribute(dataSrc);
 }
 
 function onIntersection(entries) {
@@ -62,7 +86,13 @@ function onIntersection(entries) {
 
         if (entry.intersectionRatio > 0) {
             observer.unobserve(entry.target);
-            preloadBackgrounds(entry.target);
+            if (entry.target.hasAttribute(dataLazyBg)) {
+                preloadBackground(entry.target);
+            } else if (entry.target.hasAttribute(dataLazyPic)) {
+                preloadImg(entry.target);
+            } else {
+                return;
+            }
         }
     }
 }
