@@ -20,7 +20,7 @@ block content
         .wrapper
 
             //- section hero
-            section.sect.hero(data-lazy data-lazy-bg data-src="url(images/content/hero/bg.png) no-repeat center / cover")
+            section.sect.hero#hero(data-lazy data-lazy-bg data-src="url(images/content/hero/bg.png) no-repeat center / cover")
                 .container
                     include modules/_header
 
@@ -41,7 +41,7 @@ block content
             //- section hero end
 
             //- section we
-            section.sect.we(data-lazy data-lazy-bg data-src="url(images/content/we/bg.png) no-repeat center / cover")
+            section.sect.we#we(data-lazy data-lazy-bg data-src="url(images/content/we/bg.png) no-repeat center / cover")
                 .container
                     .sect__cont
                         h2.sect__title.we__title Мы лучшие
@@ -74,7 +74,7 @@ block content
             //- section we end
 
             //- section burgers
-            section.sect.burger
+            section.sect.burger#burger
                 .container
                     
                     //- Carousel 
@@ -324,7 +324,7 @@ block content
             //- sectino burgers end
 
             //- section team
-            section.sect.team(data-lazy data-lazy-bg data-src="url(images/content/team/bg.png) no-repeat center / cover")
+            section.sect.team#team(data-lazy data-lazy-bg data-src="url(images/content/team/bg.png) no-repeat center / cover")
                 .team__row
                     .team__col
                         .sect__cont
@@ -405,10 +405,10 @@ block content
             //- section team end
 
             //- section menu
-            section.sect.menu(data-lazy data-lazy-bg data-src="url(images/content/menu/bg.png) no-repeat center / cover")
+            section.sect.menu#menu(data-lazy data-lazy-bg data-src="url(images/content/menu/bg.png) no-repeat center / cover")
                 h2.sect__title.menu__title Меню
 
-                .menu__acco#menu
+                .menu__acco
                     //- section menu #1
                     .menu__sect.collapsed
                         .menu__pannel(data-lazy data-lazy-bg data-src="url('images/content/menu/photo-1468071174046-657d9d351a40.png') no-repeat center / cover")
@@ -471,7 +471,7 @@ block content
             //- section menu end
 
             //- section review
-            section.sect.review
+            section.sect.review#review
                 .review__row.review__reviews
                     //- #1
                     .review__col.review__review(data-lazy data-lazy-bg data-src="url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover")
@@ -482,8 +482,8 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-popup data-src="#popup-1").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-popup data-src="#popup-1").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
+                            button(type="button", data-popup data-id="#popup-1").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-id="#popup-1").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #1end
 
                     //- popup-#1
@@ -511,8 +511,8 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-popup data-src="#popup-2").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-popup data-src="#popup-2").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
+                            button(type="button", data-popup data-id="#popup-2").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-id="#popup-2").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #2end
 
                     //- popup-#2
@@ -540,8 +540,8 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-popup data-src="#popup-3").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-popup data-src="#popup-3").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
+                            button(type="button", data-popup data-id="#popup-3").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-id="#popup-3").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #3end
 
                     //- popup-#3
@@ -569,8 +569,8 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-popup data-src="#popup-4").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-popup data-src="#popup-4").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
+                            button(type="button", data-popup data-id="#popup-4").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-id="#popup-4").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #4end
 
                     //- popup-#4
@@ -598,8 +598,8 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-popup data-src="#popup-5").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-popup data-src="#popup-5").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
+                            button(type="button", data-popup data-id="#popup-5").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-id="#popup-5").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #5end
 
                     //- popup-#5
@@ -627,8 +627,8 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-popup data-src="#popup-6").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-popup data-src="#popup-6").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
+                            button(type="button", data-popup data-id="#popup-6").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-id="#popup-6").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #6end
 
                     //- popup-#6
@@ -656,8 +656,8 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-popup data-src="#popup-7").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-popup data-src="#popup-7").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
+                            button(type="button", data-popup data-id="#popup-7").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-id="#popup-7").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #7end
 
                     //- popup-#7
@@ -685,8 +685,8 @@ block content
                                     | Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
                                     | Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
                                     | а сыр таким расплавленным.
-                            button(type="button", data-popup data-src="#popup-8").btn.btn__more.review__btn Подробнее
-                            button(type="button", data-popup data-src="#popup-8").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
+                            button(type="button", data-popup data-id="#popup-8").btn.btn__more.review__btn Подробнее
+                            button(type="button", data-popup data-id="#popup-8").btn.btn__more.review__btn.review__btn_visibility_mobile Читать отзыв
                     //- #8end
 
                     //- popup-#8
@@ -707,7 +707,7 @@ block content
             //- section review end
 
             //- section form
-            section.sect.form(data-lazy data-lazy-bg data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover")
+            section.sect.form#form(data-lazy data-lazy-bg data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover")
                 .container
                     .sect__cont
                         h2.form__title.sect__title Закажите доставку
@@ -770,7 +770,7 @@ block content
             //- section form end
 
             //- section contact
-            section.sect.cont
+            section.sect.cont#content
                 .cont__map#map 
             //- section contact end
 
@@ -778,4 +778,26 @@ block content
             include modules/_footer
             //- footer end
         //- one page scroll end
+
+        //- Switch
+        .switch
+            ul
+                li
+                    a(href="javascript:void(0);")
+                li
+                    a(href="javascript:void(0);")
+                li
+                    a(href="javascript:void(0);")
+                li
+                    a(href="javascript:void(0);")
+                li
+                    a(href="javascript:void(0);")
+                li
+                    a(href="javascript:void(0);")
+                li
+                    a(href="javascript:void(0);")
+                li
+                    a(href="javascript:void(0);")
+        //- Switch end
+
     //- page main content end

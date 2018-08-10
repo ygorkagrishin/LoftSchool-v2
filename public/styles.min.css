@@ -101,6 +101,7 @@ html {
 }
 body {
   position: relative;
+  overflow: hidden;
 }
 .wrapper {
   min-height: 100vh;
@@ -222,6 +223,41 @@ textarea {
   height: 18px !important;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
+}
+.switch {
+  position: fixed;
+  top: 14.5%;
+  right: 5%;
+  z-index: 9999999;
+}
+.switch li:not(:last-child) {
+  margin-bottom: 15.5px;
+}
+.switch a {
+  position: relative;
+  z-index: 999999;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.switch a:hover:after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  z-index: 99999;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+@media (orientation: portrait) and (max-width: 1024px) {
+  .switch {
+    display: none;
+  }
 }
 /* ***************
     main styles

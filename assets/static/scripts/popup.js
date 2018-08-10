@@ -1,61 +1,51 @@
 (() => {
 
 const 
-    $W = window,
-    $D = document;
+    win = window,
+    doc = document;
 
 const 
-    DATA = 'data-popup',
-    DATA_SRC = 'data-src';
+    data = 'data-popup',
+    dataId = 'data-id';
 
 const 
-    COLLAPSED = 'collapsed';
+    buttons = doc.querySelectorAll('.review__btn'),
+    buttonsClose = doc.querySelectorAll('.review__close');
 
-const
-    BUTTONS = $D.querySelectorAll('.review__btn'),
-    BUTTONS_CLOSE = $D.querySelectorAll('.review__close');
+const collapsed = 'collapsed';
 
-let currentModal;
+let modal = null;
 
-function openModal(e) {
+for (let i = 0, len = buttons.length; i < len; i++) {
+    let btn = buttons[i];
+    btn.addEventListener('click', openHandler, false);
+}
+
+function openHandler(e) {
     e.preventDefault();
 
-    let 
-        that = this,
-        id = that.hasAttribute(DATA) && that.hasAttribute(DATA_SRC) ?
-        that.getAttribute(DATA_SRC) : false;
+    let btn = this,
+    id = btn.hasAttribute(data) && btn.hasAttribute(dataId) ?
+    btn.getAttribute(dataId) : false;
 
-    if (!id) {
+    if (!id) 
         return;
-    }
 
-    currentModal = $D.querySelector(id);
+    modal = doc.querySelector(id);
 
-    return currentModal.classList.contains(COLLAPSED) ? 
-    currentModal.classList.remove(COLLAPSED) : false;
+    modal.classList.contains(collapsed) ? 
+    modal.classList.remove(collapsed) : false;
 }
 
-function closeModal(e) {
-    e.preventDefault();
+for (let i = 0, len = buttonsClose.length; i < len; i++) {
+    let close = buttonsClose[i];
 
-    if (!currentModal) {
-        return;
-    }
-
-    return !currentModal.classList.contains(COLLAPSED) ? 
-    currentModal.classList.add(COLLAPSED) : false;
+    close.addEventListener('click', closeHandler);
 }
 
-for (let i = 0, len = BUTTONS.length; i < len; i++) {
-    let button = BUTTONS[i];
-
-    button.addEventListener('click', openModal, false);
-}
-
-for (let i = 0, len = BUTTONS_CLOSE.length; i < len; i++) {
-    let buttonClose = BUTTONS_CLOSE[i];
-
-    buttonClose.addEventListener('click', closeModal, false);
+function closeHandler() {
+    return !modal.classList.contains(collapsed) ? 
+    modal.classList.add(collapsed) : false;
 }
 
 })();

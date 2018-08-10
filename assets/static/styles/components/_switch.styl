@@ -1,0 +1,32 @@
+.switch
+    position fixed
+    top 14.5% 
+    right 5%
+    z-index $z-index1
+    li
+        &:not(:last-child)
+            margin-bottom 15.5px
+    a
+        position relative
+        z-index $z-index2
+        display block
+        width 6px
+        height 6px
+        background-color primaryWhiteColor 
+        border-radius 50%
+        &:hover
+            &:after
+                content ''
+                position absolute
+                top -5px
+                left -5px
+                z-index $z-index3
+                display block
+                width 16px
+                height 16px
+                border-radius 50%
+                border 1px solid primaryWhiteColor
+
+@media (orientation portrait) and (max-width 1024px)
+    .switch
+        display none

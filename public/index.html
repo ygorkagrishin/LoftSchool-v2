@@ -18,7 +18,7 @@
     </div>
     <main class="page__main">
       <div class="wrapper">
-        <section class="sect hero" data-lazy data-lazy-bg data-src="url(images/content/hero/bg.png) no-repeat center / cover">
+        <section class="sect hero" id="hero" data-lazy data-lazy-bg data-src="url(images/content/hero/bg.png) no-repeat center / cover">
           <div class="container">
             <header class="header">
               <div class="header__inner">
@@ -30,12 +30,12 @@
                 <div class="header__navbar">
                   <nav class="navbar">
                     <ul>
-                      <li><a href="javascript:void(0);">О нас</a></li>
-                      <li><a href="javascript:void(0);">Бургеры</a></li>
-                      <li><a href="javascript:void(0);">Команда</a></li>
-                      <li><a href="javascript:void(0);">Меню</a></li>
-                      <li><a href="javascript:void(0);">Отзывы</a></li>
-                      <li><a href="javascript:void(0);">Контакты</a></li>
+                      <li><a href="javascript:void(0);" data-scroll data-anchor="we">О нас</a></li>
+                      <li><a href="javascript:void(0);" data-scroll data-anchor="burger">Бургеры</a></li>
+                      <li><a href="javascript:void(0);" data-scroll data-anchor="team">Команда</a></li>
+                      <li><a href="javascript:void(0);" data-scroll data-anchor="menu">Меню</a></li>
+                      <li><a href="javascript:void(0);" data-scroll data-anchor="review">Отзывы</a></li>
+                      <li><a href="javascript:void(0);" data-scroll data-anchor="content">Контакты</a></li>
                     </ul>
                     <button class="navbar__close" type="button">
                       <svg width="19px" height="19px" viewBox="0 0 14.988 14.988">
@@ -71,7 +71,7 @@
             </div>
           </div>
         </section>
-        <section class="sect we" data-lazy data-lazy-bg data-src="url(images/content/we/bg.png) no-repeat center / cover">
+        <section class="sect we" id="we" data-lazy data-lazy-bg data-src="url(images/content/we/bg.png) no-repeat center / cover">
           <div class="container">
             <div class="sect__cont">
               <h2 class="sect__title we__title">Мы лучшие</h2>
@@ -116,7 +116,7 @@
             </div>
           </div>
         </section>
-        <section class="sect burger">
+        <section class="sect burger" id="burger">
           <div class="container">
             <div class="burger__carousel" id="carousel">
               <div class="burger__wrap">
@@ -392,7 +392,7 @@
             </button>
           </div>
         </section>
-        <section class="sect team" data-lazy data-lazy-bg data-src="url(images/content/team/bg.png) no-repeat center / cover">
+        <section class="sect team" id="team" data-lazy data-lazy-bg data-src="url(images/content/team/bg.png) no-repeat center / cover">
           <div class="team__row">
             <div class="team__col">
               <div class="sect__cont">
@@ -483,9 +483,9 @@
             </div>
           </div>
         </section>
-        <section class="sect menu" data-lazy data-lazy-bg data-src="url(images/content/menu/bg.png) no-repeat center / cover">
+        <section class="sect menu" id="menu" data-lazy data-lazy-bg data-src="url(images/content/menu/bg.png) no-repeat center / cover">
           <h2 class="sect__title menu__title">Меню</h2>
-          <div class="menu__acco" id="menu">
+          <div class="menu__acco">
             <div class="menu__sect collapsed">
               <div class="menu__pannel" data-lazy data-lazy-bg data-src="url('images/content/menu/photo-1468071174046-657d9d351a40.png') no-repeat center / cover">
                 <h3 class="menu__name">Для мясоедов</h3>
@@ -554,7 +554,7 @@
             </div>
           </div>
         </section>
-        <section class="sect review">
+        <section class="sect review" id="review">
           <div class="review__row review__reviews">
             <div class="review__col review__review" data-lazy data-lazy-bg data-src="url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover">
               <div class="review__hover">
@@ -566,8 +566,8 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-1">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-1">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-1">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-1">Читать отзыв</button>
               </div>
             </div>
             <div class="review__modal collapsed" id="popup-1">
@@ -598,8 +598,8 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-2">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-2">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-2">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-2">Читать отзыв</button>
               </div>
             </div>
             <div class="review__modal collapsed" id="popup-2">
@@ -630,8 +630,8 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-3">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-3">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-3">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-3">Читать отзыв</button>
               </div>
             </div>
             <div class="review__modal collapsed" id="popup-3">
@@ -662,8 +662,8 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-4">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-4">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-4">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-4">Читать отзыв</button>
               </div>
             </div>
             <div class="review__modal collapsed" id="popup-4">
@@ -694,8 +694,8 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-5">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-5">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-5">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-5">Читать отзыв</button>
               </div>
             </div>
             <div class="review__modal collapsed" id="popup-5">
@@ -726,8 +726,8 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-6">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-6">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-6">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-6">Читать отзыв</button>
               </div>
             </div>
             <div class="review__modal collapsed" id="popup-6">
@@ -758,8 +758,8 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-7">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-7">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-7">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-7">Читать отзыв</button>
               </div>
             </div>
             <div class="review__modal collapsed" id="popup-7">
@@ -790,8 +790,8 @@
                     а сыр таким расплавленным.
                   </p>
                 </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-src="#popup-8">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-src="#popup-8">Читать отзыв</button>
+                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-8">Подробнее</button>
+                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-8">Читать отзыв</button>
               </div>
             </div>
             <div class="review__modal collapsed" id="popup-8">
@@ -814,7 +814,7 @@
             </div>
           </div>
         </section>
-        <section class="sect form" data-lazy data-lazy-bg data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover">
+        <section class="sect form" id="form" data-lazy data-lazy-bg data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover">
           <div class="container">
             <div class="sect__cont">
               <h2 class="form__title sect__title">Закажите доставку</h2>
@@ -886,7 +886,7 @@
             </div>
           </div>
         </section>
-        <section class="sect cont">
+        <section class="sect cont" id="content">
           <div class="cont__map" id="map"> </div>
         </section>
         <footer class="footer" data-lazy data-lazy-bg data-src="url('images/content/footer/chalkboard_texture_mc2015_by_mattiamc-d8dbnacb.png') no-repeat center / cover">
@@ -923,6 +923,18 @@
             </div>
           </div>
         </footer>
+      </div>
+      <div class="switch">
+        <ul>
+          <li><a href="javascript:void(0);"></a></li>
+          <li><a href="javascript:void(0);"></a></li>
+          <li><a href="javascript:void(0);"></a></li>
+          <li><a href="javascript:void(0);"></a></li>
+          <li><a href="javascript:void(0);"></a></li>
+          <li><a href="javascript:void(0);"></a></li>
+          <li><a href="javascript:void(0);"></a></li>
+          <li><a href="javascript:void(0);"></a></li>
+        </ul>
       </div>
     </main>
     <script src="jquery.min.js"></script>

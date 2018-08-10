@@ -5,7 +5,7 @@ const
     doc = document;
 
 const   
-    menu = doc.querySelector('#menu'),
+    menu = doc.querySelector('.menu__acco'),
     menuSectCollection = menu.children;
 
 const 
