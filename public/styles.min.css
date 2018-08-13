@@ -242,7 +242,7 @@ textarea {
   background-color: #fff;
   border-radius: 50%;
 }
-.switch a:hover:after {
+.switch a.active:after {
   content: '';
   position: absolute;
   top: -5px;
