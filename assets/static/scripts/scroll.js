@@ -10,6 +10,11 @@ const
     SECTIONS = WRAPPER.children,
     SECTIONS_LENGTH = SECTIONS.length;
 
+const 
+    NAVIGATOR = BODY.querySelector('.navbar'),
+    NAVIGATOR_LINKS = NAVIGATOR.getElementsByTagName('a'),
+    NAVIGATOR_LENGTH = NAVIGATOR_LINKS.length;
+
 const
     SWITCHED = BODY.querySelector('.switch'),
     DOTS = SWITCHED.getElementsByTagName('a'),
@@ -28,36 +33,17 @@ let newX = 0,
 let counterSection = 0,
     currentSection = SECTIONS[counterSection];
 
-for (let i = 0; i < DOTS_LENGTH; i++) {
-    let dot = DOTS[i];
-    dot.addEventListener('click', handler, false);
+
+for (let i = 0; i < NAVIGATOR_LENGTH; i++) {
+    let link = NAVIGATOR_LINKS[i];
+
+    link.addEventListener('click', handler, false);
 }
 
-function handler(e) {
-    e.preventDefault();
-
-    let dot = this, id = null;
-
-    dot.hasAttribute(DATA_NAME) && dot.hasAttribute(DATA_TARGET) ?
-    id = dot.getAttribute(DATA_TARGET) : false;
-
-    if (!id)
-        return;
-
-    for (let i = 0; i < SECTIONS_LENGTH; i++) {
-        let section = SECTIONS[i];
-
-        if (section.id !== id)
-            continue;
-        else
-            counterSection = i;
-    }
-
-    currentSection = SECTIONS[counterSection];
-
-    viewCurrentSection()
-
-    draw();
+for (let i = 0; i < DOTS_LENGTH; i++) {
+    let dot = DOTS[i];
+    
+    dot.addEventListener('click', handler, false);
 }
 
 WRAPPER.addEventListener('touchstart', function (e) {
@@ -73,8 +59,10 @@ WRAPPER.addEventListener('touchstart', function (e) {
 })
 
 WRAPPER.addEventListener('touchmove', function (e) {
-    if (e.changedTouches.length !== 1)
-        return;
+    e.preventDefault();
+    
+    // if (e.changedTouches.length !== 1)
+    //     return;
 })
 
 WRAPPER.addEventListener('touchend', function (e) {
@@ -94,9 +82,9 @@ WRAPPER.addEventListener('touchend', function (e) {
     if (Math.abs(deltaX) >= Math.abs(deltaY))
         return;
 
-    if (y > newY && SECTIONS_LENGTH >= counterSection)
+    if (y > newY && SECTIONS_LENGTH !== counterSection)
         ++counterSection;
-    else if (newY > y && counterSection >= 0)
+    else if (newY > y && counterSection !== 0)
         --counterSection;
 
     currentSection = SECTIONS[counterSection];
@@ -106,11 +94,30 @@ WRAPPER.addEventListener('touchend', function (e) {
     draw();
 })
 
-function draw() {
-    const coord = currentSection.offsetTop;
+function handler(e) {
+    let target = e.target, id = false;
 
-    WRAPPER.style.transition = `all .7s`;
-    WRAPPER.style.transform = `translate(0, -${coord}px)`;
+    if (target.hasAttribute(DATA_NAME) && target.hasAttribute(DATA_TARGET)) {
+        id = target.getAttribute(DATA_TARGET);
+
+        for (let i = 0; i < SECTIONS_LENGTH; i++) {
+            let section = SECTIONS[i];
+
+            if (section.id !== id) 
+                continue;
+
+            counterSection = i;
+        }
+        
+        currentSection = SECTIONS[counterSection];
+
+        viewCurrentSection();
+
+        draw();
+    }
+
+    if (!id)
+        return;
 }
 
 function viewCurrentSection() {
@@ -124,6 +131,13 @@ function viewCurrentSection() {
     }
 
     DOTS[counterSection].classList.add('active');
+}
+
+function draw() {
+    const coord = currentSection.offsetTop;
+
+    WRAPPER.style.transition = `all .7s`;
+    WRAPPER.style.transform = `translate(0, -${coord}px)`;
 }
 
 })();
