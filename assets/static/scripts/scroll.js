@@ -15,6 +15,9 @@ const
     NAVIGATOR_LINKS = NAVIGATOR.getElementsByTagName('a'),
     NAVIGATOR_LENGTH = NAVIGATOR_LINKS.length;
 
+const 
+    ARROW = BODY.querySelector('.btn__arrow');
+
 const
     SWITCHED = BODY.querySelector('.switch'),
     DOTS = SWITCHED.getElementsByTagName('a'),
@@ -45,6 +48,18 @@ for (let i = 0; i < DOTS_LENGTH; i++) {
     
     dot.addEventListener('click', handler, false);
 }
+
+ARROW.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    ++counterSection
+
+    currentSection = SECTIONS[counterSection];
+
+    viewCurrentSection();
+
+    draw();
+})
 
 WRAPPER.addEventListener('touchstart', function (e) {
     let touches = e.changedTouches;
@@ -95,10 +110,13 @@ WRAPPER.addEventListener('touchend', function (e) {
 })
 
 function handler(e) {
-    let target = e.target, id = false;
+    e.preventDefault();
+    
+    let that = this, 
+        id = false;
 
-    if (target.hasAttribute(DATA_NAME) && target.hasAttribute(DATA_TARGET)) {
-        id = target.getAttribute(DATA_TARGET);
+    if (that.hasAttribute(DATA_NAME) && that.hasAttribute(DATA_TARGET)) {
+        id = that.getAttribute(DATA_TARGET);
 
         for (let i = 0; i < SECTIONS_LENGTH; i++) {
             let section = SECTIONS[i];
