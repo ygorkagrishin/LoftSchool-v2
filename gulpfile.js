@@ -159,7 +159,18 @@ gulp.task('js:copy', () => {
 
 // Собираем скрипты
 gulp.task('js:build', () => {
-    return gulp.src(options.scripts.src + '/*.js')
+    return gulp.src([
+            options.scripts.src + '/variables.js',
+            options.scripts.src + '/error.js',
+            options.scripts.src + '/lazy.js',
+            options.scripts.src + '/scroll.js',
+            options.scripts.src + '/mobile-menu.js',
+            options.scripts.src + '/carousel.js',
+            options.scripts.src + '/acco.js',
+            options.scripts.src + '/menu.js',
+            options.scripts.src + '/popup.js',
+            options.scripts.src + '/map.js'
+        ])
         .pipe(plumber({
             errorHandler: err => {
                 notify.onError({
