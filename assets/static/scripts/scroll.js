@@ -1,11 +1,6 @@
 (function () {
 
 const 
-    WIN = window,
-    DOC = document,
-    BODY = DOC.body;
-
-const 
     WRAPPER = BODY.querySelector('.wrapper'),
     SECTIONS = WRAPPER.children,
     SECTIONS_LENGTH = SECTIONS.length;
@@ -75,9 +70,6 @@ WRAPPER.addEventListener('touchstart', function (e) {
 
 WRAPPER.addEventListener('touchmove', function (e) {
     e.preventDefault();
-    
-    // if (e.changedTouches.length !== 1)
-    //     return;
 })
 
 WRAPPER.addEventListener('touchend', function (e) {
