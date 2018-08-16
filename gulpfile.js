@@ -67,6 +67,10 @@ const paths = {
         src: 'assets/static/scripts',
         dest: 'public/'
     },
+    php: {
+        src: 'assets/static',
+        dest: 'public/'
+    },
     fonts: {
         src: 'assets/static/fonts',
         dest: 'public/fonts/'
@@ -169,6 +173,7 @@ gulp.task('js:build', () => {
             options.scripts.src + '/acco.js',
             options.scripts.src + '/menu.js',
             options.scripts.src + '/popup.js',
+            options.scripts.src + '/send.js',
             options.scripts.src + '/map.js'
         ])
         .pipe(plumber({
@@ -190,6 +195,13 @@ gulp.task('js:build', () => {
         .pipe(concat('common.min.js'))
         .pipe(gulpif(isDevelopment, sourcemaps.write('.')))
         .pipe(gulp.dest(options.scripts.dest));
+});
+
+// Копируем php.
+gulp.task('php:copy', () => {
+    return gulp.src(options.php.src + '/*.php')
+    .pipe(newer(options.php.dest))
+    .pipe(gulp.dest(options.php.dest))
 });
 
 // Копируем шрифты
@@ -239,6 +251,7 @@ gulp.task('watch', () => {
     gulp.watch(options.pug.src + '/**/*.pug', gulp.series('html:build'))
     gulp.watch(options.stylus.src + '/**/*.styl', gulp.series('css:build'))
     gulp.watch(options.scripts.src + '/*.js', gulp.series('js:build'))
+    gulp.watch(options.php.src + '/*.php', gulp.series('php:copy'))
     gulp.watch(options.fonts.src + '/**/*.{ttf,woff,woff2,eot,svg}', gulp.series('fonts:copy'))
     gulp.watch(options.images.src + '/**/**/*.{png,jpg,svg}', gulp.series('img:copy'))
     gulp.watch(options.icons.src + '/**/*.svg', gulp.series('svg:sprite'))
@@ -253,7 +266,8 @@ gulp.task('serve', () => {
 });
 
 gulp.task('build', 
-    gulp.series('del', 'fonts:copy', 'img:copy', 'svg:sprite', 'css:copy', 'js:copy', 'html:build', 'css:build', 'js:build'));
+    gulp.series('del', 'fonts:copy', 'img:copy', 'svg:sprite', 
+    'css:copy', 'js:copy', 'html:build', 'css:build', 'js:build', 'php:copy'));
 
 // Собираем проект
 gulp.task('default', gulp.series('build', gulp.parallel('watch', 'serve')));
