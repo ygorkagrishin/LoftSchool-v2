@@ -712,7 +712,7 @@ block content
                     .sect__cont
                         h2.form__title.sect__title Закажите доставку
 
-                        form(action="").form__form#form
+                        form(action="action.php", method="post").form__form
                             .form__row.form__field
                                 .form__col
                                     //- #1
@@ -753,12 +753,12 @@ block content
                                     textarea(name="comment", rows="6", id="comment").form__textarea
                                     .form__set
                                         .form__puy
-                                                input(type="radio", name="card", id="change").form__input 
+                                                input(type="radio", name="card", id="change", value="1").form__input 
                                                 label(for="change").form__label.form__change Потребуется сдача
-                                                input(type="radio", name="card", id="card").form__input
+                                                input(type="radio", name="card", id="card", value="2").form__input
                                                 label(for="card").form__label.form__card Оплата по карте
                                         .form__call
-                                            input(type="checkbox", name="", id="call").form__input
+                                            input(type="checkbox", name="call", id="call").form__input
                                             label(for="call").form__label Не перезванивать
                             .form__row
                                 .form__col.form__ghost
@@ -767,8 +767,11 @@ block content
                                     .form__order
                                         button(type="submit").btn.btn__order.form__btn.form__btn_type_submit Заказать
                                         button(type="reset").btn.btn__reset.form__btn.form__btn_type_reset Очистить
+                        .form__modal
+                            .form__message
+                                p Сообщение отправлено
+                                button(type="button").btn.btn__order.form__btn.form__btn_type_close Закрыть 
             //- section form end
-
             //- section contact
             section.sect.cont#contact
                 .cont__map#map 
