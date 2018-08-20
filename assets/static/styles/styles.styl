@@ -6,6 +6,8 @@
 
 @import 'layout/_layout.styl'
 
+@import 'components/_pre.styl';
+
 @import 'components/_buttons.styl'
 @import 'components/_switch.styl';
 
@@ -17,6 +19,8 @@
     .container
         flex-direction column
         justify-content space-between
+        & > div
+            width 100% // For IE edge
 
 .hero__row
     display flex
@@ -470,6 +474,30 @@
 .form__input[type="checkbox"]:checked + label::before
     background-position center
 
+.form__modal
+    position absolute
+    top 0
+    left 0
+    z-index $z-index2
+    display none
+    width 100%
+    height 100%
+    align-items center
+    justify-content center
+    &.active
+        display flex
+
+.form__message
+    width 100%
+    max-width 196px
+    padding 18px 0
+    text-align center
+    background-color primaryWhiteColor
+    border-radius 10px
+    box-shadow 10px 10px 30px 20px rgba(primaryBlackColor,.1), -10px -10px 30px 20px rgba(primaryBlackColor,.1)
+    p
+        margin-bottom 10px
+
 .cont__map
     width 100%
     height 100%
@@ -522,7 +550,7 @@
 
     .burger
         .container
-                align-items center
+            align-items center
 
     .burger__carousel
         width 100%

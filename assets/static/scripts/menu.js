@@ -1,11 +1,7 @@
 (function () {
 
-const 
-    win = window,
-    doc = document;
-
 const   
-    menu = doc.querySelector('.menu__acco'),
+    menu = DOC.querySelector('.menu__acco'),
     menuSectCollection = menu.children;
 
 const 

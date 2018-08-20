@@ -1,23 +1,20 @@
 (() => {
 
 const 
-    win = window,
-    doc = document;
+    DATA = 'data-popup',
+    DATA_ID = 'data-id';
 
 const 
-    data = 'data-popup',
-    dataId = 'data-id';
+    BUTTONS = BODY.querySelectorAll('.review__btn'),
+    CLOSE_BUTTONS = BODY.querySelectorAll('.review__close');
 
 const 
-    buttons = doc.querySelectorAll('.review__btn'),
-    buttonsClose = doc.querySelectorAll('.review__close');
-
-const collapsed = 'collapsed';
+    COLLAPSED = 'collapsed';
 
 let modal = null;
 
-for (let i = 0, len = buttons.length; i < len; i++) {
-    let btn = buttons[i];
+for (let i = 0, len = BUTTONS.length; i < len; i++) {
+    let btn = BUTTONS[i];
     btn.addEventListener('click', openHandler, false);
 }
 
@@ -25,27 +22,27 @@ function openHandler(e) {
     e.preventDefault();
 
     let btn = this,
-    id = btn.hasAttribute(data) && btn.hasAttribute(dataId) ?
-    btn.getAttribute(dataId) : false;
+    id = btn.hasAttribute(DATA) && btn.hasAttribute(DATA_ID) ?
+    btn.getAttribute(DATA_ID) : false;
 
     if (!id) 
         return;
 
-    modal = doc.querySelector(id);
+    modal = BODY.querySelector(id);
 
-    modal.classList.contains(collapsed) ? 
-    modal.classList.remove(collapsed) : false;
+    modal.classList.contains(COLLAPSED) ? 
+    modal.classList.remove(COLLAPSED) : false;
 }
 
-for (let i = 0, len = buttonsClose.length; i < len; i++) {
-    let close = buttonsClose[i];
+for (let i = 0, len = CLOSE_BUTTONS.length; i < len; i++) {
+    let close = CLOSE_BUTTONS[i];
 
     close.addEventListener('click', closeHandler);
 }
 
 function closeHandler() {
-    return !modal.classList.contains(collapsed) ? 
-    modal.classList.add(collapsed) : false;
+    return !modal.classList.contains(COLLAPSED) ? 
+    modal.classList.add(COLLAPSED) : false;
 }
 
 })();

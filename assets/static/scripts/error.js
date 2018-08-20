@@ -1,19 +1,15 @@
 (() => {
 
 const 
-    win = window,
-    doc = document;
-
-const 
-    errors = doc.querySelector('.err'),
+    errors = DOC.querySelector('.err'),
     attr = 'hidden';
 
 /* Orientation */
-win.addEventListener('orientationchange', function ()  {
+WIN.addEventListener('orientationchange', function ()  {
 
     let 
-        orientation = win.orientation,
-    	err = doc.querySelector('.err__orient');
+        orientation = WIN.orientation,
+    	err = BODY.querySelector('.err__orient');
 
     switch(orientation) {
         case 0:

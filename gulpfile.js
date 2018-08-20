@@ -166,6 +166,7 @@ gulp.task('js:build', () => {
     return gulp.src([
             options.scripts.src + '/variables.js',
             options.scripts.src + '/error.js',
+            options.scripts.src + '/pre.js',
             options.scripts.src + '/lazy.js',
             options.scripts.src + '/scroll.js',
             options.scripts.src + '/mobile-menu.js',

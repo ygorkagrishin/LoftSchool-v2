@@ -1,943 +1,107 @@
-<!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>LoftSchool templates
-    </title>
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.min.css">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-  </head>
-  <body class="page">
-    <div class="err" hidden>
-      <div class="err__err err__orient">
-        <div class="err__text">Переведите устройство в портретный режим.</div>
-      </div>
-    </div>
-    <main class="page__main">
-      <div class="wrapper">
-        <section class="sect hero" id="hero" data-lazy data-lazy-bg data-src="url(images/content/hero/bg.png) no-repeat center / cover">
-          <div class="container">
-            <header class="header">
-              <div class="header__inner">
-                <div class="header__banner banner">
-                  <svg width="95.265px" height="70.317px" viewBox="0 0 98.265 74.317">
-                    <use xlink:href="sprite-svg.svg#logo"></use>
-                  </svg>
-                </div>
-                <div class="header__navbar">
-                  <nav class="navbar">
-                    <ul>
-                      <li><a href="javascript:void(0);" data-scroll data-anchor="we">О нас</a></li>
-                      <li><a href="javascript:void(0);" data-scroll data-anchor="burger">Бургеры</a></li>
-                      <li><a href="javascript:void(0);" data-scroll data-anchor="team">Команда</a></li>
-                      <li><a href="javascript:void(0);" data-scroll data-anchor="menu">Меню</a></li>
-                      <li><a href="javascript:void(0);" data-scroll data-anchor="review">Отзывы</a></li>
-                      <li><a href="javascript:void(0);" data-scroll data-anchor="contact">Контакты</a></li>
-                    </ul>
-                    <button class="navbar__close" type="button">
-                      <svg width="19px" height="19px" viewBox="0 0 14.988 14.988">
-                        <use xlink:href="sprite-svg.svg#menu"></use>
-                      </svg>
-                    </button>
-                  </nav>
-                </div>
-                <div class="header__order"><a class="btn btn__order" href="javascript:void(0);">Заказать</a></div>
-                <button class="header__menu navbar-trigger" type="button"><span></span><span></span><span></span></button>
-              </div>
-            </header>
-            <div class="hero__row">
-              <div class="hero__col">
-                <div class="hero__pic"><img class="hero__burger" src="" alt="burger pic" data-lazy data-lazy-pic data-src="images/content/hero/steam.png">
-                  <svg class="hero__drops" width="450.527px" height="241.369px" viewBox="0 0 450.527 241.369">
-                    <use xlink:href="sprite-svg.svg#drops"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="hero__col">
-                <div class="hero__desc">
-                  <h1 class="hero__title sect__title">Мы делаем </h1><span>натуральные бургеры</span>
-                </div>
-              </div>
-            </div>
-            <div class="hero__arrow">
-              <button class="btn btn__arrow" type="button">
-                <svg width="28px" height="14px" viewBox="0 0 28.685 14.479">
-                  <use xlink:href="sprite-svg.svg#arrow-scroll"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </section>
-        <section class="sect we" id="we" data-lazy data-lazy-bg data-src="url(images/content/we/bg.png) no-repeat center / cover">
-          <div class="container">
-            <div class="sect__cont">
-              <h2 class="sect__title we__title">Мы лучшие</h2>
-              <div class="we__row">
-                <div class="we__col we__meat">
-                  <svg width="96.428px" height="89.246px" viewBox="0 0 96.428 89.246">
-                    <use xlink:href="sprite-svg.svg#meat"></use>
-                  </svg>
-                  <div class="we__desc">
-                    <h3>100% свежее мясо</h3>
-                    <p>
-                      Драма представляет собой деструктивный цикл. 
-                      Анапест представляет собой анапест. Ямб неравномерен.
-                    </p>
-                  </div>
-                </div>
-                <div class="we__col we__hand">
-                  <svg width="73px" height="85.875px" viewBox="0 0 73 85.875">
-                    <use xlink:href="sprite-svg.svg#hand"></use>
-                  </svg>
-                  <div class="we__desc">
-                    <h3>Ручная сборка </h3>
-                    <p>
-                      Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. 
-                      Первое полустишие притягивает сюжетный реформаторский пафос.
-                    </p>
-                  </div>
-                </div>
-                <div class="we__col we__natural">
-                  <svg width="88px" height="75.534px" viewBox="0 0 88 75.534">
-                    <use xlink:href="sprite-svg.svg#natural"></use>
-                  </svg>
-                  <div class="we__desc">
-                    <h3>Натуральные ингредиенты</h3>
-                    <p>
-                      Драма представляет собой деструктивный цикл. 
-                      Анапест представляет собой анапест.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="sect burger" id="burger">
-          <div class="container">
-            <div class="burger__carousel" id="carousel">
-              <div class="burger__wrap">
-                <div class="burger__slide">
-                  <div class="burger__comp">
-                    <svg width="46px" height="42px" viewBox="0 0 45.748 44.625">
-                      <use xlink:href="sprite-svg.svg#burger"></use>
-                    </svg>
-                    <p>Состав</p>
-                    <div class="burger__hover">
-                      <ul class="burger__list">
-                        <li>
-                          <svg width="44px" height="39px" viewBox="0 0 44 39.212">
-                            <use xlink:href="sprite-svg.svg#beef"></use>
-                          </svg>
-                          <div class="burger__product">Говядина</div>
-                          <div class="burger__weight">300г</div>
-                        </li>
-                        <li>
-                          <svg width="38px" height="30px" viewBox="0 0 48 30.317">
-                            <use xlink:href="sprite-svg.svg#buns"></use>
-                          </svg>
-                          <div class="burger__product">Булочки</div>
-                          <div class="burger__weight">100г</div>
-                        </li>
-                        <li>
-                          <svg width="38px" height="38px" viewBox="0 0 38 38.638">
-                            <use xlink:href="sprite-svg.svg#salad"></use>
-                          </svg>
-                          <div class="burger__product">Зелень</div>
-                          <div class="burger__weight">70г</div>
-                        </li>
-                        <li>
-                          <svg width="41px" height="44px" viewBox="0 0 40.189 43.416">
-                            <use xlink:href="sprite-svg.svg#sauce"></use>
-                          </svg>
-                          <div class="burger__product">Соус</div>
-                          <div class="burger__weight">150г</div>
-                        </li>
-                        <li>
-                          <svg width="43px" height="37px" viewBox="0 0 42 37.754">
-                            <use xlink:href="sprite-svg.svg#cucumber"></use>
-                          </svg>
-                          <div class="burger__product">Овощи</div>
-                          <div class="burger__weight">200г</div>
-                        </li>
-                        <li>
-                          <svg width="40px" height="34px" viewBox="0 0 38.126 34.138">
-                            <use xlink:href="sprite-svg.svg#cheese"></use>
-                          </svg>
-                          <div class="burger__product">Сыр</div>
-                          <div class="burger__weight">80г</div>
-                        </li>
-                      </ul>
-                      <button class="burger__close" type="button">
-                        <svg width="18px" height="18px" viewBox="0 0 14.988 14.988">
-                          <use xlink:href="sprite-svg.svg#close"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="burger__row">
-                    <div class="burger__col">
-                      <div class="burger__pic"><img class="burger__img burger__burger" src="" alt="dark beef burger pic" data-lazy data-lazy-pic data-src="images/content/burger/darkbeefburger.png"></div>
-                    </div>
-                    <div class="burger__col burger__col_align_start">
-                      <div class="burger__cont">
-                        <div class="burger__desc">
-                          <h2>Dark Beef Burger</h2>
-                          <p>
-                            Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
-                            тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
-                            луком, салатом и соусом гриль теперь 
-                            с добавлением экзотического соуса чураско.
-                          </p>
-                        </div>
-                        <div class="burger__order">
-                          <div class="burger__price"><span>500</span>рублей</div><a class="btn btn__order" href="javascript:void(0);">Заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="burger__kkal">
-                    <svg width="60px" height="60px" viewBox="0 0 60 60.178">
-                      <use xlink:href="sprite-svg.svg#kkal"></use>
-                    </svg><span>1200</span>
-                    <p>Ккал</p>
-                  </div>
-                </div>
-                <div class="burger__slide">
-                  <div class="burger__comp">
-                    <svg width="46px" height="42px" viewBox="0 0 45.748 44.625">
-                      <use xlink:href="sprite-svg.svg#burger"></use>
-                    </svg>
-                    <p>Состав</p>
-                    <div class="burger__hover">
-                      <ul class="burger__list">
-                        <li>
-                          <svg width="44px" height="39px" viewBox="0 0 44 39.212">
-                            <use xlink:href="sprite-svg.svg#beef"></use>
-                          </svg>
-                          <div class="burger__product">Говядина</div>
-                          <div class="burger__weight">300г</div>
-                        </li>
-                        <li>
-                          <svg width="38px" height="30px" viewBox="0 0 48 30.317">
-                            <use xlink:href="sprite-svg.svg#buns"></use>
-                          </svg>
-                          <div class="burger__product">Булочки</div>
-                          <div class="burger__weight">100г</div>
-                        </li>
-                        <li>
-                          <svg width="38px" height="38px" viewBox="0 0 38 38.638">
-                            <use xlink:href="sprite-svg.svg#salad"></use>
-                          </svg>
-                          <div class="burger__product">Зелень</div>
-                          <div class="burger__weight">70г</div>
-                        </li>
-                        <li>
-                          <svg width="41px" height="44px" viewBox="0 0 40.189 43.416">
-                            <use xlink:href="sprite-svg.svg#sauce"></use>
-                          </svg>
-                          <div class="burger__product">Соус</div>
-                          <div class="burger__weight">150г</div>
-                        </li>
-                        <li>
-                          <svg width="43px" height="37px" viewBox="0 0 42 37.754">
-                            <use xlink:href="sprite-svg.svg#cucumber"></use>
-                          </svg>
-                          <div class="burger__product">Овощи</div>
-                          <div class="burger__weight">200г</div>
-                        </li>
-                        <li>
-                          <svg width="40px" height="34px" viewBox="0 0 38.126 34.138">
-                            <use xlink:href="sprite-svg.svg#cheese"></use>
-                          </svg>
-                          <div class="burger__product">Сыр</div>
-                          <div class="burger__weight">80г</div>
-                        </li>
-                      </ul>
-                      <button class="burger__close" type="button">
-                        <svg width="18px" height="18px" viewBox="0 0 14.988 14.988">
-                          <use xlink:href="sprite-svg.svg#close"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="burger__row">
-                    <div class="burger__col">
-                      <div class="burger__pic"><img class="burger__img burger__burger" src="" alt="dark beef burger pic" data-lazy data-lazy-pic data-src="images/content/burger/darkbeefburger.png"></div>
-                    </div>
-                    <div class="burger__col burger__col_align_start">
-                      <div class="burger__cont">
-                        <div class="burger__desc">
-                          <h2>Dark Beef Burger</h2>
-                          <p>
-                            Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
-                            тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
-                            луком, салатом и соусом гриль теперь 
-                            с добавлением экзотического соуса чураско.
-                          </p>
-                        </div>
-                        <div class="burger__order">
-                          <div class="burger__price"><span>500</span>рублей</div><a class="btn btn__order" href="javascript:void(0);">Заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="burger__kkal">
-                    <svg width="60px" height="60px" viewBox="0 0 60 60.178">
-                      <use xlink:href="sprite-svg.svg#kkal"></use>
-                    </svg><span>1200</span>
-                    <p>Ккал</p>
-                  </div>
-                </div>
-                <div class="burger__slide">
-                  <div class="burger__comp">
-                    <svg width="46px" height="42px" viewBox="0 0 45.748 44.625">
-                      <use xlink:href="sprite-svg.svg#burger"></use>
-                    </svg>
-                    <p>Состав</p>
-                    <div class="burger__hover">
-                      <ul class="burger__list">
-                        <li>
-                          <svg width="44px" height="39px" viewBox="0 0 44 39.212">
-                            <use xlink:href="sprite-svg.svg#beef"></use>
-                          </svg>
-                          <div class="burger__product">Говядина</div>
-                          <div class="burger__weight">300г</div>
-                        </li>
-                        <li>
-                          <svg width="38px" height="30px" viewBox="0 0 48 30.317">
-                            <use xlink:href="sprite-svg.svg#buns"></use>
-                          </svg>
-                          <div class="burger__product">Булочки</div>
-                          <div class="burger__weight">100г</div>
-                        </li>
-                        <li>
-                          <svg width="38px" height="38px" viewBox="0 0 38 38.638">
-                            <use xlink:href="sprite-svg.svg#salad"></use>
-                          </svg>
-                          <div class="burger__product">Зелень</div>
-                          <div class="burger__weight">70г</div>
-                        </li>
-                        <li>
-                          <svg width="41px" height="44px" viewBox="0 0 40.189 43.416">
-                            <use xlink:href="sprite-svg.svg#sauce"></use>
-                          </svg>
-                          <div class="burger__product">Соус</div>
-                          <div class="burger__weight">150г</div>
-                        </li>
-                        <li>
-                          <svg width="43px" height="37px" viewBox="0 0 42 37.754">
-                            <use xlink:href="sprite-svg.svg#cucumber"></use>
-                          </svg>
-                          <div class="burger__product">Овощи</div>
-                          <div class="burger__weight">200г</div>
-                        </li>
-                        <li>
-                          <svg width="40px" height="34px" viewBox="0 0 38.126 34.138">
-                            <use xlink:href="sprite-svg.svg#cheese"></use>
-                          </svg>
-                          <div class="burger__product">Сыр</div>
-                          <div class="burger__weight">80г</div>
-                        </li>
-                      </ul>
-                      <button class="burger__close" type="button">
-                        <svg width="18px" height="18px" viewBox="0 0 14.988 14.988">
-                          <use xlink:href="sprite-svg.svg#close"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="burger__row">
-                    <div class="burger__col">
-                      <div class="burger__pic"><img class="burger__img burger__burger" src="" alt="dark beef burger pic" data-lazy data-lazy-pic data-src="images/content/burger/darkbeefburger.png"></div>
-                    </div>
-                    <div class="burger__col burger__col_align_start">
-                      <div class="burger__cont">
-                        <div class="burger__desc">
-                          <h2>Dark Beef Burger</h2>
-                          <p>
-                            Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
-                            тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
-                            луком, салатом и соусом гриль теперь 
-                            с добавлением экзотического соуса чураско.
-                          </p>
-                        </div>
-                        <div class="burger__order">
-                          <div class="burger__price"><span>500</span>рублей</div><a class="btn btn__order" href="javascript:void(0);">Заказать</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="burger__kkal">
-                    <svg width="60px" height="60px" viewBox="0 0 60 60.178">
-                      <use xlink:href="sprite-svg.svg#kkal"></use>
-                    </svg><span>1200</span>
-                    <p>Ккал</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="burger__prev" type="button">
-              <svg width="28px" height="14px" viewBox="0 0 28.685 14.479">
-                <use xlink:href="sprite-svg.svg#arrow-scroll"></use>
-              </svg>
-            </button>
-            <button class="burger__next" type="button">
-              <svg width="28px" height="14px" viewBox="0 0 28.685 14.479">
-                <use xlink:href="sprite-svg.svg#arrow-scroll"></use>
-              </svg>
-            </button>
-          </div>
-        </section>
-        <section class="sect team" id="team" data-lazy data-lazy-bg data-src="url(images/content/team/bg.png) no-repeat center / cover">
-          <div class="team__row">
-            <div class="team__col">
-              <div class="sect__cont">
-                <h2 class="sect__title team__title">Команда</h2>
-                <div class="team__acco" id="acco">
-                  <div class="team__sect collapsed">
-                    <h3 class="team__name"> 
-                      <svg class="team__arrow" width="9px" height="6px" viewBox="0 0 16 16">
-                        <use xlink:href="sprite-svg.svg#triangle-pointing-up"></use>
-                      </svg><span>Дэниэл Редклиф</span>
-                    </h3>
-                    <div class="team__cont">
-                      <div class="team__wrap">
-                        <div class="team__pic"><img class="team__img" src="" alt="avatar pic" data-lazy data-lazy-pic data-src="images/content/team/aphex.png"></div>
-                        <div class="team__desc">
-                          <h4>Оператор</h4>
-                          <p>
-                             С радостью поможем подобрать
-                            идеальный бургер и оформить
-                            заказ.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="team__sect collapsed">
-                    <h3 class="team__name"> 
-                      <svg class="team__arrow" width="9px" height="6px" viewBox="0 0 16 16">
-                        <use xlink:href="sprite-svg.svg#triangle-pointing-up"></use>
-                      </svg><span>Ричард Джеймс</span>
-                    </h3>
-                    <div class="team__cont">
-                      <div class="team__wrap">
-                        <div class="team__pic"><img class="team__img" src="" alt="avatar pic" data-lazy data-lazy-pic data-src="images/content/team/aphex.png"></div>
-                        <div class="team__desc">
-                          <h4>Оператор</h4>
-                          <p>
-                             С радостью поможем подобрать
-                            идеальный бургер и оформить
-                            заказ.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="team__sect collapsed">
-                    <h3 class="team__name"> 
-                      <svg class="team__arrow" width="9px" height="6px" viewBox="0 0 16 16">
-                        <use xlink:href="sprite-svg.svg#triangle-pointing-up"></use>
-                      </svg><span>Джейк Финн</span>
-                    </h3>
-                    <div class="team__cont">
-                      <div class="team__wrap">
-                        <div class="team__pic"><img class="team__img" src="" alt="avatar pic" data-lazy data-lazy-pic data-src="images/content/team/aphex.png"></div>
-                        <div class="team__desc">
-                          <h4>Оператор</h4>
-                          <p>
-                             С радостью поможем подобрать
-                            идеальный бургер и оформить
-                            заказ.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="team__sect collapsed">
-                    <h3 class="team__name"> 
-                      <svg class="team__arrow" width="9px" height="6px" viewBox="0 0 16 16">
-                        <use xlink:href="sprite-svg.svg#triangle-pointing-up"></use>
-                      </svg><span>Николай Иванов</span>
-                    </h3>
-                    <div class="team__cont">
-                      <div class="team__wrap">
-                        <div class="team__pic"><img class="team__img" src="" alt="avatar pic" data-lazy data-lazy-pic data-src="images/content/team/aphex.png"></div>
-                        <div class="team__desc">
-                          <h4>Оператор</h4>
-                          <p>
-                             С радостью поможем подобрать
-                            идеальный бургер и оформить
-                            заказ.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="sect menu" id="menu" data-lazy data-lazy-bg data-src="url(images/content/menu/bg.png) no-repeat center / cover">
-          <h2 class="sect__title menu__title">Меню</h2>
-          <div class="menu__acco">
-            <div class="menu__sect collapsed">
-              <div class="menu__pannel" data-lazy data-lazy-bg data-src="url('images/content/menu/photo-1468071174046-657d9d351a40.png') no-repeat center / cover">
-                <h3 class="menu__name">Для мясоедов</h3>
-              </div>
-              <div class="menu__cont">
-                <div class="menu__desc">
-                  <p>
-                    Речевой акт редуцирует диалектический характер. 
-                    Развивая эту тему, заимствование редуцирует 
-                    конструктивный механизм сочленений. 
-                    Лирический субъект начинает диссонансный анжамбеман. 
-                    Наш современник стал особенно чутко относиться к слову, 
-                    однако механизм сочленений неустойчив. Модальность высказывания, 
-                    как справедливо считает И.Гальперин, пространственно выбирает метр.
-                    Речевой акт редуцирует диалектический характер. Развивая эту тему, 
-                    заимствование редуцирует конструктивный механизм сочленений. 
-                    Лирический субъект начинает диссонансный анжамбеман. 
-                    Наш современник стал особенно чутко относиться к слову.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="menu__sect collapsed">
-              <div class="menu__pannel" data-lazy data-lazy-bg data-src="url(images/content/menu/photo-1466814314367-45323ac74e2b.png) no-repeat center / cover">
-                <h3 class="menu__name">Вегетарианское</h3>
-              </div>
-              <div class="menu__cont">
-                <div class="menu__desc">
-                  <p>
-                    Речевой акт редуцирует диалектический характер. 
-                    Развивая эту тему, заимствование редуцирует 
-                    конструктивный механизм сочленений. 
-                    Лирический субъект начинает диссонансный анжамбеман. 
-                    Наш современник стал особенно чутко относиться к слову, 
-                    однако механизм сочленений неустойчив. Модальность высказывания, 
-                    как справедливо считает И.Гальперин, пространственно выбирает метр.
-                    Речевой акт редуцирует диалектический характер. Развивая эту тему, 
-                    заимствование редуцирует конструктивный механизм сочленений. 
-                    Лирический субъект начинает диссонансный анжамбеман. 
-                    Наш современник стал особенно чутко относиться к слову.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="menu__sect collapsed">
-              <div class="menu__pannel" data-lazy data-lazy-bg data-src="url('images/content/menu/IMG_4084.png') no-repeat center / cover">
-                <h3 class="menu__name">Диетическое</h3>
-              </div>
-              <div class="menu__cont">
-                <div class="menu__desc">
-                  <p>
-                    Речевой акт редуцирует диалектический характер. 
-                    Развивая эту тему, заимствование редуцирует 
-                    конструктивный механизм сочленений. 
-                    Лирический субъект начинает диссонансный анжамбеман. 
-                    Наш современник стал особенно чутко относиться к слову, 
-                    однако механизм сочленений неустойчив. Модальность высказывания, 
-                    как справедливо считает И.Гальперин, пространственно выбирает метр.
-                    Речевой акт редуцирует диалектический характер. Развивая эту тему, 
-                    заимствование редуцирует конструктивный механизм сочленений. 
-                    Лирический субъект начинает диссонансный анжамбеман. 
-                    Наш современник стал особенно чутко относиться к слову.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="sect review" id="review">
-          <div class="review__row review__reviews">
-            <div class="review__col review__review" data-lazy data-lazy-bg data-src="url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover">
-              <div class="review__hover">
-                <div class="review__desc">
-                  <h3>Констанин Спилберг</h3>
-                  <p>
-                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                    а сыр таким расплавленным.
-                  </p>
-                </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-1">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-1">Читать отзыв</button>
-              </div>
-            </div>
-            <div class="review__modal collapsed" id="popup-1">
-              <div class="review__popup">
-                <h4>Констанин Спилберг</h4>
-                <p>
-                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                  а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
-                  Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, 
-                  котлетка такой сочной, а сыр таким расплавленным.
-                </p>
-                <button class="review__close" type="button">
-                  <svg width="15px" height="15px" viewBox="0 0 14.988 14.988">
-                    <use xlink:href="sprite-svg.svg#close"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1440606797942-6cc04c045447.png) no-repeat center / cover">
-              <div class="review__hover">
-                <div class="review__desc">
-                  <h3>Констанин Спилберг</h3>
-                  <p>
-                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                    а сыр таким расплавленным.
-                  </p>
-                </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-2">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-2">Читать отзыв</button>
-              </div>
-            </div>
-            <div class="review__modal collapsed" id="popup-2">
-              <div class="review__popup">
-                <h4>Констанин Спилберг</h4>
-                <p>
-                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                  а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
-                  Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, 
-                  котлетка такой сочной, а сыр таким расплавленным.
-                </p>
-                <button class="review__close" type="button">
-                  <svg width="15px" height="15px" viewBox="0 0 14.988 14.988">
-                    <use xlink:href="sprite-svg.svg#close"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1445404590072-16ef9c18bd83.png) no-repeat center / cover">
-              <div class="review__hover">
-                <div class="review__desc">
-                  <h3>Констанин Спилберг</h3>
-                  <p>
-                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                    а сыр таким расплавленным.
-                  </p>
-                </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-3">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-3">Читать отзыв</button>
-              </div>
-            </div>
-            <div class="review__modal collapsed" id="popup-3">
-              <div class="review__popup">
-                <h4>Констанин Спилберг</h4>
-                <p>
-                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                  а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
-                  Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, 
-                  котлетка такой сочной, а сыр таким расплавленным.
-                </p>
-                <button class="review__close" type="button">
-                  <svg width="15px" height="15px" viewBox="0 0 14.988 14.988">
-                    <use xlink:href="sprite-svg.svg#close"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1468546818829-25bb337b6646.png) no-repeat center / cover">
-              <div class="review__hover">
-                <div class="review__desc">
-                  <h3>Констанин Спилберг</h3>
-                  <p>
-                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                    а сыр таким расплавленным.
-                  </p>
-                </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-4">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-4">Читать отзыв</button>
-              </div>
-            </div>
-            <div class="review__modal collapsed" id="popup-4">
-              <div class="review__popup">
-                <h4>Констанин Спилберг</h4>
-                <p>
-                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                  а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
-                  Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, 
-                  котлетка такой сочной, а сыр таким расплавленным.
-                </p>
-                <button class="review__close" type="button">
-                  <svg width="15px" height="15px" viewBox="0 0 14.988 14.988">
-                    <use xlink:href="sprite-svg.svg#close"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1438763298591-75a0d42b7265.png) no-repeat center / cover">
-              <div class="review__hover">
-                <div class="review__desc">
-                  <h3>Констанин Спилберг</h3>
-                  <p>
-                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                    а сыр таким расплавленным.
-                  </p>
-                </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-5">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-5">Читать отзыв</button>
-              </div>
-            </div>
-            <div class="review__modal collapsed" id="popup-5">
-              <div class="review__popup">
-                <h4>Констанин Спилберг</h4>
-                <p>
-                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                  а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
-                  Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, 
-                  котлетка такой сочной, а сыр таким расплавленным.
-                </p>
-                <button class="review__close" type="button">
-                  <svg width="15px" height="15px" viewBox="0 0 14.988 14.988">
-                    <use xlink:href="sprite-svg.svg#close"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1461332682233-b818af4c3a6e.png) no-repeat center / cover">
-              <div class="review__hover">
-                <div class="review__desc">
-                  <h3>Констанин Спилберг</h3>
-                  <p>
-                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                    а сыр таким расплавленным.
-                  </p>
-                </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-6">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-6">Читать отзыв</button>
-              </div>
-            </div>
-            <div class="review__modal collapsed" id="popup-6">
-              <div class="review__popup">
-                <h4>Констанин Спилберг</h4>
-                <p>
-                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                  а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
-                  Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, 
-                  котлетка такой сочной, а сыр таким расплавленным.
-                </p>
-                <button class="review__close" type="button">
-                  <svg width="15px" height="15px" viewBox="0 0 14.988 14.988">
-                    <use xlink:href="sprite-svg.svg#close"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1457706924510-773f3c796de3.png) no-repeat center / cover">
-              <div class="review__hover">
-                <div class="review__desc">
-                  <h3>Констанин Спилберг</h3>
-                  <p>
-                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                    а сыр таким расплавленным.
-                  </p>
-                </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-7">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-7">Читать отзыв</button>
-              </div>
-            </div>
-            <div class="review__modal collapsed" id="popup-7">
-              <div class="review__popup">
-                <h4>Констанин Спилберг</h4>
-                <p>
-                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                  а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
-                  Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, 
-                  котлетка такой сочной, а сыр таким расплавленным.
-                </p>
-                <button class="review__close" type="button">
-                  <svg width="15px" height="15px" viewBox="0 0 14.988 14.988">
-                    <use xlink:href="sprite-svg.svg#close"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1458696765561-12142eaead131.png) no-repeat center / cover">
-              <div class="review__hover">
-                <div class="review__desc">
-                  <h3>Констанин Спилберг</h3>
-                  <p>
-                    Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                    Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                    а сыр таким расплавленным.
-                  </p>
-                </div>
-                <button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-8">Подробнее</button>
-                <button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-8">Читать отзыв</button>
-              </div>
-            </div>
-            <div class="review__modal collapsed" id="popup-8">
-              <div class="review__popup">
-                <h4>Констанин Спилберг</h4>
-                <p>
-                  Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
-                  а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
-                  Нельзя устоять, невозможно забыть... 
-                  Никогда не думал, что булочки могут быть такими мягкими, 
-                  котлетка такой сочной, а сыр таким расплавленным.
-                </p>
-                <button class="review__close" type="button">
-                  <svg width="15px" height="15px" viewBox="0 0 14.988 14.988">
-                    <use xlink:href="sprite-svg.svg#close"></use>
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="sect form" id="form" data-lazy data-lazy-bg data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover">
-          <div class="container">
-            <div class="sect__cont">
-              <h2 class="form__title sect__title">Закажите доставку</h2>
-              <form class="form__form" action="" id="form">
-                <div class="form__row form__field">
-                  <div class="form__col">
-                    <div class="form__row">
-                      <div class="form__col form__name">
-                        <label class="form__label" for="name">Имя</label>
-                        <input class="form__input" type="text" name="name" id="name">
-                      </div>
-                      <div class="form__col form__phone">
-                        <label class="form__label" for="phone">Телефон</label>
-                        <input class="form__input" type="text" name="phone" id="phone">
-                      </div>
-                    </div>
-                    <div class="form__row">
-                      <div class="form__col form__street">
-                        <label class="form__label" for="street">Улица</label>
-                        <input class="form__input" type="text" name="street" id="street">
-                      </div>
-                    </div>
-                    <div class="form__row">
-                      <div class="form__col form__house">
-                        <label class="form__label" for="house">Дом</label>
-                        <input class="form__input" type="text" name="house" id="house">
-                      </div>
-                      <div class="form__col form__build">
-                        <label class="form__label" for="build">Корпус</label>
-                        <input class="form__input" type="text" name="build" id="build">
-                      </div>
-                      <div class="form__col form__flat">
-                        <label class="form__label" for="flat">Квартира</label>
-                        <input class="form__input" type="text" name="flat" id="flat">
-                      </div>
-                      <div class="form__col form__floor">
-                        <label class="form__label" for="floor">Этаж</label>
-                        <input class="form__input" type="text" name="floor" id="floor">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form__col">
-                    <label class="form__label" for="comment">Комментарий</label>
-                    <textarea class="form__textarea" name="comment" rows="6" id="comment"></textarea>
-                    <div class="form__set">
-                      <div class="form__puy">
-                        <input class="form__input" type="radio" name="card" id="change">
-                        <label class="form__label form__change" for="change">Потребуется сдача</label>
-                        <input class="form__input" type="radio" name="card" id="card">
-                        <label class="form__label form__card" for="card">Оплата по карте</label>
-                      </div>
-                      <div class="form__call">
-                        <input class="form__input" type="checkbox" name="" id="call">
-                        <label class="form__label" for="call">Не перезванивать</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form__row">
-                  <div class="form__col form__ghost"></div>
-                  <div class="form__col">
-                    <div class="form__order">
-                      <button class="btn btn__order form__btn form__btn_type_submit" type="submit">Заказать</button>
-                      <button class="btn btn__reset form__btn form__btn_type_reset" type="reset">Очистить</button>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </section>
-        <section class="sect cont" id="contact">
-          <div class="cont__map" id="map"> </div>
-        </section>
-        <footer class="footer" data-lazy data-lazy-bg data-src="url('images/content/footer/chalkboard_texture_mc2015_by_mattiamc-d8dbnacb.png') no-repeat center / cover">
-          <div class="container">
-            <div class="footer__inner">
-              <div class="footer__info">
-                <div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-                <div class="footer__phone"> 
-                  <svg width="11px" height="11px" viewBox="0 0 11 11">
-                    <use xlink:href="sprite-svg.svg#phone"></use>
-                  </svg>+7 (812) 377-13-77
-                </div>
-              </div>
-              <div class="footer__social">
-                <ul>
-                  <li><a href="javascript:void(0);">
-                      <svg width="23px" height="13px" viewBox="0 0 126 72">
-                        <use xlink:href="sprite-svg.svg#vk"></use>
-                      </svg></a></li>
-                  <li><a href="javascript:void(0);">
-                      <svg width="20px" height="20px" viewBox="0 0 36.711 36.711">
-                        <use xlink:href="sprite-svg.svg#fb"></use>
-                      </svg></a></li>
-                  <li><a href="javascript:void(0);">
-                      <svg width="20px" height="20px" viewBox="0 0 36.663 36.664">
-                        <use xlink:href="sprite-svg.svg#inst"></use>
-                      </svg></a></li>
-                  <li><a href="javascript:void(0);">
-                      <svg width="19px" height="16px" viewBox="0 0 37.453 31.21">
-                        <use xlink:href="sprite-svg.svg#twitter"></use>
-                      </svg></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
-      <div class="switch">
-        <ul>
-          <li><a class="active" href="javascript:void(0);" data-scroll data-anchor="hero"></a></li>
-          <li><a href="javascript:void(0);" data-scroll data-anchor="we"></a></li>
-          <li><a href="javascript:void(0);" data-scroll data-anchor="burger"></a></li>
-          <li><a href="javascript:void(0);" data-scroll data-anchor="team"></a></li>
-          <li><a href="javascript:void(0);" data-scroll data-anchor="menu"></a></li>
-          <li><a href="javascript:void(0);" data-scroll data-anchor="review"></a></li>
-          <li><a href="javascript:void(0);" data-scroll data-anchor="form"></a></li>
-          <li><a href="javascript:void(0);" data-scroll data-anchor="contact"></a></li>
-        </ul>
-      </div>
-    </main>
-    <script src="jquery.min.js"></script>
-    <script src="common.min.js"></script>
-  </body>
-</html>
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width, initial-scale=1" name="viewport"><title>LoftSchool templates</title><link rel="stylesheet" href="normalize.css"><link rel="stylesheet" href="styles.min.css"><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script></head><body class="page"><div class="pre"><div class="pre__count"></div></div><div class="err" hidden><div class="err__err err__orient"><div class="err__text">Переведите устройство в портретный режим.</div></div></div><main class="page__main"><div class="wrapper"><section class="sect hero" id="hero" data-lazy data-lazy-bg data-src="url(images/content/hero/bg.png) no-repeat center / cover"><div class="container"><header class="header"><div class="header__inner"><div class="header__banner banner"><svg width="95.265px" height="70.317px" viewBox="0 0 98.265 74.317"><use xlink:href="sprite-svg.svg#logo"></use></svg></div><div class="header__navbar"><nav class="navbar"><ul><li><a href="javascript:void(0);" data-scroll data-anchor="we">О нас</a></li><li><a href="javascript:void(0);" data-scroll data-anchor="burger">Бургеры</a></li><li><a href="javascript:void(0);" data-scroll data-anchor="team">Команда</a></li><li><a href="javascript:void(0);" data-scroll data-anchor="menu">Меню</a></li><li><a href="javascript:void(0);" data-scroll data-anchor="review">Отзывы</a></li><li><a href="javascript:void(0);" data-scroll data-anchor="contact">Контакты</a></li></ul><button class="navbar__close" type="button"><svg width="19px" height="19px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#menu"></use></svg></button></nav></div><div class="header__order"><a class="btn btn__order" href="javascript:void(0);">Заказать</a></div><button class="header__menu navbar-trigger" type="button"><span></span><span></span><span></span></button></div></header><div class="hero__row"><div class="hero__col"><div class="hero__pic"><img class="hero__burger" src="" alt="burger pic" data-lazy data-lazy-pic data-src="images/content/hero/steam.png"><svg class="hero__drops" width="450.527px" height="241.369px" viewBox="0 0 450.527 241.369"><use xlink:href="sprite-svg.svg#drops"></use></svg></div></div><div class="hero__col"><div class="hero__desc"><h1 class="hero__title sect__title">Мы делаем </h1><span>натуральные бургеры</span></div></div></div><div class="hero__arrow"><button class="btn btn__arrow" type="button"><svg width="28px" height="14px" viewBox="0 0 28.685 14.479"><use xlink:href="sprite-svg.svg#arrow-scroll"></use></svg></button></div></div></section><section class="sect we" id="we" data-lazy data-lazy-bg data-src="url(images/content/we/bg.png) no-repeat center / cover"><div class="container"><div class="sect__cont"><h2 class="sect__title we__title">Мы лучшие</h2><div class="we__row"><div class="we__col we__meat"><svg width="96.428px" height="89.246px" viewBox="0 0 96.428 89.246"><use xlink:href="sprite-svg.svg#meat"></use></svg><div class="we__desc"><h3>100% свежее мясо</h3><p>Драма представляет собой деструктивный цикл. 
+Анапест представляет собой анапест. Ямб неравномерен.</p></div></div><div class="we__col we__hand"><svg width="73px" height="85.875px" viewBox="0 0 73 85.875"><use xlink:href="sprite-svg.svg#hand"></use></svg><div class="we__desc"><h3>Ручная сборка </h3><p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. 
+Первое полустишие притягивает сюжетный реформаторский пафос.</p></div></div><div class="we__col we__natural"><svg width="88px" height="75.534px" viewBox="0 0 88 75.534"><use xlink:href="sprite-svg.svg#natural"></use></svg><div class="we__desc"><h3>Натуральные ингредиенты</h3><p>Драма представляет собой деструктивный цикл. 
+Анапест представляет собой анапест.</p></div></div></div></div></div></section><section class="sect burger" id="burger"><div class="container"><div class="burger__carousel" id="carousel"><div class="burger__wrap"><div class="burger__slide"><div class="burger__comp"><svg width="46px" height="42px" viewBox="0 0 45.748 44.625"><use xlink:href="sprite-svg.svg#burger"></use></svg><p>Состав</p><div class="burger__hover"><ul class="burger__list"><li><svg width="44px" height="39px" viewBox="0 0 44 39.212"><use xlink:href="sprite-svg.svg#beef"></use></svg><div class="burger__product">Говядина</div><div class="burger__weight">300г</div></li><li><svg width="38px" height="30px" viewBox="0 0 48 30.317"><use xlink:href="sprite-svg.svg#buns"></use></svg><div class="burger__product">Булочки</div><div class="burger__weight">100г</div></li><li><svg width="38px" height="38px" viewBox="0 0 38 38.638"><use xlink:href="sprite-svg.svg#salad"></use></svg><div class="burger__product">Зелень</div><div class="burger__weight">70г</div></li><li><svg width="41px" height="44px" viewBox="0 0 40.189 43.416"><use xlink:href="sprite-svg.svg#sauce"></use></svg><div class="burger__product">Соус</div><div class="burger__weight">150г</div></li><li><svg width="43px" height="37px" viewBox="0 0 42 37.754"><use xlink:href="sprite-svg.svg#cucumber"></use></svg><div class="burger__product">Овощи</div><div class="burger__weight">200г</div></li><li><svg width="40px" height="34px" viewBox="0 0 38.126 34.138"><use xlink:href="sprite-svg.svg#cheese"></use></svg><div class="burger__product">Сыр</div><div class="burger__weight">80г</div></li></ul><button class="burger__close" type="button"><svg width="18px" height="18px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#close"></use></svg></button></div></div><div class="burger__row"><div class="burger__col"><div class="burger__pic"><img class="burger__img burger__burger" src="images/content/burger/darkbeefburger.png" alt="dark beef burger pic"></div></div><div class="burger__col burger__col_align_start"><div class="burger__cont"><div class="burger__desc"><h2>Dark Beef Burger</h2><p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
+тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
+луком, салатом и соусом гриль теперь 
+с добавлением экзотического соуса чураско.</p></div><div class="burger__order"><div class="burger__price"><span>500</span>рублей</div><a class="btn btn__order" href="javascript:void(0);">Заказать</a></div></div></div></div><div class="burger__kkal"><svg width="60px" height="60px" viewBox="0 0 60 60.178"><use xlink:href="sprite-svg.svg#kkal"></use></svg><span>1200</span><p>Ккал</p></div></div><div class="burger__slide"><div class="burger__comp"><svg width="46px" height="42px" viewBox="0 0 45.748 44.625"><use xlink:href="sprite-svg.svg#burger"></use></svg><p>Состав</p><div class="burger__hover"><ul class="burger__list"><li><svg width="44px" height="39px" viewBox="0 0 44 39.212"><use xlink:href="sprite-svg.svg#beef"></use></svg><div class="burger__product">Говядина</div><div class="burger__weight">300г</div></li><li><svg width="38px" height="30px" viewBox="0 0 48 30.317"><use xlink:href="sprite-svg.svg#buns"></use></svg><div class="burger__product">Булочки</div><div class="burger__weight">100г</div></li><li><svg width="38px" height="38px" viewBox="0 0 38 38.638"><use xlink:href="sprite-svg.svg#salad"></use></svg><div class="burger__product">Зелень</div><div class="burger__weight">70г</div></li><li><svg width="41px" height="44px" viewBox="0 0 40.189 43.416"><use xlink:href="sprite-svg.svg#sauce"></use></svg><div class="burger__product">Соус</div><div class="burger__weight">150г</div></li><li><svg width="43px" height="37px" viewBox="0 0 42 37.754"><use xlink:href="sprite-svg.svg#cucumber"></use></svg><div class="burger__product">Овощи</div><div class="burger__weight">200г</div></li><li><svg width="40px" height="34px" viewBox="0 0 38.126 34.138"><use xlink:href="sprite-svg.svg#cheese"></use></svg><div class="burger__product">Сыр</div><div class="burger__weight">80г</div></li></ul><button class="burger__close" type="button"><svg width="18px" height="18px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#close"></use></svg></button></div></div><div class="burger__row"><div class="burger__col"><div class="burger__pic"><img class="burger__img burger__burger" src="images/content/burger/darkbeefburger.png" alt="dark beef burger pic"></div></div><div class="burger__col burger__col_align_start"><div class="burger__cont"><div class="burger__desc"><h2>Dark Beef Burger</h2><p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
+тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
+луком, салатом и соусом гриль теперь 
+с добавлением экзотического соуса чураско.</p></div><div class="burger__order"><div class="burger__price"><span>500</span>рублей</div><a class="btn btn__order" href="javascript:void(0);">Заказать</a></div></div></div></div><div class="burger__kkal"><svg width="60px" height="60px" viewBox="0 0 60 60.178"><use xlink:href="sprite-svg.svg#kkal"></use></svg><span>1200</span><p>Ккал</p></div></div><div class="burger__slide"><div class="burger__comp"><svg width="46px" height="42px" viewBox="0 0 45.748 44.625"><use xlink:href="sprite-svg.svg#burger"></use></svg><p>Состав</p><div class="burger__hover"><ul class="burger__list"><li><svg width="44px" height="39px" viewBox="0 0 44 39.212"><use xlink:href="sprite-svg.svg#beef"></use></svg><div class="burger__product">Говядина</div><div class="burger__weight">300г</div></li><li><svg width="38px" height="30px" viewBox="0 0 48 30.317"><use xlink:href="sprite-svg.svg#buns"></use></svg><div class="burger__product">Булочки</div><div class="burger__weight">100г</div></li><li><svg width="38px" height="38px" viewBox="0 0 38 38.638"><use xlink:href="sprite-svg.svg#salad"></use></svg><div class="burger__product">Зелень</div><div class="burger__weight">70г</div></li><li><svg width="41px" height="44px" viewBox="0 0 40.189 43.416"><use xlink:href="sprite-svg.svg#sauce"></use></svg><div class="burger__product">Соус</div><div class="burger__weight">150г</div></li><li><svg width="43px" height="37px" viewBox="0 0 42 37.754"><use xlink:href="sprite-svg.svg#cucumber"></use></svg><div class="burger__product">Овощи</div><div class="burger__weight">200г</div></li><li><svg width="40px" height="34px" viewBox="0 0 38.126 34.138"><use xlink:href="sprite-svg.svg#cheese"></use></svg><div class="burger__product">Сыр</div><div class="burger__weight">80г</div></li></ul><button class="burger__close" type="button"><svg width="18px" height="18px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#close"></use></svg></button></div></div><div class="burger__row"><div class="burger__col"><div class="burger__pic"><img class="burger__img burger__burger" src="images/content/burger/darkbeefburger.png" alt="dark beef burger pic"></div></div><div class="burger__col burger__col_align_start"><div class="burger__cont"><div class="burger__desc"><h2>Dark Beef Burger</h2><p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, 
+тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, 
+луком, салатом и соусом гриль теперь 
+с добавлением экзотического соуса чураско.</p></div><div class="burger__order"><div class="burger__price"><span>500</span>рублей</div><a class="btn btn__order" href="javascript:void(0);">Заказать</a></div></div></div></div><div class="burger__kkal"><svg width="60px" height="60px" viewBox="0 0 60 60.178"><use xlink:href="sprite-svg.svg#kkal"></use></svg><span>1200</span><p>Ккал</p></div></div></div></div><button class="burger__prev" type="button"><svg width="28px" height="14px" viewBox="0 0 28.685 14.479"><use xlink:href="sprite-svg.svg#arrow-scroll"></use></svg></button><button class="burger__next" type="button"><svg width="28px" height="14px" viewBox="0 0 28.685 14.479"><use xlink:href="sprite-svg.svg#arrow-scroll"></use></svg></button></div></section><section class="sect team" id="team" data-lazy data-lazy-bg data-src="url(images/content/team/bg.png) no-repeat center / cover"><div class="team__row"><div class="team__col"><div class="sect__cont"><h2 class="sect__title team__title">Команда</h2><div class="team__acco" id="acco"><div class="team__sect collapsed"><h3 class="team__name"> <svg class="team__arrow" width="9px" height="6px" viewBox="0 0 16 16"><use xlink:href="sprite-svg.svg#triangle-pointing-up"></use></svg><span>Дэниэл Редклиф</span></h3><div class="team__cont"><div class="team__wrap"><div class="team__pic"><img class="team__img" src="" alt="avatar pic" data-lazy data-lazy-pic data-src="images/content/team/aphex.png"></div><div class="team__desc"><h4>Оператор</h4><p> С радостью поможем подобрать
+идеальный бургер и оформить
+заказ.</p></div></div></div></div><div class="team__sect collapsed"><h3 class="team__name"> <svg class="team__arrow" width="9px" height="6px" viewBox="0 0 16 16"><use xlink:href="sprite-svg.svg#triangle-pointing-up"></use></svg><span>Ричард Джеймс</span></h3><div class="team__cont"><div class="team__wrap"><div class="team__pic"><img class="team__img" src="" alt="avatar pic" data-lazy data-lazy-pic data-src="images/content/team/aphex.png"></div><div class="team__desc"><h4>Оператор</h4><p> С радостью поможем подобрать
+идеальный бургер и оформить
+заказ.</p></div></div></div></div><div class="team__sect collapsed"><h3 class="team__name"> <svg class="team__arrow" width="9px" height="6px" viewBox="0 0 16 16"><use xlink:href="sprite-svg.svg#triangle-pointing-up"></use></svg><span>Джейк Финн</span></h3><div class="team__cont"><div class="team__wrap"><div class="team__pic"><img class="team__img" src="" alt="avatar pic" data-lazy data-lazy-pic data-src="images/content/team/aphex.png"></div><div class="team__desc"><h4>Оператор</h4><p> С радостью поможем подобрать
+идеальный бургер и оформить
+заказ.</p></div></div></div></div><div class="team__sect collapsed"><h3 class="team__name"> <svg class="team__arrow" width="9px" height="6px" viewBox="0 0 16 16"><use xlink:href="sprite-svg.svg#triangle-pointing-up"></use></svg><span>Николай Иванов</span></h3><div class="team__cont"><div class="team__wrap"><div class="team__pic"><img class="team__img" src="" alt="avatar pic" data-lazy data-lazy-pic data-src="images/content/team/aphex.png"></div><div class="team__desc"><h4>Оператор</h4><p> С радостью поможем подобрать
+идеальный бургер и оформить
+заказ.</p></div></div></div></div></div></div></div></div></section><section class="sect menu" id="menu" data-lazy data-lazy-bg data-src="url(images/content/menu/bg.png) no-repeat center / cover"><h2 class="sect__title menu__title">Меню</h2><div class="menu__acco"><div class="menu__sect collapsed"><div class="menu__pannel" data-lazy data-lazy-bg data-src="url('images/content/menu/photo-1468071174046-657d9d351a40.png') no-repeat center / cover"><h3 class="menu__name">Для мясоедов</h3></div><div class="menu__cont"><div class="menu__desc"><p>Речевой акт редуцирует диалектический характер. 
+Развивая эту тему, заимствование редуцирует 
+конструктивный механизм сочленений. 
+Лирический субъект начинает диссонансный анжамбеман. 
+Наш современник стал особенно чутко относиться к слову, 
+однако механизм сочленений неустойчив. Модальность высказывания, 
+как справедливо считает И.Гальперин, пространственно выбирает метр.
+Речевой акт редуцирует диалектический характер. Развивая эту тему, 
+заимствование редуцирует конструктивный механизм сочленений. 
+Лирический субъект начинает диссонансный анжамбеман. 
+Наш современник стал особенно чутко относиться к слову.</p></div></div></div><div class="menu__sect collapsed"><div class="menu__pannel" data-lazy data-lazy-bg data-src="url(images/content/menu/photo-1466814314367-45323ac74e2b.png) no-repeat center / cover"><h3 class="menu__name">Вегетарианское</h3></div><div class="menu__cont"><div class="menu__desc"><p>Речевой акт редуцирует диалектический характер. 
+Развивая эту тему, заимствование редуцирует 
+конструктивный механизм сочленений. 
+Лирический субъект начинает диссонансный анжамбеман. 
+Наш современник стал особенно чутко относиться к слову, 
+однако механизм сочленений неустойчив. Модальность высказывания, 
+как справедливо считает И.Гальперин, пространственно выбирает метр.
+Речевой акт редуцирует диалектический характер. Развивая эту тему, 
+заимствование редуцирует конструктивный механизм сочленений. 
+Лирический субъект начинает диссонансный анжамбеман. 
+Наш современник стал особенно чутко относиться к слову.</p></div></div></div><div class="menu__sect collapsed"><div class="menu__pannel" data-lazy data-lazy-bg data-src="url('images/content/menu/IMG_4084.png') no-repeat center / cover"><h3 class="menu__name">Диетическое</h3></div><div class="menu__cont"><div class="menu__desc"><p>Речевой акт редуцирует диалектический характер. 
+Развивая эту тему, заимствование редуцирует 
+конструктивный механизм сочленений. 
+Лирический субъект начинает диссонансный анжамбеман. 
+Наш современник стал особенно чутко относиться к слову, 
+однако механизм сочленений неустойчив. Модальность высказывания, 
+как справедливо считает И.Гальперин, пространственно выбирает метр.
+Речевой акт редуцирует диалектический характер. Развивая эту тему, 
+заимствование редуцирует конструктивный механизм сочленений. 
+Лирический субъект начинает диссонансный анжамбеман. 
+Наш современник стал особенно чутко относиться к слову.</p></div></div></div></div></section><section class="sect review" id="review"><div class="review__row review__reviews"><div class="review__col review__review" data-lazy data-lazy-bg data-src="url('images/content/review/photo-1458890715264-db84f7c6ef13.png') no-repeat center / cover"><div class="review__hover"><div class="review__desc"><h3>Констанин Спилберг</h3><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным.</p></div><button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-1">Подробнее</button><button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-1">Читать отзыв</button></div></div><div class="review__modal collapsed" id="popup-1"><div class="review__popup"><h4>Констанин Спилберг</h4><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, 
+котлетка такой сочной, а сыр таким расплавленным.</p><button class="review__close" type="button"><svg width="15px" height="15px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#close"></use></svg></button></div></div><div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1440606797942-6cc04c045447.png) no-repeat center / cover"><div class="review__hover"><div class="review__desc"><h3>Констанин Спилберг</h3><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным.</p></div><button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-2">Подробнее</button><button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-2">Читать отзыв</button></div></div><div class="review__modal collapsed" id="popup-2"><div class="review__popup"><h4>Констанин Спилберг</h4><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, 
+котлетка такой сочной, а сыр таким расплавленным.</p><button class="review__close" type="button"><svg width="15px" height="15px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#close"></use></svg></button></div></div><div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1445404590072-16ef9c18bd83.png) no-repeat center / cover"><div class="review__hover"><div class="review__desc"><h3>Констанин Спилберг</h3><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным.</p></div><button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-3">Подробнее</button><button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-3">Читать отзыв</button></div></div><div class="review__modal collapsed" id="popup-3"><div class="review__popup"><h4>Констанин Спилберг</h4><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, 
+котлетка такой сочной, а сыр таким расплавленным.</p><button class="review__close" type="button"><svg width="15px" height="15px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#close"></use></svg></button></div></div><div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1468546818829-25bb337b6646.png) no-repeat center / cover"><div class="review__hover"><div class="review__desc"><h3>Констанин Спилберг</h3><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным.</p></div><button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-4">Подробнее</button><button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-4">Читать отзыв</button></div></div><div class="review__modal collapsed" id="popup-4"><div class="review__popup"><h4>Констанин Спилберг</h4><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, 
+котлетка такой сочной, а сыр таким расплавленным.</p><button class="review__close" type="button"><svg width="15px" height="15px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#close"></use></svg></button></div></div><div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1438763298591-75a0d42b7265.png) no-repeat center / cover"><div class="review__hover"><div class="review__desc"><h3>Констанин Спилберг</h3><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным.</p></div><button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-5">Подробнее</button><button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-5">Читать отзыв</button></div></div><div class="review__modal collapsed" id="popup-5"><div class="review__popup"><h4>Констанин Спилберг</h4><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, 
+котлетка такой сочной, а сыр таким расплавленным.</p><button class="review__close" type="button"><svg width="15px" height="15px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#close"></use></svg></button></div></div><div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1461332682233-b818af4c3a6e.png) no-repeat center / cover"><div class="review__hover"><div class="review__desc"><h3>Констанин Спилберг</h3><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным.</p></div><button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-6">Подробнее</button><button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-6">Читать отзыв</button></div></div><div class="review__modal collapsed" id="popup-6"><div class="review__popup"><h4>Констанин Спилберг</h4><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, 
+котлетка такой сочной, а сыр таким расплавленным.</p><button class="review__close" type="button"><svg width="15px" height="15px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#close"></use></svg></button></div></div><div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1457706924510-773f3c796de3.png) no-repeat center / cover"><div class="review__hover"><div class="review__desc"><h3>Констанин Спилберг</h3><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным.</p></div><button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-7">Подробнее</button><button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-7">Читать отзыв</button></div></div><div class="review__modal collapsed" id="popup-7"><div class="review__popup"><h4>Констанин Спилберг</h4><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, 
+котлетка такой сочной, а сыр таким расплавленным.</p><button class="review__close" type="button"><svg width="15px" height="15px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#close"></use></svg></button></div></div><div class="review__col review__review" data-lazy data-lazy-bg data-src="url(images/content/review/photo-1458696765561-12142eaead131.png) no-repeat center / cover"><div class="review__hover"><div class="review__desc"><h3>Констанин Спилберг</h3><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным.</p></div><button class="btn btn__more review__btn" type="button" data-popup data-id="#popup-8">Подробнее</button><button class="btn btn__more review__btn review__btn_visibility_mobile" type="button" data-popup data-id="#popup-8">Читать отзыв</button></div></div><div class="review__modal collapsed" id="popup-8"><div class="review__popup"><h4>Констанин Спилберг</h4><p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, 
+а сыр таким расплавленным. Мысли все о них и о них, о них и о них. 
+Нельзя устоять, невозможно забыть... 
+Никогда не думал, что булочки могут быть такими мягкими, 
+котлетка такой сочной, а сыр таким расплавленным.</p><button class="review__close" type="button"><svg width="15px" height="15px" viewBox="0 0 14.988 14.988"><use xlink:href="sprite-svg.svg#close"></use></svg></button></div></div></div></section><section class="sect form" id="form" data-lazy data-lazy-bg data-src="url(images/content/form/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) no-repeat center / cover"><div class="container"><div class="sect__cont"><h2 class="form__title sect__title">Закажите доставку</h2><form class="form__form" action="action.php" method="post"><div class="form__row form__field"><div class="form__col"><div class="form__row"><div class="form__col form__name"><label class="form__label" for="name">Имя</label><input class="form__input" type="text" name="name" id="name"></div><div class="form__col form__phone"><label class="form__label" for="phone">Телефон</label><input class="form__input" type="text" name="phone" id="phone"></div></div><div class="form__row"><div class="form__col form__street"><label class="form__label" for="street">Улица</label><input class="form__input" type="text" name="street" id="street"></div></div><div class="form__row"><div class="form__col form__house"><label class="form__label" for="house">Дом</label><input class="form__input" type="text" name="house" id="house"></div><div class="form__col form__build"><label class="form__label" for="build">Корпус</label><input class="form__input" type="text" name="build" id="build"></div><div class="form__col form__flat"><label class="form__label" for="flat">Квартира</label><input class="form__input" type="text" name="flat" id="flat"></div><div class="form__col form__floor"><label class="form__label" for="floor">Этаж</label><input class="form__input" type="text" name="floor" id="floor"></div></div></div><div class="form__col"><label class="form__label" for="comment">Комментарий</label><textarea class="form__textarea" name="comment" rows="6" id="comment"></textarea><div class="form__set"><div class="form__puy"><input class="form__input" type="radio" name="card" id="change" value="1"><label class="form__label form__change" for="change">Потребуется сдача</label><input class="form__input" type="radio" name="card" id="card" value="2"><label class="form__label form__card" for="card">Оплата по карте</label></div><div class="form__call"><input class="form__input" type="checkbox" name="call" id="call"><label class="form__label" for="call">Не перезванивать</label></div></div></div></div><div class="form__row"><div class="form__col form__ghost"></div><div class="form__col"><div class="form__order"><button class="btn btn__order form__btn form__btn_type_submit" type="submit">Заказать</button><button class="btn btn__reset form__btn form__btn_type_reset" type="reset">Очистить</button></div></div></div></form><div class="form__modal"><div class="form__message"><p>Сообщение отправлено</p><button class="btn btn__order form__btn form__btn_type_close" type="button">Закрыть </button></div></div></div></div></section><section class="sect cont" id="contact"><div class="cont__map" id="map"> </div></section><footer class="footer" data-lazy data-lazy-bg data-src="url('images/content/footer/chalkboard_texture_mc2015_by_mattiamc-d8dbnacb.png') no-repeat center / cover"><div class="container"><div class="footer__inner"><div class="footer__info"><div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div><div class="footer__phone"> <svg width="11px" height="11px" viewBox="0 0 11 11"><use xlink:href="sprite-svg.svg#phone"></use></svg>+7 (812) 377-13-77</div></div><div class="footer__social"><ul><li><a href="javascript:void(0);"><svg width="23px" height="13px" viewBox="0 0 126 72"><use xlink:href="sprite-svg.svg#vk"></use></svg></a></li><li><a href="javascript:void(0);"><svg width="20px" height="20px" viewBox="0 0 36.711 36.711"><use xlink:href="sprite-svg.svg#fb"></use></svg></a></li><li><a href="javascript:void(0);"><svg width="20px" height="20px" viewBox="0 0 36.663 36.664"><use xlink:href="sprite-svg.svg#inst"></use></svg></a></li><li><a href="javascript:void(0);"><svg width="19px" height="16px" viewBox="0 0 37.453 31.21"><use xlink:href="sprite-svg.svg#twitter"></use></svg></a></li></ul></div></div></div></footer></div><div class="switch"><ul><li><a class="active" href="javascript:void(0);" data-scroll data-anchor="hero"></a></li><li><a href="javascript:void(0);" data-scroll data-anchor="we"></a></li><li><a href="javascript:void(0);" data-scroll data-anchor="burger"></a></li><li><a href="javascript:void(0);" data-scroll data-anchor="team"></a></li><li><a href="javascript:void(0);" data-scroll data-anchor="menu"></a></li><li><a href="javascript:void(0);" data-scroll data-anchor="review"></a></li><li><a href="javascript:void(0);" data-scroll data-anchor="form"></a></li><li><a href="javascript:void(0);" data-scroll data-anchor="contact"></a></li></ul></div></main><script src="jquery.min.js"></script><script src="common.min.js"></script></body></html>

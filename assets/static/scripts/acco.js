@@ -1,59 +1,53 @@
 (function () {
 
-const 
-    win = window,
-    doc = document;
+const
+    ACCO = BODY.querySelector('#acco'),
+    SECTIONS = ACCO.children,
+    SECTIONS_LENGTH = SECTIONS.length;
 
 const 
-    acco = doc.querySelector('#acco'),
-    sections = acco.children;
+    STATE = 'collapsed';
 
-let collapsed = 'collapsed';
-
-for (let i = 0, len = sections.length; i < len; i++) {
-    let section = sections[i];
-
-    section.addEventListener('click', sectionHandler, false);
+for (let i = 0; i < SECTIONS_LENGTH; i++) {
+    let section = SECTIONS[i];
+    section.addEventListener('click', handler, false);
 }
 
-function sectionHandler(e) {
-    e.preventDefault();
-
+function handler() {
     let section = this;
 
-    return section.classList.contains(collapsed) ?
-    toOpenSection(section) : toCloseSection(section);
+    return section.classList.contains(STATE) ?
+    openSection(section) : closeSection(section);
 }
 
-function toOpenSection(sect) {
+function openSection(sect) {
     let section = sect,
-    sectionContent = section.querySelector('.team__cont'),
-    sectionContentHeight = sectionContent.firstElementChild.clientHeight;
+        content = section.querySelector('.team__cont'),
+        contentHeight = content.firstElementChild.clientHeight;
 
-    toCloseSections();
+    destroy();
 
-    section.classList.remove(collapsed);
-    sectionContent.style.height = `${sectionContentHeight}px`;
+    section.classList.remove(STATE);
+    content.style.height = `${contentHeight}px`;
 }
 
-function toCloseSection(sect) {
+function closeSection(sect) {
     let section = sect,
-    sectionContent = section.querySelector('.team__cont'),
-    sectionContentHeight = sectionContent.firstElementChild.clientHeight;
+        content = section.querySelector('.team__cont');
 
-    sectionContent.removeAttribute('style');
-    section.classList.add(collapsed);
+    content.removeAttribute('style');
+    section.classList.add(STATE);
 }
 
-function toCloseSections() {
-    for (let i = 0, len = sections.length; i < len; i++) {
-        let section = sections[i];
+function destroy() {
+    for (let i = 0; i < SECTIONS_LENGTH; i++) {
+        let section = SECTIONS[i];
 
-        if (section.classList.contains(collapsed)) {
+        if (section.classList.contains(STATE)) {
             continue;
         }
 
-        toCloseSection(section);
+        closeSection(section);
     }
 }
 

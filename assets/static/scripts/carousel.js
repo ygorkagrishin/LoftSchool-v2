@@ -1,11 +1,6 @@
 (() => {
 
 const 
-    WIN = window,
-    DOC = document,
-    BODY = DOC.body;
-
-const 
     CAROUSEL = BODY.querySelector('#carousel'),
     WRAPPER = CAROUSEL.firstElementChild,
     SLIDES = WRAPPER.children;
@@ -87,7 +82,6 @@ for (let i = 0; i < SLIDES_LENGTH; i++) {
         autoPlayClear();
 
         let product = this;
-
         return !product.classList.contains('active') ? 
         product.classList.add('active') : false;
     })
@@ -186,10 +180,7 @@ function autoPlayClear() {
 function toSwitchToFirstSlide() {
     counterSlides = 0;
 
-    let style = WRAPPER.style;
-
-    style.transition = `all 0ms`;
-    style.transform = `translate(-${counterSlides}00%, 0)`;
+    destroy();
 
     ++counterSlides;
 
@@ -199,14 +190,18 @@ function toSwitchToFirstSlide() {
 function toSwitchToLastSlide() {
     counterSlides = SLIDES_LENGTH - 1;
 
-    let style = WRAPPER.style;
-
-    style.transition = `all 0ms`;
-    style.transform = `translate(-${counterSlides}00%, 0)`;
+    destroy();
 
     --counterSlides;
 
     draw();
+}
+
+function destroy() {
+    let style = WRAPPER.style;
+
+    style.transition = `all 0ms`;
+    style.transform = `translate(-${counterSlides}00%, 0%)`;
 }
 
 function draw() {
@@ -217,4 +212,5 @@ function draw() {
         style.transform = `translate(-${counterSlides}00%, 0)`;
     }, 25);
 }
+
 })();
